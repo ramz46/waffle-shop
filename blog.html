@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Stories & Artisan Journal | Golden Crust Café</title>
+  <meta name="description" content="Read recipes, coffee pairing guides, pastry history, and stories from our kitchen at Golden Crust Crepe & Waffle Café.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <span class="text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 block">Café Stories</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Home Experience Switcher Dropdown (Home 1 & Home 2) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                    <span class="px-1.5 py-0.2 rounded bg-white/10 text-[9px] uppercase font-bold text-cream/80 dark:text-dark-muted">Home 1</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                    <span class="px-1.5 py-0.2 rounded bg-honey/25 text-[9px] uppercase font-bold text-amber dark:text-dark-gold">Home 2</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="catering.html" class="nav-link">Catering & Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="blog.html" class="nav-link active text-honey dark:text-dark-gold">Café Stories</a>
+          <a href="contact.html" class="nav-link">Contact & Hours</a>
+        </nav>
+
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow">
+
+    <!-- EDITORIAL HERO ARTICLE -->
+    <section class="py-12 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-card hover:shadow-hover card-hover-elevate transition duration-300 reveal-scale">
+          <div class="lg:col-span-7 relative aspect-[16/10] lg:aspect-auto reveal-left delay-100">
+            <img src="img/blog/pearl_sugar_waffle.jpg" alt="Caramelized Belgian Pearl Sugar Liege Waffle" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+            <span class="absolute top-4 start-4 bg-sale text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">Featured Story</span>
+          </div>
+          <div class="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between space-y-6 reveal-right delay-200">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 text-xs text-primary-btn dark:text-dark-gold font-semibold">
+                <span class="editorial-eyebrow">The Science of Baking</span>
+                <span>•</span>
+                <span>6 Min Read</span>
+              </div>
+              <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-espresso dark:text-dark-text leading-tight">
+                <a href="blog-details.html" class="hover:text-primary-btn transition-colors">
+                  The Alchemy of Belgian Pearl Sugar: Why Liege Waffles Crunch Like Glass
+                </a>
+              </h1>
+              <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
+                Unlike regular granulated sugar that dissolves into the batter, Nib Sugar P4 remains intact during kneading, melting only in the final 90 seconds under 200°C cast irons to create a lacquer of caramelized crunch.
+              </p>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-border dark:border-dark-border">
+              <div class="flex items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=100&auto=format&fit=crop&q=80" alt="Julien Laurent" class="w-9 h-9 rounded-full object-cover">
+                <div>
+                  <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Chef Julien Laurent</h4>
+                  <p class="text-[10px] text-gray-400">Head Pastry Master</p>
+                </div>
+              </div>
+              <a href="blog-details.html" class="btn-primary px-4 py-2 rounded-full text-white text-xs font-bold shadow">
+                Read Full Article →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER TOOLBAR -->
+    <section class="py-8 bg-cream dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 reveal-fade">
+          
+          <!-- Category Pills -->
+          <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto no-scrollbar" id="blog-category-filter">
+            <button data-cat="all" class="blog-cat-btn active px-4 py-2 rounded-full text-xs font-bold bg-amber text-white shadow">All Stories</button>
+            <button data-cat="recipes" class="blog-cat-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">🥞 Master Recipes</button>
+            <button data-cat="coffee" class="blog-cat-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">☕ Coffee Pairings</button>
+            <button data-cat="kitchen" class="blog-cat-btn px-4 py-2 rounded-full text-xs font-bold bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">🌾 Sourcing & Craft</button>
+          </div>
+
+          <!-- Search Input -->
+          <div class="w-full md:w-72 relative">
+            <input type="text" id="blog-search-input" placeholder="Search recipes, ingredients..." class="w-full ps-10 pe-4 py-2.5 rounded-full bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+            <span class="absolute start-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-xs">🔍</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARTICLES GRID -->
+    <section class="py-16 bg-cream dark:bg-dark-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Article 1 -->
+          <article class="blog-item bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate transition flex flex-col justify-between reveal-up delay-100" data-category="recipes">
+            <div>
+              <a href="blog-details.html" class="block aspect-[16/10] overflow-hidden">
+                <img src="img/blog/silk_crepe.jpg" alt="Mastering the Silk Crepe Fold" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center gap-2 text-[11px] font-bold text-amber">
+                  <span>Master Recipes</span>
+                  <span>•</span>
+                  <span>4 Min Read</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">
+                  <a href="blog-details.html" class="hover:text-amber transition">Mastering the Silk Crepe: How to Swirl Batter Without Clumping</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed line-clamp-3">
+                  The secret to featherlight, paper-thin crepes lies in letting your batter rest overnight in the refrigerator to relax gluten strands. Here is our step-by-step home kitchen guide.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs border-t border-amber/10 dark:border-dark-border mt-2">
+              <span class="text-gray-400">By Chef Amélie</span>
+              <a href="blog-details.html" class="font-bold text-amber hover:underline">Read Story →</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-item bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate transition flex flex-col justify-between reveal-up delay-200" data-category="coffee">
+            <div>
+              <a href="blog-details.html" class="block aspect-[16/10] overflow-hidden">
+                <img src="img/blog/coffee_waffle_pairing.jpg" alt="African Geisha Pour-Over Paired with Dark Chocolate Waffle" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center gap-2 text-[11px] font-bold text-amber">
+                  <span>Coffee Pairings</span>
+                  <span>•</span>
+                  <span>5 Min Read</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">
+                  <a href="blog-details.html" class="hover:text-amber transition">The Perfect Cup: Pairing African Geisha Roasts with Dark Chocolate Waffles</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed line-clamp-3">
+                  Why intense cacao ganache requires high citric notes rather than earthy Sumatran beans. Discover how acidity cuts through butterfat.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs border-t border-amber/10 dark:border-dark-border mt-2">
+              <span class="text-gray-400">By Leo Bennett</span>
+              <a href="blog-details.html" class="font-bold text-amber hover:underline">Read Story →</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-item bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate transition flex flex-col justify-between reveal-up delay-300" data-category="kitchen">
+            <div>
+              <a href="blog-details.html" class="block aspect-[16/10] overflow-hidden">
+                <img src="img/menu/bretonne_galette.jpg" alt="Authentic 100% Buckwheat Brittany Galette" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center gap-2 text-[11px] font-bold text-amber">
+                  <span>Sourcing & Craft</span>
+                  <span>•</span>
+                  <span>7 Min Read</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">
+                  <a href="blog-details.html" class="hover:text-amber transition">Why 100% Buckwheat Galettes Are Gluten-Free Yet Full of Earthy Body</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed line-clamp-3">
+                  Despite its misleading name, buckwheat is not wheat at all—it is a flowering seed related to rhubarb. Learn how Brittany fishermen preserved this ancient staple.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs border-t border-amber/10 dark:border-dark-border mt-2">
+              <span class="text-gray-400">By Chef Julien</span>
+              <a href="blog-details.html" class="font-bold text-amber hover:underline">Read Story →</a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="blog-item bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate transition flex flex-col justify-between reveal-up delay-100" data-category="kitchen">
+            <div>
+              <a href="blog-details.html" class="block aspect-[16/10] overflow-hidden">
+                <img src="img/theater/billig_swirl.jpg" alt="Swirling Batter on Cast-Iron Billig Griddle" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center gap-2 text-[11px] font-bold text-amber">
+                  <span>Sourcing & Craft</span>
+                  <span>•</span>
+                  <span>6 Min Read</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">
+                  <a href="blog-details.html" class="hover:text-amber transition">Brittany Sarrasin Masterclass: The Physics of Billig Cast-Iron Heat</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed line-clamp-3">
+                  Why traditional French billigs use non-enameled machined cast iron instead of modern Teflon. The seasoning oil creates micro-pores that aerate buckwheat galettes into crisp lace patterns.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs border-t border-amber/10 dark:border-dark-border mt-2">
+              <span class="text-gray-400">By Chef Amélie</span>
+              <a href="blog-details.html" class="font-bold text-amber hover:underline">Read Story →</a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="blog-item bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate transition flex flex-col justify-between reveal-up delay-200" data-category="coffee">
+            <div>
+              <a href="blog-details.html" class="block aspect-[16/10] overflow-hidden">
+                <img src="img/menu/vanilla_nitro_brew.jpg" alt="Cold Brew Nitro Micro-Bubbles Foam Head" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center gap-2 text-[11px] font-bold text-amber">
+                  <span>Coffee Pairings</span>
+                  <span>•</span>
+                  <span>4 Min Read</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">
+                  <a href="blog-details.html" class="hover:text-amber transition">Cold Brew Nitro Alchemy: Micro-Bubbles vs Heavy Cream Pastries</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed line-clamp-3">
+                  Steeping single-origin Sidama beans for 18 hours extracts berry sweetness without harsh tannins. Charging with nitrogen creates a cascading Guinness-like foam head that pairs effortlessly with rich Liege waffles.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs border-t border-amber/10 dark:border-dark-border mt-2">
+              <span class="text-gray-400">By Leo Bennett</span>
+              <a href="blog-details.html" class="font-bold text-amber hover:underline">Read Story →</a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="blog-item bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate transition flex flex-col justify-between reveal-up delay-300" data-category="recipes">
+            <div>
+              <a href="blog-details.html" class="block aspect-[16/10] overflow-hidden">
+                <img src="img/menu/wild_berry_bubble_waffle.jpg" alt="Hong Kong Golden Egg Bubble Waffle" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+              </a>
+              <div class="p-6 space-y-3">
+                <div class="flex items-center gap-2 text-[11px] font-bold text-amber">
+                  <span>Master Recipes</span>
+                  <span>•</span>
+                  <span>5 Min Read</span>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">
+                  <a href="blog-details.html" class="hover:text-amber transition">From Hong Kong Bubble Waffles to Paris Galettes: A Global Griddle Odyssey</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed line-clamp-3">
+                  How hot irons conquered street food from 1950s Kowloon egg puffs (gai daan zai) to Parisian boulevards. We explore the steam containment principles that produce pillow-soft interiors with eggshell-thin crusts.
+                </p>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between text-xs border-t border-amber/10 dark:border-dark-border mt-2">
+              <span class="text-gray-400">By Chef Julien</span>
+              <a href="blog-details.html" class="font-bold text-amber hover:underline">Read Story →</a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PASTRY & ROAST FLAVOR MATRIX -->
+    <section class="py-16 bg-white dark:bg-dark-surface border-t border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber">The Flavor Compass</span>
+          <h2 class="font-serif text-3xl font-bold text-espresso dark:text-dark-text mt-1">Interactive Pastry & Roast Pairing Matrix</h2>
+          <p class="text-xs text-gray-600 dark:text-dark-muted mt-2">
+            Click a flavor profile below to unlock our chef's recommended pastry creation, single-origin beverage pairing, and molecular tasting rationale.
+          </p>
+        </div>
+
+        <!-- Flavor Matrix Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10 reveal-fade delay-100">
+          <button type="button" onclick="updateFlavorCompass('caramel')" id="compass-btn-caramel" class="compass-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-amber text-white shadow">
+            🍬 Caramelized Sugar & Dark Cocoa
+          </button>
+          <button type="button" onclick="updateFlavorCompass('citrus')" id="compass-btn-citrus" class="compass-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">
+            🍋 Citrus Acidity & Wild Lavender
+          </button>
+          <button type="button" onclick="updateFlavorCompass('savory')" id="compass-btn-savory" class="compass-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">
+            🧀 Earthy Sarrasin & Black Truffle
+          </button>
+          <button type="button" onclick="updateFlavorCompass('matcha')" id="compass-btn-matcha" class="compass-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">
+            🍵 Ceremonial Uji Matcha & Pistachio
+          </button>
+        </div>
+
+        <!-- Interactive Compass Card -->
+        <div id="flavor-compass-card" class="bg-cream dark:bg-dark-card rounded-3xl p-6 sm:p-10 border border-amber/20 dark:border-dark-border shadow-lg grid grid-cols-1 md:grid-cols-3 gap-6 items-center reveal-scale delay-200">
+          
+          <div class="p-6 bg-white dark:bg-dark-surface rounded-2xl border border-amber/10 shadow-sm space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber block">Pastry Benchmark</span>
+            <h4 id="compass-pastry-title" class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Belgian Liege Waffle + Pearl Sugar</h4>
+            <p id="compass-pastry-desc" class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              Caramelized P4 beet sugar embedded inside 24-hour slow fermented brioche dough.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-dark-surface rounded-2xl border border-amber/10 shadow-sm space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber block">Coffee / Beverage Match</span>
+            <h4 id="compass-drink-title" class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Ethiopian Guji Natural Pour-Over</h4>
+            <p id="compass-drink-desc" class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              Jasmine florals and ripe blackberry notes that cut through the richness of caramelized butterfat.
+            </p>
+          </div>
+
+          <div class="p-6 bg-white dark:bg-dark-surface rounded-2xl border border-amber/10 shadow-sm space-y-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber block">Molecular Sommelier Note</span>
+            <h4 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Why It Works</h4>
+            <p id="compass-rationale" class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              “High-acidity washed coffee clears the palate between crunchy, molasses-rich sugar bites, rejuvenating taste buds with each sip.”
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU & CART DRAWERS -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">Café Journal</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">✕</button>
+      </div>
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🧇</span>
+          <span>Home: Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">Theme 🌓</button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">⇄ <span class="rtl-text">RTL</span></button>
+        </div>
+      </div>
+      <a href="menu.html" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Browse & Order Online →
+      </a>
+    </div>
+  </div>
+
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2"><span class="text-2xl">🛍️</span><h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3></div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso">✕</button>
+      </div>
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar"></div>
+    </div>
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Subtotal</span><span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span></div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Tax (8%)</span><span id="cart-tax">$0.00</span></div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border"><span>Estimated Total</span><span id="cart-total">$0.00</span></div>
+      </div>
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg transition active:scale-95">Checkout Box ✨</button>
+    </div>
+  </div>
+
+
+  <div id="toast-container"></div>
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=2.6"></script>
+
+  <!-- Interactive Blog Search & Filter -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const catButtons = document.querySelectorAll('.blog-cat-btn');
+      const searchInput = document.getElementById('blog-search-input');
+      const articles = document.querySelectorAll('.blog-item');
+
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      function filterArticles() {
+        articles.forEach(article => {
+          const category = article.getAttribute('data-category');
+          const title = article.querySelector('h3').textContent.toLowerCase();
+          const desc = article.querySelector('p').textContent.toLowerCase();
+
+          const matchesCat = activeCategory === 'all' || category === activeCategory;
+          const matchesSearch = !searchQuery || title.includes(searchQuery) || desc.includes(searchQuery);
+
+          if (matchesCat && matchesSearch) {
+            article.style.display = 'flex';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      }
+
+      catButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catButtons.forEach(b => {
+            b.classList.remove('bg-amber', 'text-white', 'shadow');
+            b.classList.add('bg-white', 'dark:bg-dark-card', 'text-espresso', 'dark:text-dark-text');
+          });
+          btn.classList.add('bg-amber', 'text-white', 'shadow');
+          btn.classList.remove('bg-white', 'dark:bg-dark-card', 'text-espresso', 'dark:text-dark-text');
+          activeCategory = btn.getAttribute('data-cat');
+          filterArticles();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          filterArticles();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Alchemy of Belgian Pearl Sugar | Golden Crust Café</title>
+  <meta name="description" content="Discover how 100% Belgian pearl sugar creates the iconic caramelized glass crunch on our signature Liege waffles. Includes master recipe card.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <span class="text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 block">Baker's Journal</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Home Experience Switcher Dropdown (Home 1 & Home 2) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                    <span class="px-1.5 py-0.2 rounded bg-white/10 text-[9px] uppercase font-bold text-cream/80 dark:text-dark-muted">Home 1</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                    <span class="px-1.5 py-0.2 rounded bg-honey/25 text-[9px] uppercase font-bold text-amber dark:text-dark-gold">Home 2</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="catering.html" class="nav-link">Catering & Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="blog.html" class="nav-link active text-honey dark:text-dark-gold">Café Stories</a>
+          <a href="contact.html" class="nav-link">Contact & Hours</a>
+        </nav>
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- BREADCRUMBS -->
+      <nav class="flex items-center gap-2 text-xs text-gray-500 dark:text-dark-muted mb-6 reveal-fade">
+        <a href="index.html" class="hover:text-amber">Home</a>
+        <span>/</span>
+        <a href="blog.html" class="hover:text-amber">Café Stories</a>
+        <span>/</span>
+        <span class="text-espresso dark:text-dark-text font-semibold truncate max-w-xs">The Alchemy of Belgian Pearl Sugar</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- ARTICLE MAIN CONTENT (8 cols) -->
+        <article class="lg:col-span-8 space-y-8">
+          
+          <!-- Header -->
+          <div class="space-y-4 reveal-up">
+            <div class="flex items-center gap-3">
+              <span class="editorial-eyebrow px-3.5 py-1 rounded-full bg-soft-accent dark:bg-dark-card text-primary-btn dark:text-dark-gold border border-primary-btn/30 shadow-xs">The Science of Baking</span>
+              <span class="text-xs text-gray-400">Published October 2026</span>
+              <span class="text-xs text-gray-400">• 6 min read</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-espresso dark:text-dark-text leading-tight tracking-tight">
+              The Alchemy of Belgian Pearl Sugar: Why Liege Waffles Crunch Like <span class="italic font-normal text-gradient-primary">Glass</span>
+            </h1>
+
+            <div class="flex items-center gap-4 py-4 border-y border-amber/15 dark:border-dark-border">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=120&auto=format&fit=crop&q=80" alt="Chef Julien" class="w-12 h-12 rounded-full object-cover border-2 border-honey">
+              <div>
+                <h3 class="text-sm font-bold text-espresso dark:text-dark-text">Chef Julien Laurent</h3>
+                <p class="text-xs text-gray-500 dark:text-dark-muted">Executive Pastry Master at Golden Crust Café</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Image -->
+          <div class="rounded-3xl overflow-hidden aspect-[16/9] shadow-xl border border-amber/20 dark:border-dark-border reveal-scale delay-100">
+            <img src="img/blog/pearl_sugar_waffle.jpg" alt="Caramelized Belgian Pearl Sugar Liege Waffle Close Up" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+          </div>
+
+          <!-- Body Text -->
+          <div class="prose prose-amber dark:prose-invert max-w-none space-y-6 text-sm sm:text-base text-cocoa/90 dark:text-dark-text leading-relaxed">
+            <p class="text-lg leading-relaxed font-serif italic text-amber dark:text-dark-gold">
+              "If Brussels waffles are light clouds made of batter, Liege waffles are dense, butter-soaked brioche masterpieces sculpted by fire and caramelized crystal pearls."
+            </p>
+
+            <p>
+              Step into our café at 6:30 in the morning and you will not smell pancake batter. Instead, you smell the unmistakable, rich perfume of butter brioche proofing slowly under damp linen, and the deep molasses note of high-density sugar crystals awaiting cast iron.
+            </p>
+
+            <p>
+              Most American diners mistake all waffles for batter-based creations. But true Belgian Liege waffles (invented in the 18th century for the Prince-Bishop of Liège) are not made from a liquid batter. They are kneaded from an enriched yeast dough—identical to luxury French brioche with egg yolks, whole milk, and 82% butterfat European cultured butter.
+            </p>
+
+            <!-- Pull Quote Callout -->
+            <blockquote class="p-6 rounded-3xl bg-honey/15 dark:bg-dark-card border-s-4 border-amber my-8 reveal-left delay-100">
+              <p class="font-serif text-lg font-bold text-espresso dark:text-dark-gold italic">
+                "Pearl sugar does not melt into dough. It stays dormant until 195°C heat strikes the cast iron, melting only the outermost shell to form a crackling, amber sugar carapace."
+              </p>
+            </blockquote>
+
+            <h2 class="font-serif text-2xl font-bold text-espresso dark:text-dark-text reveal-up">The P4 Grade Pearl: Size Matters</h2>
+            <p>
+              In Belgium, pearl sugar is categorized by granulation number from C10 to C50. At Golden Crust, we import exclusively Belgian P4 (approx 4-6mm diameter) compressed sugar crystals from the sugar beet fields of Tienen. If the pearl is too small, it dissolves into the dough during the second proof, making the crumb sickly sweet without any crunch. If it is too large, it remains a hard stone in the center. P4 is the golden ratio.
+            </p>
+
+            <!-- INTERACTIVE STEP-BY-STEP RECIPE STUDIO -->
+            <div class="p-6 sm:p-8 rounded-3xl bg-cream dark:bg-dark-card border-2 border-amber/30 dark:border-dark-border shadow-lg space-y-6 my-8 reveal-scale">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-amber/20 pb-4">
+                <div>
+                  <span class="text-xs font-bold uppercase text-amber tracking-wider">Interactive Kitchen Studio</span>
+                  <h3 class="font-serif text-2xl font-bold text-espresso dark:text-dark-text mt-0.5">The Golden Crust Liege Waffle (Home Formula)</h3>
+                </div>
+                <!-- Serving Scaler Buttons -->
+                <div class="flex items-center gap-1.5 p-1 bg-white dark:bg-dark-surface rounded-2xl border border-amber/20">
+                  <span class="text-[11px] font-bold text-gray-500 ps-2 pe-1">Yield:</span>
+                  <button type="button" data-factor="0.5" class="portion-btn px-2.5 py-1 text-xs font-bold rounded-xl transition hover:bg-honey/20 text-espresso dark:text-dark-text">4 Waffles</button>
+                  <button type="button" data-factor="1" class="portion-btn px-2.5 py-1 text-xs font-bold rounded-xl transition bg-amber text-white shadow">8 Waffles</button>
+                  <button type="button" data-factor="1.5" class="portion-btn px-2.5 py-1 text-xs font-bold rounded-xl transition hover:bg-honey/20 text-espresso dark:text-dark-text">12 Waffles</button>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-4 text-center py-2 bg-white dark:bg-dark-surface rounded-2xl border border-amber/10">
+                <div>
+                  <span class="text-[11px] text-gray-400 block">Active Prep</span>
+                  <span class="font-bold text-sm text-espresso dark:text-dark-text">30 Mins</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-gray-400 block">Cold Proof</span>
+                  <span class="font-bold text-sm text-espresso dark:text-dark-text">4 Hours</span>
+                </div>
+                <div>
+                  <span class="text-[11px] text-gray-400 block">Iron Temp</span>
+                  <span class="font-bold text-sm text-espresso dark:text-dark-text">375°F / 190°C</span>
+                </div>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-xs uppercase tracking-wider text-amber">Dynamic Ingredients (Click to check off):</h4>
+                  <span class="text-[10px] text-gray-400 italic">Auto-scales with yield buttons above</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>Unbleached Bread Flour: <strong class="ingredient-weight text-amber" data-base="375" data-unit="g">375 g</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>European Cultured Butter (82%): <strong class="ingredient-weight text-amber" data-base="150" data-unit="g">150 g</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>Lukewarm Whole Milk (105°F): <strong class="ingredient-weight text-amber" data-base="120" data-unit="ml">120 ml</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>Farm Fresh Eggs: <strong class="ingredient-weight text-amber" data-base="2" data-unit="eggs">2 eggs</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>Instant Dry Yeast: <strong class="ingredient-weight text-amber" data-base="7" data-unit="g">7 g</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>Wildflower Honey: <strong class="ingredient-weight text-amber" data-base="15" data-unit="g">15 g</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border border-amber/10 cursor-pointer hover:border-amber/40 transition">
+                    <span class="text-amber">✓</span>
+                    <span>Pure Vanilla Bean Paste: <strong class="ingredient-weight text-amber" data-base="5" data-unit="g">5 g</strong></span>
+                  </div>
+                  <div class="recipe-check-item flex items-center gap-2 p-2 rounded-xl bg-white dark:bg-dark-surface border-2 border-amber/30 cursor-pointer hover:border-amber transition bg-honey/10">
+                    <span class="text-amber font-bold">★</span>
+                    <span>Belgian Pearl Sugar (P4): <strong class="ingredient-weight text-amber font-bold" data-base="150" data-unit="g">150 g</strong></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Step-by-Step with Countdown Timers -->
+              <div class="space-y-4 pt-2">
+                <h4 class="font-bold text-xs uppercase tracking-wider text-amber">Step-by-Step Execution (With Built-in Kitchen Timers):</h4>
+                
+                <div class="space-y-3 text-xs">
+                  <div class="p-3 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <strong class="text-espresso dark:text-dark-text block">Step 1: Yeast Sponge Activation</strong>
+                      <p class="text-gray-600 dark:text-dark-muted mt-0.5">Whisk lukewarm whole milk, wildflower honey, and dry yeast. Rest until frothy and blooming.</p>
+                    </div>
+                    <button type="button" class="recipe-timer-btn px-3 py-1.5 rounded-xl border border-amber/30 text-amber font-bold hover:bg-honey/15 transition whitespace-nowrap self-start sm:self-auto" data-seconds="600" data-step="Sponge Bloom">
+                      ⏱️ Start 10m Timer
+                    </button>
+                  </div>
+
+                  <div class="p-3 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <strong class="text-espresso dark:text-dark-text block">Step 2: Brioche Gluten Knead</strong>
+                      <p class="text-gray-600 dark:text-dark-muted mt-0.5">Combine flour, salt, sponge, and eggs in mixer bowl. Knead on medium speed until smooth and elastic.</p>
+                    </div>
+                    <button type="button" class="recipe-timer-btn px-3 py-1.5 rounded-xl border border-amber/30 text-amber font-bold hover:bg-honey/15 transition whitespace-nowrap self-start sm:self-auto" data-seconds="360" data-step="Brioche Kneading">
+                      ⏱️ Start 6m Timer
+                    </button>
+                  </div>
+
+                  <div class="p-3 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15">
+                    <strong class="text-espresso dark:text-dark-text block">Step 3: Butter Incorporation & Double Proof</strong>
+                    <p class="text-gray-600 dark:text-dark-muted mt-0.5">Drop softened butter cubes one by one until absorbed. Rise 2 hours warm, then chill 2 hours in fridge to solidify fats.</p>
+                  </div>
+
+                  <div class="p-3 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15">
+                    <strong class="text-espresso dark:text-dark-text block">Step 4: Fold the Pearl Sugar</strong>
+                    <p class="text-gray-600 dark:text-dark-muted mt-0.5">Gently press chilled dough flat and distribute the 150g P4 pearl sugar. Divide into 100g dough portions.</p>
+                  </div>
+
+                  <div class="p-3 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <strong class="text-espresso dark:text-dark-text block">Step 5: Cast Iron Bake & Caramelization</strong>
+                      <p class="text-gray-600 dark:text-dark-muted mt-0.5">Place dough ball on 375°F preheated waffle press. Clamp firmly until deeply caramelized.</p>
+                    </div>
+                    <button type="button" class="recipe-timer-btn px-3 py-1.5 rounded-xl border border-amber/30 text-amber font-bold hover:bg-honey/15 transition whitespace-nowrap self-start sm:self-auto" data-seconds="210" data-step="Waffle Caramelization">
+                      ⏱️ Start 3.5m Timer
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-amber/10 dark:bg-dark-surface border border-amber/20 text-xs text-cocoa dark:text-dark-muted flex items-start gap-2">
+                <span class="text-base">💡</span>
+                <div>
+                  <strong>Pastry Chef Note:</strong> Never clean your hot cast irons with cold water, which causes thermal shock. Wipe residual pearl sugar caramelization with heat-resistant silicone while the iron is still warm.
+                </div>
+              </div>
+            </div>
+
+            <p>
+              Next time you visit Golden Crust, watch through our glass baking counter as our pastry team lowers the heavy iron plates. That puff of sweet, buttery steam is two centuries of culinary history coming alive.
+            </p>
+          </div>
+
+        </article>
+
+        <!-- SIDEBAR (4 cols) -->
+        <aside class="lg:col-span-4 space-y-8">
+          
+          <!-- Author Bio Card -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-dark-card border border-amber/15 dark:border-dark-border text-center space-y-4 shadow-card hover:shadow-hover card-hover-elevate transition reveal-up delay-100">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=200&auto=format&fit=crop&q=80" alt="Chef Julien" class="w-20 h-20 rounded-full mx-auto object-cover border-2 border-honey transition-transform duration-500 hover:scale-105">
+            <div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Chef Julien Laurent</h3>
+              <p class="text-xs text-amber font-semibold">Head Pastry Master</p>
+              <p class="text-xs text-gray-500 dark:text-dark-muted mt-2 leading-relaxed">
+                Julien spent 12 years in Brussels and Paris perfecting yeast doughs and chocolate crystallization before founding Golden Crust in 2018.
+              </p>
+            </div>
+            <a href="about.html" class="inline-block text-xs font-bold text-amber hover:underline">Read Julien's Full Story →</a>
+          </div>
+
+          <!-- Order In Café Box -->
+          <div class="p-6 rounded-3xl bg-gradient-to-br from-espresso to-cocoa text-cream dark:from-dark-surface dark:to-dark-card border border-honey/30 shadow-card hover:shadow-hover card-hover-elevate transition space-y-3 reveal-scale delay-200">
+            <span class="text-[10px] uppercase font-bold text-honey tracking-wider">Taste the Real Thing</span>
+            <h4 class="font-serif text-xl font-bold">Craving This Exact Waffle?</h4>
+            <p class="text-xs text-cream/80">
+              Our Liege waffles are baked hot every 15 minutes at our Sweetbriar café.
+            </p>
+            <a href="menu.html" class="block w-full py-3 bg-honey hover:bg-amber text-white text-center font-bold text-xs rounded-xl transition shadow active:scale-95">
+              Order Warm Liege Box ($15.75)
+            </a>
+          </div>
+
+          <!-- Related Articles -->
+          <div class="p-6 rounded-3xl bg-white dark:bg-dark-card border border-amber/15 dark:border-dark-border space-y-4 shadow-card hover:shadow-hover card-hover-elevate transition reveal-up delay-300">
+            <h4 class="font-serif text-lg font-bold text-espresso dark:text-dark-text border-b border-amber/15 pb-2">Related Café Stories</h4>
+            
+            <a href="blog.html" class="flex gap-3 group">
+              <img src="img/blog/silk_crepe.jpg" alt="Mastering the Silk Crepe" class="w-16 h-16 rounded-xl object-cover flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <div>
+                <h5 class="text-xs font-bold text-espresso dark:text-dark-text group-hover:text-amber transition line-clamp-2">Mastering the Silk Crepe: How to Swirl Batter</h5>
+                <span class="text-[10px] text-gray-400 mt-1 block">4 Min Read</span>
+              </div>
+            </a>
+
+            <a href="blog.html" class="flex gap-3 group">
+              <img src="img/blog/coffee_waffle_pairing.jpg" alt="African Geisha & Cocoa Pairing" class="w-16 h-16 rounded-xl object-cover flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+              <div>
+                <h5 class="text-xs font-bold text-espresso dark:text-dark-text group-hover:text-amber transition line-clamp-2">The Perfect Cup: African Geisha & Cocoa Pairing</h5>
+                <span class="text-[10px] text-gray-400 mt-1 block">5 Min Read</span>
+              </div>
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU & CART DRAWERS -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">Story Details</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">✕</button>
+      </div>
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🧇</span>
+          <span>Home: Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">Theme 🌓</button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">⇄ <span class="rtl-text">RTL</span></button>
+        </div>
+      </div>
+      <a href="menu.html" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Browse & Order Online →
+      </a>
+    </div>
+  </div>
+
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2"><span class="text-2xl">🛍️</span><h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3></div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso">✕</button>
+      </div>
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar"></div>
+    </div>
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Subtotal</span><span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span></div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Tax (8%)</span><span id="cart-tax">$0.00</span></div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border"><span>Estimated Total</span><span id="cart-total">$0.00</span></div>
+      </div>
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg transition active:scale-95">Checkout Box ✨</button>
+    </div>
+  </div>
+
+
+  <div id="toast-container"></div>
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=2.6"></script>
+</body>
+</html>

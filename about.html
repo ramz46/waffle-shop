@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Our Story & Master Chefs | Golden Crust Café</title>
+  <meta name="description" content="Discover our journey from a vintage food truck to San Francisco's favorite artisanal crepe and Belgian waffle sanctuary.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <span class="text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 block">Our Heritage</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Experience Switcher Dropdown (Signature Experience & Express Ordering) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="catering.html" class="nav-link">Catering & Events</a>
+          <a href="about.html" class="nav-link active text-honey dark:text-dark-gold">About Us</a>
+          <a href="blog.html" class="nav-link">Café Stories</a>
+          <a href="contact.html" class="nav-link">Contact & Hours</a>
+        </nav>
+
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow">
+
+    <!-- ABOUT HERO SPLIT -->
+    <section class="relative py-16 md:py-24 bg-gradient-to-b from-cream via-amber/5 to-cream dark:from-dark-bg dark:via-dark-surface dark:to-dark-bg overflow-hidden border-b border-amber/15 dark:border-dark-border">
+      <!-- Ambient glow -->
+      <div class="absolute -top-32 start-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-honey/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6 reveal-left">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soft-accent dark:bg-dark-card border border-primary-btn/30 text-primary-btn dark:text-dark-gold editorial-eyebrow mb-2 shadow-xs">
+              <span class="status-dot-ping w-2 h-2 rounded-full bg-success"></span>
+              <span>Handcrafted in San Francisco Since 2018</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-espresso dark:text-dark-text leading-tight tracking-tight">
+              Honoring Old-World Tradition with <span class="italic font-normal text-gradient-primary">Modern Passion</span>
+            </h1>
+
+            <p class="text-base text-gray-600 dark:text-dark-muted leading-relaxed">
+              Golden Crust was born out of a simple, uncompromising obsession: why should authentic Liege pearl waffles and paper-thin Brittany buckwheat galettes only exist in the cobblestone lanes of Brussels and Paris?
+            </p>
+
+            <p class="text-base text-gray-600 dark:text-dark-muted leading-relaxed">
+              In 2018, we restored a retro 1969 Citroën H-Van, shipped over heavy cast-iron clamshell presses from Belgium, and began proofing brioche dough for 24 slow hours. Today, our 742 Sweetbriar sanctuary is a warm living room for breakfast connoisseurs, specialty coffee purists, and sweet-toothed dreamers.
+            </p>
+
+            <!-- Craft Metrics Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-border dark:border-dark-border">
+              <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl sm:text-3xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">24h</span>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted mt-0.5 font-medium">Slow Brioche Ferment</p>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl sm:text-3xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">185°C</span>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted mt-0.5 font-medium">Maillard Pearl Crunch</p>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl sm:text-3xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">100%</span>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted mt-0.5 font-medium">GF Brittany Buckwheat</p>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-border dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl sm:text-3xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">400+</span>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted mt-0.5 font-medium">Daily Swirled Crepes</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image Collage with Live Kitchen Status Ticker -->
+          <div class="lg:col-span-6 relative reveal-right">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative overflow-hidden rounded-3xl shadow-lg aspect-square group">
+                <img src="img/about/dining_nook.jpg" alt="Sweetbriar Dining Nook" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute bottom-3 start-3 px-2.5 py-1 rounded-full bg-espresso/80 backdrop-blur-xs text-cream text-[10px] font-bold">Sweetbriar Dining Nook</span>
+              </div>
+              <div class="relative overflow-hidden rounded-3xl shadow-lg aspect-square group mt-6">
+                <img src="img/about/billig_swirl.jpg" alt="Cast-Iron Billig Swirl" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute bottom-3 start-3 px-2.5 py-1 rounded-full bg-espresso/80 backdrop-blur-xs text-cream text-[10px] font-bold">Cast-Iron Billig Swirl</span>
+              </div>
+              <div class="relative overflow-hidden rounded-3xl shadow-lg aspect-square group -mt-6">
+                <img src="img/about/waffle_press.jpg" alt="Belgian Pearl Press" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute bottom-3 start-3 px-2.5 py-1 rounded-full bg-espresso/80 backdrop-blur-xs text-cream text-[10px] font-bold">Belgian Pearl Press</span>
+              </div>
+              <div class="relative overflow-hidden rounded-3xl shadow-lg aspect-square group">
+                <img src="img/about/espresso_extraction.jpg" alt="Guji Espresso Extraction" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <span class="absolute bottom-3 start-3 px-2.5 py-1 rounded-full bg-espresso/80 backdrop-blur-xs text-cream text-[10px] font-bold">Guji Espresso Extraction</span>
+              </div>
+            </div>
+
+            <!-- Live Kitchen Status Ticker (Positioned cleanly below images with zero overlay) -->
+            <div class="mt-6 p-4 rounded-2xl bg-white/95 dark:bg-dark-surface/95 backdrop-blur-md border border-amber/20 dark:border-dark-border shadow-md flex items-center justify-between gap-3 text-xs">
+              <div class="flex items-center gap-2.5">
+                <span class="status-dot-ping w-2.5 h-2.5 rounded-full bg-success"></span>
+                <span class="font-bold text-espresso dark:text-dark-text">Kitchen Baking Counter:</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-success/10 text-success dark:text-emerald-400 font-semibold text-[11px]">Active Fresh Batch</span>
+              </div>
+              <span class="text-[11px] text-gray-500 dark:text-dark-muted hidden sm:inline font-medium">Irons at 185°C • Proofing Tank #2</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION (FROM RETRO TRUCK TO BRUNCH DESTINATION) -->
+    <section class="py-16 md:py-20 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Our Milestones</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">The Journey of Golden Crust</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2 max-w-xl mx-auto">
+            From two cast-iron waffle irons parked on Embarcadero piers to San Francisco's award-winning European breakfast sanctuary.
+          </p>
+        </div>
+
+        <div class="space-y-8 relative before:absolute before:inset-0 before:start-1/2 before:-translate-x-1/2 before:w-0.5 before:bg-amber/20 hidden md:block reveal-up">
+          
+          <!-- Milestone 1 -->
+          <div class="relative flex items-center justify-between">
+            <div class="w-5/12 text-end pe-8">
+              <span class="font-serif text-2xl font-bold text-amber">2018</span>
+              <h3 class="font-bold text-base text-espresso dark:text-dark-text mt-0.5">The Citroën H-Van Food Truck</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed">Started parking outside Ferry Building weekend farmers markets with 2 imported waffle irons and a hand-turned crepe billig.</p>
+            </div>
+            <div class="w-9 h-9 rounded-full bg-amber text-white flex items-center justify-center font-bold text-xs shadow-md z-10 border-2 border-white dark:border-dark-surface">1</div>
+            <div class="w-5/12 ps-8"></div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="relative flex items-center justify-between">
+            <div class="w-5/12 pe-8"></div>
+            <div class="w-9 h-9 rounded-full bg-honey text-white flex items-center justify-center font-bold text-xs shadow-md z-10 border-2 border-white dark:border-dark-surface">2</div>
+            <div class="w-5/12 ps-8 text-start">
+              <span class="font-serif text-2xl font-bold text-amber">2021</span>
+              <h3 class="font-bold text-base text-espresso dark:text-dark-text mt-0.5">Opening the Sweetbriar Flagship</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed">Unlocked our beloved 742 Sweetbriar brick-and-mortar café featuring open-kitchen crepe griddles and a La Marzocco espresso bar.</p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="relative flex items-center justify-between">
+            <div class="w-5/12 text-end pe-8">
+              <span class="font-serif text-2xl font-bold text-amber">2024</span>
+              <h3 class="font-bold text-base text-espresso dark:text-dark-text mt-0.5">Voted #1 Best Bay Area Brunch</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed">Awarded Best Specialty Dessert & Brunch Destination by Gastronomy Magazine, serving over 150,000 artisan waffles annually.</p>
+            </div>
+            <div class="w-9 h-9 rounded-full bg-amber text-white flex items-center justify-center font-bold text-xs shadow-md z-10 border-2 border-white dark:border-dark-surface">3</div>
+            <div class="w-5/12 ps-8"></div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="relative flex items-center justify-between">
+            <div class="w-5/12 pe-8"></div>
+            <div class="w-9 h-9 rounded-full bg-berry text-white flex items-center justify-center font-bold text-xs shadow-md z-10 border-2 border-white dark:border-dark-surface">4</div>
+            <div class="w-5/12 ps-8 text-start">
+              <span class="font-serif text-2xl font-bold text-amber">Today & Beyond</span>
+              <h3 class="font-bold text-base text-espresso dark:text-dark-text mt-0.5">Live Catering Fleet & Farm Partnerships</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed">Expanded our live mobile catering bars to Napa vineyard weddings and established direct organic berry farm sourcing in Watsonville.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mobile Stacked Milestones -->
+        <div class="md:hidden space-y-4">
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/20 shadow-xs">
+            <span class="font-serif text-xl font-bold text-amber">2018</span>
+            <h4 class="font-bold text-sm text-espresso dark:text-dark-text mt-1">The Citroën H-Van Food Truck</h4>
+            <p class="text-xs text-gray-500 mt-1">Baking for weekend farmers markets with 2 waffle presses.</p>
+          </div>
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/20 shadow-xs">
+            <span class="font-serif text-xl font-bold text-amber">2021</span>
+            <h4 class="font-bold text-sm text-espresso dark:text-dark-text mt-1">Sweetbriar Flagship Opening</h4>
+            <p class="text-xs text-gray-500 mt-1">Our cozy home at 742 Sweetbriar Lane.</p>
+          </div>
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/20 shadow-xs">
+            <span class="font-serif text-xl font-bold text-amber">2024</span>
+            <h4 class="font-bold text-sm text-espresso dark:text-dark-text mt-1">Voted #1 Best Bay Area Brunch</h4>
+            <p class="text-xs text-gray-500 mt-1">Recognized across the Bay Area for authentic European craftsmanship.</p>
+          </div>
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/20 shadow-xs">
+            <span class="font-serif text-xl font-bold text-amber">Today</span>
+            <h4 class="font-bold text-sm text-espresso dark:text-dark-text mt-1">Live Mobile Catering & Farm Direct</h4>
+            <p class="text-xs text-gray-500 mt-1">Full-service crepe bars for luxury vineyard weddings and corporate galas.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RELATED MENU ITEMS: SIGNATURE CREATIONS BORN FROM OUR STORY -->
+    <section class="py-16 md:py-20 bg-cream/70 dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal-up">
+          <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-honey/15 text-amber dark:text-dark-gold text-xs font-bold uppercase tracking-wider mb-3">
+            <span>🥞</span>
+            <span>Our Heritage on the Plate</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-espresso dark:text-dark-text tracking-tight">
+            Signature Dishes Born From Our History
+          </h2>
+          <p class="text-xs sm:text-sm md:text-base text-gray-600 dark:text-dark-muted mt-2.5 max-w-2xl mx-auto leading-relaxed">
+            Every milestone in our story inspired an authentic dish that remains on our daily menu today. Taste the creations that built Golden Crust.
+          </p>
+          <div class="mt-4 flex items-center justify-center">
+            <a href="menu.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber/10 hover:bg-amber hover:text-white text-amber dark:text-dark-gold dark:hover:text-white dark:hover:bg-amber text-xs sm:text-sm font-bold transition-all duration-300 shadow-xs hover:shadow-md group">
+              <span>Explore Full 18-Item Menu</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          
+          <!-- Dish 1: Belgian Berry Crown (The 2018 Origin) -->
+          <div class="bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group reveal-up delay-100">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/belgian_berry_waffle.jpg" alt="Belgian Berry Liege Waffle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 text-amber dark:text-dark-gold font-bold text-xs px-2.5 py-1 rounded-full shadow border border-amber/15">$15.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-amber text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">2018 Origin</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Liege Waffle</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Vegetarian</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Belgian Berry Crown Waffle</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                The recipe that drew our first 100-person line at Ferry Building: 24h brioche dough, crunchy pearl sugar, and Bourbon vanilla cream.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Liège, Belgium • 530 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-9" data-title="Belgian Berry Crown Liege Waffle" data-price="15.75"
+                        data-story="Our founding recipe: 24-hour slow fermented brioche dough studded with imported Belgian pearl sugar, crowned with fresh Watsonville berries."
+                        data-origin="Liège, Belgium" data-cal="530" data-allergens="Dairy, Gluten, Eggs"
+                        data-img="img/menu/belgian_berry_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Bestseller</span>
+              <button data-id="menu-9" data-name="Belgian Berry Crown Waffle" data-price="15.75" data-img="img/menu/belgian_berry_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- Dish 2: La Complète Bretonne (Chef Amélie's Heritage) -->
+          <div class="bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group reveal-up delay-200">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/bretonne_galette.jpg" alt="La Complete Bretonne Galette" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 text-amber dark:text-dark-gold font-bold text-xs px-2.5 py-1 rounded-full shadow border border-amber/15">$16.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Chef Amélie</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Savory Galette</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 100% GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">La Complète Bretonne</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Passed down from Chef Amélie’s grandmother in Rennes: crisp 100% buckwheat, Paris ham, runny farm yolk, and melted Emmental.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Rennes, France • 490 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-5" data-title="La Complete Bretonne Galette" data-price="16.75"
+                        data-story="Amélie's family recipe: 100% stone-ground IGP Breton buckwheat batter hydrated with mineral water, folded with cured Paris ham."
+                        data-origin="Rennes, Brittany, France" data-cal="490" data-allergens="Dairy, Eggs, Pork"
+                        data-img="img/menu/bretonne_galette.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">100% Buckwheat GF</span>
+              <button data-id="menu-5" data-name="La Complete Bretonne Galette" data-price="16.75" data-img="img/menu/bretonne_galette.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- Dish 3: Mont Blanc French Chestnut (Chef Julien's Masterpiece) -->
+          <div class="bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group reveal-up delay-300">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/mont_blanc_crepe.jpg" alt="Mont Blanc Crepe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 text-amber dark:text-dark-gold font-bold text-xs px-2.5 py-1 rounded-full shadow border border-amber/15">$15.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-honey text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Chef Julien</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Sweet Crepe</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Vegetarian</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Mont Blanc French Chestnut</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Created during Julien's training in Lyon: French Ardèche marron glacé purée, Tahitian vanilla Chantilly, and rum caramel drizzle.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Ardèche, France • 480 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-3" data-title="Mont Blanc French Chestnut Crepe" data-price="15.50"
+                        data-story="Ardèche sweet chestnut paste whipped with Normandy butter and folded into paper-thin crêpes with rum-infused Chantilly cream."
+                        data-origin="Ardèche, France" data-cal="480" data-allergens="Dairy, Eggs, Gluten"
+                        data-img="img/menu/mont_blanc_crepe.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Candied chestnut</span>
+              <button data-id="menu-3" data-name="Mont Blanc French Chestnut Crepe" data-price="15.50" data-img="img/menu/mont_blanc_crepe.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- Dish 4: Salted Fleur de Sel Cortado (Barista Leo's Roastery) -->
+          <div class="bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between group reveal-up delay-400">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/cortado.jpg" alt="Salted Fleur de Sel Cortado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 text-amber dark:text-dark-gold font-bold text-xs px-2.5 py-1 rounded-full shadow border border-amber/15">$5.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-blue-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Barista Leo</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Specialty Coffee</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Salted Fleur de Sel Cortado</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Dialed in to pair specifically with buttery crepes: Guji roast espresso cut with micro-foamed milk and Brittany sea salt caramel.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Guji, Ethiopia • 120 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-16" data-title="Salted Fleur de Sel Cortado" data-price="5.75"
+                        data-story="Direct-trade Ethiopian Guji roast cut 1:1 with micro-foamed milk and our signature butterscotch caramel with crushed fleur de sel."
+                        data-origin="Guji, Ethiopia / Guérande, France" data-cal="120" data-allergens="Dairy (Oat milk alternative available)"
+                        data-img="img/menu/cortado.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Double shot espresso</span>
+              <button data-id="menu-16" data-name="Salted Fleur de Sel Cortado" data-price="5.75" data-img="img/menu/cortado.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Banner Linking to Full Menu -->
+        <div class="mt-8 p-5 sm:p-6 rounded-2xl bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🧇</span>
+            <p class="text-xs sm:text-sm text-gray-700 dark:text-dark-text">
+              Want to see our full seasonal collection? Browse all <strong>18 handcrafted sweet & savory dishes</strong> with recipe transparency.
+            </p>
+          </div>
+          <a href="menu.html" class="px-5 py-2.5 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl shadow-xs transition shrink-0">
+            View Complete Menu →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE INGREDIENT ORIGIN & TERROIR EXPLORER -->
+    <section class="py-16 md:py-24 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Terroir & Traceability</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">Interactive Ingredient Origin Explorer</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Click an ingredient below to trace its geographic source, culinary role in our doughs, and thermal specifications.
+          </p>
+        </div>
+
+        <!-- Tab Pills (6 Detailed Ingredients) -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <button type="button" data-origin-key="pearl_sugar" class="origin-tab-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-amber text-white shadow">
+            🍬 Belgian Pearl Sugar
+          </button>
+          <button type="button" data-origin-key="butter" class="origin-tab-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card text-espresso dark:text-dark-text border border-amber/20 dark:border-dark-border hover:bg-honey/10">
+            🧈 Normandy Cultured Butter
+          </button>
+          <button type="button" data-origin-key="buckwheat" class="origin-tab-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card text-espresso dark:text-dark-text border border-amber/20 dark:border-dark-border hover:bg-honey/10">
+            🌾 Brittany Buckwheat (Sarrasin)
+          </button>
+          <button type="button" data-origin-key="cocoa" class="origin-tab-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card text-espresso dark:text-dark-text border border-amber/20 dark:border-dark-border hover:bg-honey/10">
+            🍫 Valrhona Guanaja Cocoa
+          </button>
+          <button type="button" data-origin-key="berries" class="origin-tab-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card text-espresso dark:text-dark-text border border-amber/20 dark:border-dark-border hover:bg-honey/10">
+            🍓 Watsonville Heritage Berries
+          </button>
+          <button type="button" data-origin-key="coffee" class="origin-tab-btn px-4 py-2 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card text-espresso dark:text-dark-text border border-amber/20 dark:border-dark-border hover:bg-honey/10">
+            ☕ Guji Single-Origin Coffee
+          </button>
+        </div>
+
+        <!-- Interactive Explorer Display Card -->
+        <div class="bg-cream dark:bg-dark-card rounded-3xl p-6 sm:p-10 border border-amber/20 dark:border-dark-border shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center reveal-scale">
+          
+          <div class="lg:col-span-6 relative overflow-hidden rounded-2xl aspect-[4/3] shadow-md border border-amber/10 dark:border-dark-border">
+            <img id="origin-img" src="img/menu/belgian_berry_waffle.jpg" alt="Ingredient preview" class="w-full h-full object-cover transition-opacity duration-300">
+          </div>
+
+          <div class="lg:col-span-6 space-y-5">
+            <div>
+              <span id="origin-region" class="inline-block text-[11px] font-bold text-amber px-3 py-1 bg-honey/15 rounded-full mb-2">
+                Tienen, Flemish Brabant, Belgium
+              </span>
+              <h3 id="origin-title" class="font-serif text-2xl sm:text-3xl font-bold text-espresso dark:text-dark-text">
+                Tienen Belgian Pearl Sugar (P4 Grade)
+              </h3>
+            </div>
+
+            <p id="origin-desc" class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
+              Formed by high-pressure compaction of pure sugar beet syrup into dense 4-6mm granules. Crucially, it does not dissolve during our 24-hour dough proofing stage.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="p-3.5 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15 dark:border-dark-border">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-amber block">Culinary Role in Kitchen</span>
+                <p id="origin-role" class="text-xs text-gray-700 dark:text-dark-text mt-0.5 font-medium leading-relaxed">
+                  Creates the signature caramelized crunch pockets that pop in the mouth while keeping the interior brioche soft, buttery, and pillowy.
+                </p>
+              </div>
+
+              <div class="p-3.5 bg-white dark:bg-dark-surface rounded-2xl border border-amber/15 dark:border-dark-border">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-amber block">Technical & Thermal Spec</span>
+                <p id="origin-spec" class="text-xs text-gray-700 dark:text-dark-text mt-0.5 font-medium leading-relaxed">
+                  Caramelizes precisely at 185°C (365°F) upon contact with heavy cast iron.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE CULINARY SCIENCE OF THE WAFFLE GRID & GALETTE -->
+    <section class="py-16 md:py-20 bg-cream/50 dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Culinary Chemistry</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">The Science of the Waffle Grid</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Why our pastries taste noticeably different from ordinary brunch diners: precision fermentation, thermal inertia, and radial batter tension.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-7 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-lg transition">
+            <div class="w-12 h-12 rounded-2xl bg-amber/20 text-amber flex items-center justify-center font-bold text-xl mb-5">⚗️</div>
+            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">1. 24-Hour Yeast Maturation</h3>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+              Standard diners use chemical baking powder for quick rise. We proof living wild yeast brioche at 4°C for 24 hours. This breaks starches down into complex sweet esters, delivering deep brioche flavor that never feels heavy.
+            </p>
+            <div class="mt-5 pt-3.5 border-t border-amber/15 dark:border-dark-border text-[11px] font-semibold text-espresso dark:text-dark-text flex items-center justify-between">
+              <span>Fermentation Temp:</span>
+              <span class="text-amber font-bold">4°C / 39°F</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-7 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-lg transition">
+            <div class="w-12 h-12 rounded-2xl bg-honey/20 text-honey flex items-center justify-center font-bold text-xl mb-5">🔥</div>
+            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">2. The 185°C Maillard Window</h3>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+              18kg cast iron thermal mass prevents temperature collapse when cold dough hits the iron. At 185°C, pearl sugar granules melt externally into an amber caramelized crust while staying crystalline inside for dual-texture bliss.
+            </p>
+            <div class="mt-5 pt-3.5 border-t border-amber/15 dark:border-dark-border text-[11px] font-semibold text-espresso dark:text-dark-text flex items-center justify-between">
+              <span>Caramelization Trigger:</span>
+              <span class="text-amber font-bold">185°C / 365°F</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-7 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-lg transition">
+            <div class="w-12 h-12 rounded-2xl bg-berry/20 text-berry flex items-center justify-center font-bold text-xl mb-5">🌀</div>
+            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">3. 0.8mm Rozell Centrifugal Sweep</h3>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+              Brittany crepe masters use a beechwood T-bar spun in a single radial arc. This spreads buckwheat batter down to micro-thin 0.8mm before steam bubbles create delicate, golden lace edges with tender centers.
+            </p>
+            <div class="mt-5 pt-3.5 border-t border-amber/15 dark:border-dark-border text-[11px] font-semibold text-espresso dark:text-dark-text flex items-center justify-between">
+              <span>Bake Duration:</span>
+              <span class="text-amber font-bold">55 Seconds</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARTISAN KITCHEN EQUIPMENT & HERITAGE TOOLS -->
+    <section class="py-16 md:py-20 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">European Machinery</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">Our Heritage Tool Theater</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Imported directly from Brittany, Brussels, and Florence to ensure absolute authenticity in every bite.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border space-y-3">
+            <span class="text-3xl">🥞</span>
+            <h4 class="font-serif text-base font-bold text-espresso dark:text-dark-text">Krampouz Cast-Iron Billig</h4>
+            <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              Made in Pluguffan, Brittany. Heavy 40cm machined micro-grooved cast iron maintaining precise 210°C thermal equilibrium.
+            </p>
+            <span class="inline-block text-[10px] font-bold text-amber bg-amber/10 px-2 py-0.5 rounded-full">Brittany, France</span>
+          </div>
+
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border space-y-3">
+            <span class="text-3xl">🧇</span>
+            <h4 class="font-serif text-base font-bold text-espresso dark:text-dark-text">Liege Clamshell Press</h4>
+            <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              18kg cast iron clamshell with 4x7 deep grid pockets designed specifically to encapsulate dense brioche and pearl sugar.
+            </p>
+            <span class="inline-block text-[10px] font-bold text-amber bg-amber/10 px-2 py-0.5 rounded-full">Brussels, Belgium</span>
+          </div>
+
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border space-y-3">
+            <span class="text-3xl">🪵</span>
+            <h4 class="font-serif text-base font-bold text-espresso dark:text-dark-text">Beechwood Rozell & Spanell</h4>
+            <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              Hand-carved wooden T-spreaders and long flat wooden spatulas soaked in cold water to smoothly glide across sizzling griddles.
+            </p>
+            <span class="inline-block text-[10px] font-bold text-amber bg-amber/10 px-2 py-0.5 rounded-full">Rennes, France</span>
+          </div>
+
+          <div class="p-5 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border space-y-3">
+            <span class="text-3xl">☕</span>
+            <h4 class="font-serif text-base font-bold text-espresso dark:text-dark-text">La Marzocco Linea PB</h4>
+            <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+              Dual saturated boilers with digital flowmeters delivering 9-bar pre-infusion for bright floral Ethiopian Guji single origins.
+            </p>
+            <span class="inline-block text-[10px] font-bold text-amber bg-amber/10 px-2 py-0.5 rounded-full">Florence, Italy</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DIRECT FARM PARTNERS & SUSTAINABLE PURVEYORS -->
+    <section class="py-16 md:py-20 bg-cream/70 dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Direct Trade & Ethics</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">Our Partner Purveyors</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            We partner with certified organic mills, heritage dairies, and direct-trade cooperatives that share our obsession with purity.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <div class="p-5 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xl">🌾</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">100% Organic</span>
+            </div>
+            <h4 class="font-serif text-sm font-bold text-espresso dark:text-dark-text">Moulin de la Fatigue</h4>
+            <span class="text-[11px] text-amber block font-semibold">Vitré, Brittany, France</span>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+              Traditional water mill grinding 100% French sarrasin grain between ancient granite millstones since 1870.
+            </p>
+          </div>
+
+          <div class="p-5 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xl">🧈</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">AOP Certified</span>
+            </div>
+            <h4 class="font-serif text-sm font-bold text-espresso dark:text-dark-text">Isigny Ste Mère</h4>
+            <span class="text-[11px] text-amber block font-semibold">Normandy, France</span>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+              Pasture-grazed dairy cooperative famous for slow-churned, deep yellow cultured butter rich in coastal minerals.
+            </p>
+          </div>
+
+          <div class="p-5 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xl">🍓</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-berry/20 text-berry font-semibold">Delivered Daily</span>
+            </div>
+            <h4 class="font-serif text-sm font-bold text-espresso dark:text-dark-text">Pajaro Valley Organic</h4>
+            <span class="text-[11px] text-amber block font-semibold">Watsonville, California</span>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+              Heritage Albion strawberries and sweet marionberries hand-harvested at sunrise mist 4 mornings a week.
+            </p>
+          </div>
+
+          <div class="p-5 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xl">☕</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">Direct-Trade</span>
+            </div>
+            <h4 class="font-serif text-sm font-bold text-espresso dark:text-dark-text">Guji Highland Coop</h4>
+            <span class="text-[11px] text-amber block font-semibold">Oromia, Ethiopia</span>
+            <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+              Micro-lot forest coffee at 2,100m elevation. Naturally processed for floral jasmine and candied citrus notes.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MEET THE MASTER CHEFS & BARISTAS -->
+    <section class="py-16 md:py-20 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-14 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Our Culinary Artisans</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">The Hands Behind the Batter</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Meet the culinary masters who prepare our 24-hour doughs and dialed-in espresso extractions fresh every morning.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Chef 1 -->
+          <div class="bg-cream dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border p-6 text-center space-y-4 shadow-xs hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=500&auto=format&fit=crop&q=80" alt="Chef Julien" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-honey/30 shadow-md">
+            <div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Chef Julien Laurent</h3>
+              <p class="text-xs font-bold text-amber mt-0.5">Executive Pastry Master • Lyon, France</p>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+                Trained in Lyon's classical pastry academies. Julien oversees our 24-hour brioche fermentation doughs, custom chocolate ganache melts, and Mont Blanc chestnut creations.
+              </p>
+              <div class="mt-4 pt-3 border-t border-amber/15 dark:border-dark-border text-[11px] text-gray-500 font-medium">
+                Favorite: <span class="text-amber font-bold">Mont Blanc French Chestnut Silk</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chef 2 -->
+          <div class="bg-cream dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border p-6 text-center space-y-4 shadow-xs hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&auto=format&fit=crop&q=80" alt="Chef Amélie" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-honey/30 shadow-md">
+            <div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Chef Amélie Dupont</h3>
+              <p class="text-xs font-bold text-amber mt-0.5">Master of Brittany Galettes • Rennes, France</p>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+                Native to Rennes, Brittany. Amélie is an internationally recognized authority on 100% gluten-free buckwheat flour hydration and traditional savory fold techniques.
+              </p>
+              <div class="mt-4 pt-3 border-t border-amber/15 dark:border-dark-border text-[11px] text-gray-500 font-medium">
+                Favorite: <span class="text-amber font-bold">La Complète Bretonne Galette</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Barista 3 -->
+          <div class="bg-cream dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/15 dark:border-dark-border p-6 text-center space-y-4 shadow-xs hover:shadow-lg transition">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80" alt="Leo Bennett" class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-honey/30 shadow-md">
+            <div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Leo Bennett</h3>
+              <p class="text-xs font-bold text-amber mt-0.5">Head Coffee Roaster & Mixologist • Q-Grader</p>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+                Certified Q-Grader. Leo dials in our micro-lot Ethiopian Guji roast profiles to harmonize with sweet waffles through balanced citric acidity and floral finish.
+              </p>
+              <div class="mt-4 pt-3 border-t border-amber/15 dark:border-dark-border text-[11px] text-gray-500 font-medium">
+                Favorite: <span class="text-amber font-bold">Salted Fleur de Sel Cortado</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION -->
+    <section class="py-16 md:py-20 bg-cream/50 dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-12 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Behind The Scenes</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">Our Baking Theater in Motion</h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Step behind our open glass counter and experience the sights and scents of live cast-iron baking.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal-fade">
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] group relative shadow-md">
+            <img src="img/theater/dining_nook.jpg" alt="Dining Room" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white text-xs font-bold">
+              The Main Sunlit Dining Nook
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] group relative shadow-md">
+            <img src="img/theater/billig_swirl.jpg" alt="Billig crepes" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white text-xs font-bold">
+              Krampouz Cast-Iron Crepe Billig
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] group relative shadow-md">
+            <img src="img/theater/waffle_press.jpg" alt="Waffle Press" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white text-xs font-bold">
+              Caramelizing Pearl Sugar in Cast Irons
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] group relative shadow-md">
+            <img src="img/theater/espresso_bar.jpg" alt="Espresso machine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white text-xs font-bold">
+              La Marzocco Espresso Bar
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] group relative shadow-md">
+            <img src="img/theater/galette_fold.jpg" alt="Buckwheat folding" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white text-xs font-bold">
+              Buckwheat Galette Square Folding
+            </div>
+          </div>
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] group relative shadow-md">
+            <img src="img/theater/dough_proofing.jpg" alt="Kitchen Prep" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4 text-white text-xs font-bold">
+              Morning Brioche Batter Proofing
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRESS HONORS & CRITIC ACCOLADES -->
+    <section class="py-16 md:py-20 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Critique & Acclaim</span>
+          <h2 class="font-serif text-3xl font-bold text-espresso dark:text-dark-text mt-1">What the Critics Say</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs text-center space-y-3">
+            <div class="text-amber font-bold text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-gray-700 dark:text-dark-muted italic leading-relaxed">
+              "Golden Crust has redefined American brunch. Their Liege waffles achieve a level of caramelized sugar crusting unseen west of Brussels."
+            </p>
+            <span class="block text-xs font-bold text-espresso dark:text-dark-text mt-2">— San Francisco Chronicle</span>
+          </div>
+
+          <div class="p-6 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs text-center space-y-3">
+            <div class="text-amber font-bold text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-gray-700 dark:text-dark-muted italic leading-relaxed">
+              "A true masterclass in Brittany sarrasin buckwheat. Crispy, earthy, and folded with artisan cheese precision that transports you to Mont Saint-Michel."
+            </p>
+            <span class="block text-xs font-bold text-espresso dark:text-dark-text mt-2">— Gastronomy Digest</span>
+          </div>
+
+          <div class="p-6 bg-cream dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border shadow-xs text-center space-y-3">
+            <div class="text-amber font-bold text-sm">★★★★★</div>
+            <p class="text-xs sm:text-sm text-gray-700 dark:text-dark-muted italic leading-relaxed">
+              "The single best coffee-and-pastry pairing in the Bay Area. The Fleur de Sel Cortado alongside the Chestnut Crepe is pure culinary harmony."
+            </p>
+            <span class="block text-xs font-bold text-espresso dark:text-dark-text mt-2">— Eater Bay Area</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VISITING THE KITCHEN / OPEN COUNTER CTA -->
+    <section class="py-16 bg-gradient-to-r from-espresso via-cocoa to-espresso text-cream">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-honey">Experience It In Person</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream">
+          Watch Our Bakers at 742 Sweetbriar Lane
+        </h2>
+        <p class="text-sm sm:text-base text-cream/80 max-w-2xl mx-auto leading-relaxed">
+          Our open-glass griddle counter allows guests to watch every crepe swirled and every Liege waffle caramelized in real time. Walk-ins welcome daily from 7:00 AM.
+        </p>
+        <div class="pt-2 flex flex-wrap justify-center gap-4">
+          <a href="menu.html" class="px-7 py-3.5 bg-gradient-to-r from-honey to-amber hover:from-amber hover:to-honey text-white text-xs font-bold rounded-2xl shadow-lg transition">
+            Order Ahead for Pickup 🧇
+          </a>
+          <a href="contact.html" class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-cream text-xs font-bold rounded-2xl border border-white/20 transition">
+            View Live Hours & Directions 📍
+          </a>
+          <a href="catering.html" class="px-7 py-3.5 bg-white/10 hover:bg-white/20 text-cream text-xs font-bold rounded-2xl border border-white/20 transition">
+            Book Mobile Catering Bar 🚚
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU & CART DRAWERS -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">About Our Kitchen</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">✕</button>
+      </div>
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✨</span>
+          <span>Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">Theme 🌓</button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">⇄ <span class="rtl-text">RTL</span></button>
+        </div>
+      </div>
+      <a href="menu.html" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Browse Menu & Order →
+      </a>
+    </div>
+  </div>
+
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2"><span class="text-2xl">🛍️</span><h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3></div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso">✕</button>
+      </div>
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar"></div>
+    </div>
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Subtotal</span><span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span></div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Tax (8%)</span><span id="cart-tax">$0.00</span></div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border"><span>Estimated Total</span><span id="cart-total">$0.00</span></div>
+      </div>
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg transition active:scale-95">Checkout Box ✨</button>
+    </div>
+  </div>
+
+
+
+  <!-- INGREDIENT & NUTRITION INSPECTOR MODAL -->
+  <div id="ingredient-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div id="ingredient-modal-backdrop" class="fixed inset-0 bg-espresso/70 backdrop-blur-sm transition-opacity"></div>
+    <div class="relative w-full max-w-lg modal-dialog bg-cream dark:bg-dark-surface rounded-3xl p-6 md:p-8 shadow-2xl border border-amber/20 dark:border-dark-border z-10 modal-enter max-h-[90vh] overflow-y-auto no-scrollbar">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber">Artisanal Flavor Profile</span>
+          <h3 id="modal-item-title" class="font-serif text-2xl font-bold text-espresso dark:text-dark-gold mt-0.5">Item Name</h3>
+        </div>
+        <button id="close-ingredient-modal" class="p-2 text-gray-400 hover:text-espresso dark:hover:text-dark-text rounded-full hover:bg-honey/10 transition text-lg">✕</button>
+      </div>
+
+      <div class="mt-4 space-y-5">
+        <div class="relative overflow-hidden rounded-2xl aspect-[16/9] shadow-md border border-amber/10 dark:border-dark-border">
+          <img id="modal-item-img" src="" alt="Item photo" class="w-full h-full object-cover">
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-gray-500 dark:text-dark-muted uppercase tracking-wider mb-1">Culinary Heritage & Technique</h4>
+          <p id="modal-item-story" class="text-sm text-gray-700 dark:text-dark-text leading-relaxed">
+            Description
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border">
+            <span class="text-[11px] text-gray-500 dark:text-dark-muted block">Direct Farm / Origin</span>
+            <span id="modal-item-origin" class="text-xs font-bold text-espresso dark:text-dark-gold mt-0.5 block">—</span>
+          </div>
+          <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border">
+            <span class="text-[11px] text-gray-500 dark:text-dark-muted block">Estimated Nutrition</span>
+            <span id="modal-item-cal" class="text-xs font-bold text-espresso dark:text-dark-gold mt-0.5 block">—</span>
+          </div>
+        </div>
+
+        <div class="p-4 bg-amber/10 dark:bg-amber-950/30 rounded-2xl border border-amber/20 dark:border-dark-border">
+          <span class="text-xs font-bold text-amber dark:text-dark-gold block">Allergen & Dietary Transparency</span>
+          <p id="modal-item-allergens" class="text-xs text-gray-700 dark:text-dark-muted mt-1 leading-relaxed">
+            Allergen information
+          </p>
+        </div>
+
+        <button id="modal-item-add-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-98 flex items-center justify-center gap-2">
+          <span>Add to Dessert Box</span>
+          <span>🧇</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=2.6"></script>
+</body>
+</html>

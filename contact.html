@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Live Operating Hours | Golden Crust Café</title>
+  <meta name="description" content="Visit Golden Crust Crepe & Waffle Café at 742 Sweetbriar Lane, San Francisco. View live operating hours, parking information, and send an inquiry.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+  <link rel="stylesheet" href="css/leaflet.css">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <span class="text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 block">Contact & Location</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Home Experience Switcher Dropdown (Home 1 & Home 2) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                    <span class="px-1.5 py-0.2 rounded bg-white/10 text-[9px] uppercase font-bold text-cream/80 dark:text-dark-muted">Home 1</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                    <span class="px-1.5 py-0.2 rounded bg-honey/25 text-[9px] uppercase font-bold text-amber dark:text-dark-gold">Home 2</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="catering.html" class="nav-link">Catering & Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="blog.html" class="nav-link">Café Stories</a>
+          <a href="contact.html" class="nav-link active text-honey dark:text-dark-gold">Contact & Hours</a>
+        </nav>
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- HERO HEADER -->
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+        <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Visit Us In Person</span>
+        <h1 class="font-serif text-4xl sm:text-5xl font-bold text-espresso dark:text-dark-text mt-2 tracking-tight">
+          Find Us, Say Hello, or <span class="italic font-normal text-gradient-primary">Reserve a Table</span>
+        </h1>
+        <p class="text-sm text-gray-600 dark:text-dark-muted mt-3 leading-relaxed">
+          Whether you are dropping in for a morning cortado and hot Liege waffle or planning a private group celebration, we would love to welcome you.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- LEFT COLUMN: OPERATING HOURS & LOCATION INFO (5 cols) -->
+        <div class="lg:col-span-5 space-y-8 reveal-left">
+          
+          <!-- LIVE HOURS TABLE CARD -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate space-y-4">
+            <div class="flex items-center justify-between border-b border-border dark:border-dark-border pb-4">
+              <div>
+                <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Weekly Schedule</span>
+                <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Café Operating Hours</h3>
+              </div>
+              <div class="live-hours-status"></div>
+            </div>
+
+            <div class="divide-y divide-amber/10 dark:divide-dark-border text-xs">
+              <div id="hours-monday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Monday</span>
+                <span class="font-semibold text-espresso dark:text-dark-text">7:30 AM – 9:30 PM</span>
+              </div>
+              <div id="hours-tuesday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Tuesday</span>
+                <span class="font-semibold text-espresso dark:text-dark-text">7:30 AM – 9:30 PM</span>
+              </div>
+              <div id="hours-wednesday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Wednesday</span>
+                <span class="font-semibold text-espresso dark:text-dark-text">7:30 AM – 9:30 PM</span>
+              </div>
+              <div id="hours-thursday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Thursday</span>
+                <span class="font-semibold text-espresso dark:text-dark-text">7:30 AM – 9:30 PM</span>
+              </div>
+              <div id="hours-friday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Friday</span>
+                <span class="font-semibold text-amber">7:30 AM – 11:00 PM (Late Night Bakes)</span>
+              </div>
+              <div id="hours-saturday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Saturday</span>
+                <span class="font-semibold text-amber">8:00 AM – 11:00 PM (Brunch & Bakes)</span>
+              </div>
+              <div id="hours-sunday" class="py-2.5 px-3 rounded-xl flex justify-between items-center transition">
+                <span>Sunday</span>
+                <span class="font-semibold text-espresso dark:text-dark-text">8:00 AM – 9:00 PM</span>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-gray-400 pt-2 italic">
+              * Kitchen prepares last crepe orders 30 minutes before closing.
+            </p>
+          </div>
+
+          <!-- CONTACT CHANNELS & TRANSIT -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border space-y-4">
+            <h4 class="font-serif text-lg font-bold text-espresso dark:text-dark-text border-b border-amber/15 pb-2">Location & Transit</h4>
+            
+            <div class="space-y-3 text-xs">
+              <div class="flex items-start gap-3">
+                <span class="text-base">📍</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text">Physical Address:</strong>
+                  <p class="text-gray-600 dark:text-dark-muted">742 Sweetbriar Lane, Downtown<br>San Francisco, CA 94102</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-base">📞</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text">Direct Line:</strong>
+                  <p class="text-gray-600 dark:text-dark-muted">(555) 465-3362 (Table questions & to-go)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-base">🚇</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text">Transit & Parking:</strong>
+                  <p class="text-gray-600 dark:text-dark-muted">Powell St BART (3 min walk). Sweetbriar Garage parking validated up to 1 hour with purchases over $25.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DAILY KITCHEN AROMA & BAKE SCHEDULE -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border shadow-sm space-y-4">
+            <div class="flex items-center justify-between border-b border-amber/15 dark:border-dark-border pb-3">
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber">Sensory Experience</span>
+                <h4 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Daily Kitchen Aroma Schedule</h4>
+              </div>
+              <span class="text-xl">👃✨</span>
+            </div>
+
+            <div class="space-y-3 text-xs">
+              <div class="p-2.5 rounded-xl bg-cream dark:bg-dark-surface border border-amber/10 flex items-start gap-3">
+                <span class="font-bold text-amber whitespace-nowrap">07:30 AM</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text block">Brioche Fermentation Bloom</strong>
+                  <p class="text-gray-500 text-[11px] mt-0.5">Warm wild yeast, Bourbon vanilla bean, and melting Normandy butter filling the morning air.</p>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-cream dark:bg-dark-surface border border-amber/10 flex items-start gap-3">
+                <span class="font-bold text-amber whitespace-nowrap">08:45 AM</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text block">First Liege Waffle Grid Drop</strong>
+                  <p class="text-gray-500 text-[11px] mt-0.5">Heavy cast irons hit 185°C; rich Belgian pearl sugar caramelization aroma envelops the patio.</p>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-cream dark:bg-dark-surface border border-amber/10 flex items-start gap-3">
+                <span class="font-bold text-amber whitespace-nowrap">11:30 AM</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text block">Brittany Buckwheat Galette Sizzle</strong>
+                  <p class="text-gray-500 text-[11px] mt-0.5">Toasty organic buckwheat, Paris ham, melted Swiss Gruyère, and black summer truffle oils.</p>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-cream dark:bg-dark-surface border border-amber/10 flex items-start gap-3">
+                <span class="font-bold text-amber whitespace-nowrap">02:30 PM</span>
+                <div>
+                  <strong class="text-espresso dark:text-dark-text block">Valrhona Chocolate Tempering</strong>
+                  <p class="text-gray-500 text-[11px] mt-0.5">Warm 70% Guanaja chocolate fondue stirred alongside fragrant lavender cold brew teas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: INTERACTIVE MAP VISUAL & ENQUIRY FORM (7 cols) -->
+        <div class="lg:col-span-7 space-y-8 reveal-right">
+          
+          <!-- EXACT LOCATION INTERACTIVE MAP -->
+          <div class="rounded-3xl overflow-hidden border border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card shadow-lg flex flex-col">
+            
+            <!-- Map Header with Verified Address Badge & Controls -->
+            <div class="px-5 py-3.5 bg-cream/90 dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-xl bg-amber/20 text-amber flex items-center justify-center text-base shadow-xs">
+                  📍
+                </span>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h4 class="font-serif text-sm font-bold text-espresso dark:text-dark-text leading-tight">Flagship Café Location</h4>
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-[10px] font-bold">Exact Pin</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 dark:text-dark-muted">742 Sweetbriar Lane, Downtown San Francisco, CA 94102</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <!-- Map Layer Switcher: Street vs Satellite -->
+                <div class="inline-flex p-0.5 rounded-xl bg-gray-100 dark:bg-dark-card border border-amber/20 dark:border-dark-border text-[11px] font-semibold">
+                  <button type="button" id="map-layer-street-btn" class="px-2.5 py-1 rounded-lg bg-white dark:bg-dark-surface text-espresso dark:text-dark-gold shadow-xs font-bold transition">
+                    🗺️ Streets
+                  </button>
+                  <button type="button" id="map-layer-sat-btn" class="px-2.5 py-1 rounded-lg text-gray-500 dark:text-dark-muted hover:text-espresso dark:hover:text-dark-text transition">
+                    🛰️ Satellite
+                  </button>
+                </div>
+                <button type="button" id="copy-address-btn" class="px-3 py-1.5 rounded-xl bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-xs font-bold text-espresso dark:text-dark-text hover:bg-honey/15 transition shadow-xs flex items-center gap-1.5" title="Copy exact address">
+                  <span>📋</span>
+                  <span>Copy Address</span>
+                </button>
+                <button type="button" id="recenter-map-btn" class="px-3 py-1.5 rounded-xl bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-xs font-bold text-espresso dark:text-dark-text hover:bg-honey/15 transition shadow-xs flex items-center gap-1.5" title="Center map on Golden Crust Café">
+                  <span>🎯</span>
+                  <span>Recenter Pin</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Leaflet Map Canvas with OpenStreetMap Iframe Fallback -->
+            <div class="relative h-80 sm:h-96 md:h-[400px] w-full bg-cream dark:bg-dark-surface overflow-hidden">
+              <div id="cafe-interactive-map" class="w-full h-full"></div>
+
+              <!-- Subtle Live Transit Tip Overlay -->
+              <div class="absolute bottom-3 start-3 z-[25] pointer-events-none">
+                <div class="bg-white/95 dark:bg-dark-surface/95 backdrop-blur-md px-3.5 py-1.5 rounded-2xl shadow-md border border-amber/20 dark:border-dark-border text-[11px] font-medium text-espresso dark:text-dark-text flex items-center gap-2">
+                  <span class="text-xs">🚇</span>
+                  <span>Powell St BART: 3 min walk (Sweetbriar & 8th St)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map Action Bar with Direct Navigation Links -->
+            <div class="p-4 bg-white dark:bg-dark-surface border-t border-amber/15 dark:border-dark-border flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div class="flex items-center gap-2 text-gray-600 dark:text-dark-muted text-[11px]">
+                <span class="inline-block w-2 h-2 rounded-full bg-amber animate-pulse"></span>
+                <span>Coordinates: 37.7812° N, 122.4125° W (Corner of Sweetbriar & 8th St, San Francisco, CA)</span>
+              </div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=37.7812,-122.4125" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-amber hover:bg-honey text-white font-bold transition shadow-xs flex items-center gap-1.5">
+                  <span>Google Maps ↗</span>
+                </a>
+                <a href="https://maps.apple.com/?daddr=37.7812,-122.4125&q=Golden+Crust+Cafe" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 transition shadow-xs flex items-center gap-1.5">
+                  <span>Apple Maps ↗</span>
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=37.7812,-122.4125&travelmode=transit" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 transition shadow-xs flex items-center gap-1.5">
+                  <span>🚇 Transit Directions</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ENQUIRY & RESERVATION FORM TABS CONTAINER -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border shadow-md space-y-6">
+            
+            <!-- Form Tabs -->
+            <div class="flex p-1.5 bg-cream dark:bg-dark-surface rounded-2xl border border-amber/15 dark:border-dark-border">
+              <button type="button" id="tab-btn-res" onclick="document.getElementById('table-reservation-form').classList.remove('hidden'); document.getElementById('contact-form').classList.add('hidden'); this.classList.add('bg-amber', 'text-white', 'shadow'); this.classList.remove('text-espresso', 'dark:text-dark-text'); document.getElementById('tab-btn-contact').classList.remove('bg-amber', 'text-white', 'shadow'); document.getElementById('tab-btn-contact').classList.add('text-espresso', 'dark:text-dark-text');" class="flex-1 py-2.5 rounded-xl text-xs font-bold transition bg-amber text-white shadow">
+                🧇 Table Reservation
+              </button>
+              <button type="button" id="tab-btn-contact" onclick="document.getElementById('contact-form').classList.remove('hidden'); document.getElementById('table-reservation-form').classList.add('hidden'); this.classList.add('bg-amber', 'text-white', 'shadow'); this.classList.remove('text-espresso', 'dark:text-dark-text'); document.getElementById('tab-btn-res').classList.remove('bg-amber', 'text-white', 'shadow'); document.getElementById('tab-btn-res').classList.add('text-espresso', 'dark:text-dark-text');" class="flex-1 py-2.5 rounded-xl text-xs font-bold transition text-espresso dark:text-dark-text hover:bg-honey/10">
+                ✉️ General Message
+              </button>
+            </div>
+
+            <!-- 1. TABLE RESERVATION FORM -->
+            <form id="table-reservation-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1" for="reserve-guest-name">Your Name *</label>
+                  <input type="text" 
+                         id="reserve-guest-name" 
+                         name="guest_name" 
+                         required 
+                         placeholder="Elena Vance" 
+                         autocomplete="name" 
+                         pattern="^[A-Za-z\s'-\.]{2,60}$" 
+                         title="Please enter letters only (no numbers allowed)" 
+                         onbeforeinput="if(event.data && /[0-9]/.test(event.data)) event.preventDefault();"
+                         onkeypress="if(/[0-9]/.test(event.key)) event.preventDefault();"
+                         oninput="this.value = this.value.replace(/[0-9]/g, '')"
+                         class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Party Size *</label>
+                  <select name="party_size" class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-semibold">
+                    <option value="1 Guest">1 Guest (Bar Seat)</option>
+                    <option value="2 Guests" selected>2 Guests (Bistro Table)</option>
+                    <option value="4 Guests">4 Guests (Dining Table)</option>
+                    <option value="6 Guests">6 Guests (Garden Booth)</option>
+                    <option value="8+ Guests">8+ Guests (Brunch Gathering)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Reservation Date *</label>
+                  <input type="date" name="res_date" required class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Time Slot *</label>
+                  <select name="res_time" class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-semibold">
+                    <option value="8:30 AM">8:30 AM (Early Baker)</option>
+                    <option value="10:00 AM">10:00 AM (Brunch Rush)</option>
+                    <option value="12:00 PM">12:00 PM (Savory Lunch)</option>
+                    <option value="2:30 PM">2:30 PM (Afternoon Crepe & Coffee)</option>
+                    <option value="6:30 PM">6:30 PM (Evening Desserts)</option>
+                    <option value="8:30 PM">8:30 PM (Late Night Waffles)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1" for="reserve-phone">Mobile Phone *</label>
+                  <input type="tel" 
+                         id="reserve-phone" 
+                         name="phone" 
+                         required 
+                         inputmode="tel" 
+                         autocomplete="tel" 
+                         placeholder="(555) 465-3362" 
+                         pattern="[0-9+\s\-()]{7,20}" 
+                         title="Please enter numbers only (e.g. (555) 465-3362)" 
+                         onbeforeinput="if(event.data && /[a-zA-Z]/.test(event.data)) event.preventDefault();"
+                         onkeypress="if(/[a-zA-Z]/.test(event.key)) event.preventDefault();"
+                         oninput="this.value = this.value.replace(/[^0-9+\s\-()]/g, '')"
+                         class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Seating Preference</label>
+                  <select name="seating_area" class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                    <option>Sunlit Window Nook</option>
+                    <option>Crepe & Waffle Kitchen Bar</option>
+                    <option>Cozy Leather Booth</option>
+                    <option>Outdoor Heated Patio</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Special Occasion / Dietary Allergies</label>
+                <textarea rows="2" placeholder="Birthday, anniversary, severe nut allergy, high chair needed..." class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-gradient-to-r from-amber to-honey text-white font-bold text-sm rounded-2xl shadow-lg transition hover:from-toasted hover:to-amber">
+                Confirm Table Reservation 🧇
+              </button>
+            </form>
+
+            <!-- 2. GENERAL CONTACT FORM -->
+            <form id="contact-form" onsubmit="event.preventDefault(); showToast('✨ Message received! We will be in touch shortly.', 'success'); this.reset();" class="space-y-4 hidden">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1" for="contact-name">Your Name *</label>
+                  <input type="text" 
+                         id="contact-name" 
+                         name="name" 
+                         required 
+                         placeholder="Marcus Vance" 
+                         autocomplete="name" 
+                         pattern="^[A-Za-z\s'-\.]{2,60}$" 
+                         title="Please enter letters only (no numbers allowed)" 
+                         onbeforeinput="if(event.data && /[0-9]/.test(event.data)) event.preventDefault();"
+                         onkeypress="if(/[0-9]/.test(event.key)) event.preventDefault();"
+                         oninput="this.value = this.value.replace(/[0-9]/g, '')"
+                         class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Email Address *</label>
+                  <input type="email" required placeholder="marcus@example.com" class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1" for="contact-phone">Phone Number</label>
+                  <input type="tel" 
+                         id="contact-phone" 
+                         name="phone" 
+                         inputmode="tel" 
+                         autocomplete="tel" 
+                         placeholder="(555) 000-0000" 
+                         pattern="[0-9+\s\-()]{7,20}" 
+                         title="Please enter numbers only (e.g. (555) 000-0000)" 
+                         onbeforeinput="if(event.data && /[a-zA-Z]/.test(event.data)) event.preventDefault();"
+                         onkeypress="if(/[a-zA-Z]/.test(event.key)) event.preventDefault();"
+                         oninput="this.value = this.value.replace(/[^0-9+\s\-()]/g, '')"
+                         class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Inquiry Purpose *</label>
+                  <select class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber">
+                    <option>General Customer Question</option>
+                    <option>Private Café Evening Buyout</option>
+                    <option>Press / Media Inquiries</option>
+                    <option>Career Opportunities</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Your Message *</label>
+                <textarea rows="4" required placeholder="Tell us whatever is on your mind..." class="w-full px-4 py-3 rounded-2xl bg-cream dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold text-xs rounded-2xl shadow-lg transition hover:from-toasted hover:to-amber">
+                Send Message & Connect →
+              </button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU & CART DRAWERS -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">Contact & Hours</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">✕</button>
+      </div>
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🧇</span>
+          <span>Home: Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">Theme 🌓</button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">⇄ <span class="rtl-text">RTL</span></button>
+        </div>
+      </div>
+      <a href="menu.html" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Browse & Order Online →
+      </a>
+    </div>
+  </div>
+
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2"><span class="text-2xl">🛍️</span><h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3></div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso">✕</button>
+      </div>
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar"></div>
+    </div>
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Subtotal</span><span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span></div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Tax (8%)</span><span id="cart-tax">$0.00</span></div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border"><span>Estimated Total</span><span id="cart-total">$0.00</span></div>
+      </div>
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg transition active:scale-95">Checkout Box ✨</button>
+    </div>
+  </div>
+
+
+
+  <div id="toast-container"></div>
+
+  <!-- TABLE RESERVATION CONFIRMATION MODAL -->
+  <div id="reservation-confirmation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div class="fixed inset-0 bg-espresso/70 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-md modal-dialog bg-cream dark:bg-dark-surface rounded-3xl p-6 sm:p-8 shadow-2xl border border-amber/20 dark:border-dark-border z-10 modal-enter text-center space-y-4">
+      <div class="w-16 h-16 rounded-full bg-honey/20 text-amber flex items-center justify-center text-3xl mx-auto shadow-inner">
+        🧇
+      </div>
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-amber">Reservation Confirmed</span>
+        <h3 class="font-serif text-2xl font-bold text-espresso dark:text-dark-gold mt-1">We’re Saving Your Table!</h3>
+      </div>
+      <p id="reservation-summary-text" class="text-xs text-gray-700 dark:text-dark-text leading-relaxed p-4 bg-white dark:bg-dark-card rounded-2xl border border-amber/15">
+        Your reservation details will appear here.
+      </p>
+      <div class="space-y-2 pt-2">
+        <button type="button" id="close-reservation-modal" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold text-xs rounded-2xl shadow-lg transition hover:from-toasted hover:to-amber">
+          Great, Can't Wait! 🧇
+        </button>
+        <p class="text-[10px] text-gray-400">Confirmation SMS dispatched. Modify anytime up to 1 hour before arrival.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/leaflet.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initCafeContactMap();
+    });
+
+    function initCafeContactMap() {
+      const mapElement = document.getElementById('cafe-interactive-map');
+      if (!mapElement) return;
+
+      const lat = 37.7812;
+      const lng = -122.4125;
+      const zoomLevel = 16;
+      const addressString = '742 Sweetbriar Lane, Downtown San Francisco, CA 94102';
+
+      // Fallback if Leaflet library failed to load
+      if (typeof L === 'undefined') {
+        mapElement.innerHTML = `
+          <iframe 
+            title="Exact Map Location of Golden Crust Café"
+            class="w-full h-full border-0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4180%2C37.7775%2C-122.4070%2C37.7855&layer=mapnik&marker=${lat}%2C${lng}"
+            loading="lazy">
+          </iframe>
+        `;
+        return;
+      }
+
+      try {
+        const streetTileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const satelliteTileUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+
+        const map = L.map('cafe-interactive-map', {
+          center: [lat + 0.0016, lng],
+          zoom: zoomLevel,
+          zoomControl: true,
+          scrollWheelZoom: false
+        });
+
+        // 1. Street Tile Layer
+        const streetLayer = L.tileLayer(streetTileUrl, {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+          maxZoom: 19
+        }).addTo(map);
+
+        // 2. Satellite Tile Layer (Esri World Imagery)
+        const satelliteLayer = L.tileLayer(satelliteTileUrl, {
+          attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+          maxZoom: 18
+        });
+
+        // Layer Switcher Buttons
+        const streetBtn = document.getElementById('map-layer-street-btn');
+        const satBtn = document.getElementById('map-layer-sat-btn');
+
+        function setMapLayer(mode) {
+          const tilePane = map.getPane('tilePane');
+          if (mode === 'satellite') {
+            if (map.hasLayer(streetLayer)) map.removeLayer(streetLayer);
+            if (!map.hasLayer(satelliteLayer)) satelliteLayer.addTo(map);
+            if (tilePane) tilePane.classList.add('no-filter');
+            if (satBtn) {
+              satBtn.className = 'px-2.5 py-1 rounded-lg bg-white dark:bg-dark-surface text-espresso dark:text-dark-gold shadow-xs font-bold transition';
+            }
+            if (streetBtn) {
+              streetBtn.className = 'px-2.5 py-1 rounded-lg text-gray-500 dark:text-dark-muted hover:text-espresso dark:hover:text-dark-text transition';
+            }
+          } else {
+            if (map.hasLayer(satelliteLayer)) map.removeLayer(satelliteLayer);
+            if (!map.hasLayer(streetLayer)) streetLayer.addTo(map);
+            if (tilePane) tilePane.classList.remove('no-filter');
+            if (streetBtn) {
+              streetBtn.className = 'px-2.5 py-1 rounded-lg bg-white dark:bg-dark-surface text-espresso dark:text-dark-gold shadow-xs font-bold transition';
+            }
+            if (satBtn) {
+              satBtn.className = 'px-2.5 py-1 rounded-lg text-gray-500 dark:text-dark-muted hover:text-espresso dark:hover:text-dark-text transition';
+            }
+          }
+        }
+
+        if (streetBtn) streetBtn.addEventListener('click', () => setMapLayer('street'));
+        if (satBtn) satBtn.addEventListener('click', () => setMapLayer('satellite'));
+
+        // Custom Golden Crust Location Pin
+        const customIcon = L.divIcon({
+          className: 'cafe-map-marker-container',
+          html: `
+            <div class="cafe-custom-pin-wrapper" title="Golden Crust Café Flagship">
+              <div class="cafe-pin-pulse"></div>
+              <div class="cafe-pin-body">
+                <span class="cafe-pin-waffle">🧇</span>
+              </div>
+              <div class="cafe-pin-pointer"></div>
+            </div>
+          `,
+          iconSize: [48, 52],
+          iconAnchor: [24, 48],
+          popupAnchor: [0, -46]
+        });
+
+        const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
+
+        const popupContent = `
+          <div class="cafe-map-popup-card">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="font-size: 24px; line-height: 1;">🧇</span>
+              <div>
+                <div class="cafe-map-popup-title">Golden Crust Café</div>
+                <span class="cafe-map-popup-tag">Flagship Crêperie & Atelier</span>
+              </div>
+            </div>
+            <div class="cafe-map-popup-addr">
+              <strong>742 Sweetbriar Lane, Downtown</strong><br>
+              San Francisco, CA 94102<br>
+              <span class="cafe-map-popup-cross">Corner of Sweetbriar & 8th St • Market St Corridor</span>
+            </div>
+            <div>
+              <span class="cafe-map-popup-hours">🟢 Open Today: 7:30 AM – 9:30 PM</span>
+            </div>
+            <div class="cafe-map-popup-actions">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=37.7812,-122.4125" target="_blank" rel="noopener noreferrer" class="cafe-popup-btn-primary">
+                <span>Directions ↗</span>
+              </a>
+              <a href="tel:5554653362" class="cafe-popup-btn-secondary">
+                <span>📞 Call</span>
+              </a>
+            </div>
+          </div>
+        `;
+
+        marker.bindPopup(popupContent, { autoClose: false, closeOnClick: false }).openPopup();
+
+        // Recenter button
+        const recenterBtn = document.getElementById('recenter-map-btn');
+        if (recenterBtn) {
+          recenterBtn.addEventListener('click', function() {
+            map.flyTo([lat + 0.0016, lng], zoomLevel, { duration: 0.8 });
+            marker.openPopup();
+          });
+        }
+
+        // Copy Address button
+        const copyBtn = document.getElementById('copy-address-btn');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', function() {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(addressString).then(() => {
+                if (typeof showToast === 'function') {
+                  showToast('Address copied: 742 Sweetbriar Lane, SF! 📍', 'success');
+                }
+              }).catch(() => {
+                fallbackCopy();
+              });
+            } else {
+              fallbackCopy();
+            }
+
+            function fallbackCopy() {
+              const tempInput = document.createElement('textarea');
+              tempInput.value = addressString;
+              document.body.appendChild(tempInput);
+              tempInput.select();
+              document.execCommand('copy');
+              document.body.removeChild(tempInput);
+              if (typeof showToast === 'function') {
+                showToast('Address copied: 742 Sweetbriar Lane, SF! 📍', 'success');
+              }
+            }
+          });
+        }
+
+        // Keep map properly sized during scroll animations and transitions
+        if ('IntersectionObserver' in window) {
+          const mapObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                map.invalidateSize();
+              }
+            });
+          }, { threshold: 0.1 });
+          mapObserver.observe(mapElement);
+        }
+
+        if ('ResizeObserver' in window) {
+          const resizeObserver = new ResizeObserver(() => {
+            map.invalidateSize();
+          });
+          resizeObserver.observe(mapElement);
+        }
+
+        window.addEventListener('resize', function() {
+          map.invalidateSize();
+        });
+
+        setTimeout(function() {
+          map.invalidateSize();
+        }, 300);
+        setTimeout(function() {
+          map.invalidateSize();
+        }, 1000);
+
+      } catch (err) {
+        console.warn('Leaflet map error, switching to OpenStreetMap iframe:', err);
+        mapElement.innerHTML = `
+          <iframe 
+            title="Exact Map Location of Golden Crust Café"
+            class="w-full h-full border-0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4180%2C37.7775%2C-122.4070%2C37.7855&layer=mapnik&marker=${lat}%2C${lng}"
+            loading="lazy">
+          </iframe>
+        `;
+      }
+    }
+  </script>
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=2.6"></script>
+</body>
+</html>

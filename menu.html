@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Sweet Crepes, Savory Galettes & Golden Waffles | Golden Crust</title>
+  <meta name="description" content="Explore our complete menu of sweet Parisian crepes, savory Brittany buckwheat galettes, Belgian Liege waffles, Hong Kong bubble waffles, and specialty coffee.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <span class="text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 block">Artisanal Menu</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Experience Switcher Dropdown (Signature Experience & Express Ordering) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link active text-honey dark:text-dark-gold">Menu</a>
+          <a href="catering.html" class="nav-link">Catering & Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="blog.html" class="nav-link">Café Stories</a>
+          <a href="contact.html" class="nav-link">Contact & Hours</a>
+        </nav>
+
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow">
+
+    <!-- MENU HERO HEADER -->
+    <section class="relative py-12 lg:py-16 bg-gradient-to-b from-white via-cream to-cream dark:from-dark-surface dark:via-dark-bg dark:to-dark-bg border-b border-amber/15 dark:border-dark-border overflow-hidden">
+      <!-- Decorative ambient glows -->
+      <div class="absolute -top-24 start-1/2 -translate-x-1/2 w-96 h-96 bg-honey/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10 reveal-up">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-soft-accent dark:bg-dark-card border border-primary-btn/30 text-primary-btn dark:text-dark-gold editorial-eyebrow mb-3 shadow-xs">
+          <span class="status-dot-ping w-2 h-2 rounded-full bg-success"></span>
+          <span>Authentic Parisian Crêperie & Belgian Liege Kitchen</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-espresso dark:text-dark-text tracking-tight">
+          Handcrafted <span class="italic font-normal text-gradient-primary">Sweet & Savory</span> Creations
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-dark-muted mt-3 max-w-2xl mx-auto leading-relaxed">
+          Every crepe is swirled to order on cast-iron Breton Billig griddles. Every Liege waffle is baked with imported Belgian pearl sugar for an irresistible caramelized crunch.
+        </p>
+
+        <!-- Artisanal Highlights Strip -->
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-medium text-espresso dark:text-dark-text reveal-fade delay-150">
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-xs card-hover-elevate">
+            <span class="text-base">🌾</span>
+            <span>100% GF Buckwheat Galettes</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-xs card-hover-elevate">
+            <span class="text-base">🧇</span>
+            <span>24h Proofed Liege Brioche</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-xs card-hover-elevate">
+            <span class="text-base">🍓</span>
+            <span>Local Organic Berry Compotes</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-xs card-hover-elevate">
+            <span class="text-base">⚡</span>
+            <span>10-15 Min Express Counter Pickup</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER & CATEGORY NAVIGATION BAR (STABLE & STATIONARY) -->
+    <section id="menu-nav-section" class="relative z-20 bg-cream dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border py-4 sm:py-5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          
+          <!-- Category Tabs (Stationary, fully visible, zero snapping / moving around) -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-2.5" id="category-tabs">
+            <button data-cat="all" class="cat-btn active px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap bg-amber text-white border-2 border-amber shadow flex items-center gap-1.5 transition-colors">
+              <span>All Creations</span>
+              <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-white/25">20</span>
+            </button>
+            <button data-cat="sweet-crepe" class="cat-btn px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap bg-white dark:bg-dark-card border-2 border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 hover:border-amber/40 flex items-center gap-1.5 transition-colors">
+              <span>🥞 Sweet Crepes</span>
+              <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-honey/15 dark:bg-dark-border">4</span>
+            </button>
+            <button data-cat="savory-crepe" class="cat-btn px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap bg-white dark:bg-dark-card border-2 border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 hover:border-amber/40 flex items-center gap-1.5 transition-colors">
+              <span>🧀 Savory Galettes</span>
+              <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-honey/15 dark:bg-dark-border">4</span>
+            </button>
+            <button data-cat="belgian-waffle" class="cat-btn px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap bg-white dark:bg-dark-card border-2 border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 hover:border-amber/40 flex items-center gap-1.5 transition-colors">
+              <span>🧇 Belgian Liege</span>
+              <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-honey/15 dark:bg-dark-border">4</span>
+            </button>
+            <button data-cat="bubble-waffle" class="cat-btn px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap bg-white dark:bg-dark-card border-2 border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 hover:border-amber/40 flex items-center gap-1.5 transition-colors">
+              <span>🍦 Bubble Waffles</span>
+              <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-honey/15 dark:bg-dark-border">4</span>
+            </button>
+            <button data-cat="coffee" class="cat-btn px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap bg-white dark:bg-dark-card border-2 border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15 hover:border-amber/40 flex items-center gap-1.5 transition-colors">
+              <span>☕ Drinks & Shakes</span>
+              <span class="px-1.5 py-0.5 rounded-full text-[10px] bg-honey/15 dark:bg-dark-border">4</span>
+            </button>
+          </div>
+
+          <!-- Live Search & Dietary Pills -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto justify-between lg:justify-end">
+            <!-- Search bar -->
+            <div class="relative w-full sm:w-64">
+              <input id="menu-search-input" type="text" placeholder="🔍 Search ingredients, berries, matcha..." class="w-full ps-3.5 pe-4 py-2 rounded-full bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-xs text-espresso dark:text-dark-text focus:outline-none focus:border-amber focus:ring-1 focus:ring-amber shadow-xs transition">
+            </div>
+
+            <!-- Dietary Filter Pills -->
+            <div class="flex items-center gap-1.5">
+              <button data-diet="veg" class="diet-filter-btn px-3 py-1.5 rounded-full text-[11px] font-bold border border-emerald-500/40 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 transition hover:bg-emerald-100">
+                🌱 Veg
+              </button>
+              <button data-diet="gf" class="diet-filter-btn px-3 py-1.5 rounded-full text-[11px] font-bold border border-amber/40 text-amber dark:text-dark-gold bg-amber/10 dark:bg-dark-card transition hover:bg-amber/20">
+                🌾 100% GF
+              </button>
+              <button data-diet="nf" class="diet-filter-btn px-3 py-1.5 rounded-full text-[11px] font-bold border border-blue-500/40 text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/30 transition hover:bg-blue-100">
+                🥜 Nut-Free
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Filter Count & Recipe Inspector Hint -->
+        <div class="flex items-center justify-between pt-2 mt-2 border-t border-amber/10 dark:border-dark-border text-xs text-gray-500 dark:text-dark-muted">
+          <span id="menu-count-badge" class="font-semibold text-amber dark:text-dark-gold">Showing all 20 creations</span>
+          <span class="text-[11px] hidden sm:inline">✨ Tap <strong class="text-amber">"🔍 Recipe & Story"</strong> to inspect secret flours, farm sources & nutrition notes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU ITEMS GRID (TIGHT 4-COLUMN RESPONSIVE LAYOUT - ZERO DEAD SPACE) -->
+    <section class="py-8 sm:py-10 bg-cream dark:bg-dark-bg min-h-[500px]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div id="menu-items-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+          
+          <!-- ITEM 1: Sweet Crepe (Nutella & Banana) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="sweet-crepe" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/nutella_banana_crepe.jpg" alt="Belgian Nutella & Banana Crepe" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$14.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Bestseller</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Sweet Crepe</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Vegetarian</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Belgian Nutella & Banana</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Warm Italian hazelnut gianduja folded with caramelized banana coins, toasted almond flakes, and Chantilly cream.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Piedmont / 520 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-1" data-title="Belgian Nutella & Banana Crepe" data-price="14.50"
+                        data-story="Swirled paper-thin on our cast iron Billig plates, filled with pure Italian roasted hazelnut cocoa butter spread, and organic bananas gently pan-seared in butter."
+                        data-origin="Piedmont, Italy / Paris, France" data-cal="520" data-allergens="Dairy, Tree Nuts (Almond/Hazelnut), Gluten"
+                        data-img="img/menu/nutella_banana_crepe.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Toasted almonds</span>
+              <button data-id="menu-1" data-name="Belgian Nutella & Banana Crepe" data-price="14.50" data-img="img/menu/nutella_banana_crepe.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 2: Sweet Crepe (Lemon Curd & Lavender) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="sweet-crepe" data-diet="veg gf nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/lemon_curd_crepe.jpg" alt="Meyer Lemon Curd & Lavender Crepe" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$13.25</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Chef Choice</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Sweet Crepe</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 100% GF</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Meyer Lemon Curd & Lavender</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Buckwheat batter crisped in Normandy butter, filled with house Meyer lemon curd and Provence lavender crystal sugar.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Provence / 380 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-2" data-title="Meyer Lemon Curd & Lavender Crepe" data-price="13.25"
+                        data-story="Made with organic Brittany buckwheat flour, fresh hand-squeezed Sonoma Meyer lemons, and organic culinary lavender from Provence."
+                        data-origin="Sonoma, California / Provence, France" data-cal="380" data-allergens="Dairy, Eggs"
+                        data-img="img/menu/lemon_curd_crepe.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Gluten-free buckwheat</span>
+              <button data-id="menu-2" data-name="Meyer Lemon Curd Crepe" data-price="13.25" data-img="img/menu/lemon_curd_crepe.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 3: Sweet Crepe (Mont Blanc Chestnut) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="sweet-crepe" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/mont_blanc_crepe.jpg" alt="Mont Blanc French Chestnut Crepe" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$15.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-amber text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Autumn Limited</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Sweet Crepe</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Vegetarian</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Mont Blanc French Chestnut</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Ardèche marron glacé purée vermicelli, Tahitian vanilla Chantilly, dark rum caramel, and glazed candied chestnuts.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Ardèche / 480 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-3" data-title="Mont Blanc French Chestnut Crepe" data-price="15.50"
+                        data-story="Ardèche sweet chestnut paste whipped with Normandy butter and folded into paper-thin crêpes with rum-infused Chantilly cream and marron glacé."
+                        data-origin="Ardèche, France" data-cal="480" data-allergens="Dairy, Eggs, Gluten"
+                        data-img="img/menu/mont_blanc_crepe.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Candied chestnut top</span>
+              <button data-id="menu-3" data-name="Mont Blanc French Chestnut Crepe" data-price="15.50" data-img="img/menu/mont_blanc_crepe.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 4: Sweet Crepe (Crêpe Suzette Flambée) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="sweet-crepe" data-diet="veg nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/crepe_suzette.jpg" alt="Crêpe Suzette Flambée Grand Marnier" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$15.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-honey text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Flambée Classic</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Sweet Crepe</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Vegetarian</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Crêpe Suzette Grand Marnier</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Simmered in Beurre Suzette glaze, fresh Cara Cara blood orange segments, and Grand Marnier liqueur flambée reduction.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Monte Carlo / 440 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-4" data-title="Crêpe Suzette Flambée Grand Marnier" data-price="15.75"
+                        data-story="An iconic 1895 Monte Carlo classic: crepes folded in caramelized citrus butter, bathed in blood orange juice and Grand Marnier reduction."
+                        data-origin="Monte Carlo, Monaco" data-cal="440" data-allergens="Dairy, Gluten"
+                        data-img="img/menu/crepe_suzette.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Caramelized orange glaze</span>
+              <button data-id="menu-4" data-name="Crepe Suzette Grand Marnier" data-price="15.75" data-img="img/menu/crepe_suzette.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 5: Savory Galette (La Complète Bretonne) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="savory-crepe" data-diet="gf nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/bretonne_galette.jpg" alt="La Complète Bretonne Buckwheat Galette" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$16.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Traditional</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Savory Galette</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 100% GF</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">La Complète Bretonne</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Crispy 100% buckwheat galette with artisanal Paris ham, sunny-side organic egg yolk, and melted Emmental cheese.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Brittany / 490 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-5" data-title="La Complete Bretonne Galette" data-price="16.75"
+                        data-story="The timeless signature of Brittany: stone-ground French buckwheat batter crisped in salted butter, folded around slow-cured Paris ham and farm egg."
+                        data-origin="Brittany, France" data-cal="490" data-allergens="Dairy, Eggs, Pork"
+                        data-img="img/menu/bretonne_galette.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Runny yolk center</span>
+              <button data-id="menu-5" data-name="La Complete Bretonne Galette" data-price="16.75" data-img="img/menu/bretonne_galette.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 6: Savory Galette (Wild Mushroom & Chèvre) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="savory-crepe" data-diet="veg gf nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/chanterelle_galette.jpg" alt="Wild Chanterelle & Fresh Chèvre Galette" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$16.00</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Harvest Veg</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Savory Galette</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 100% GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Wild Chanterelle & Fresh Chèvre</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Sautéed chanterelles and creminis, Sonoma goat cheese curd, baby spinach, caramelized shallots, and fresh thyme.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Sonoma / 420 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-6" data-title="Wild Chanterelle & Fresh Chèvre Galette" data-price="16.00"
+                        data-story="Foraged seasonal wild chanterelle mushrooms sautéed in garlic-herb butter, paired with tangy fresh Sonoma goat curd on 100% buckwheat."
+                        data-origin="Sonoma County, California" data-cal="420" data-allergens="Dairy"
+                        data-img="img/menu/chanterelle_galette.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Earthy & aromatic</span>
+              <button data-id="menu-6" data-name="Wild Chanterelle & Chevre Galette" data-price="16.00" data-img="img/menu/chanterelle_galette.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 7: Savory Galette (Smoked Salmon & Truffle) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="savory-crepe" data-diet="gf nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/smoked_salmon_galette.jpg" alt="Smoked Salmon & Truffle Ricotta Galette" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$17.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-blue-800 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Chef Reserve</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Savory Galette</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 100% GF</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Smoked Salmon & Truffle Ricotta</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Alderwood cold-smoked salmon ribbons, whipped black truffle ricotta, pickled red shallots, caper berries, and fresh dill.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Norway / 460 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-7" data-title="Smoked Salmon & Truffle Ricotta Galette" data-price="17.50"
+                        data-story="Alderwood cold-smoked salmon paired with velvety ricotta infused with Périgord black truffle essence, lemon zest and fresh baby dill."
+                        data-origin="Norway / Brittany, France" data-cal="460" data-allergens="Dairy, Fish"
+                        data-img="img/menu/smoked_salmon_galette.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Truffle ricotta fold</span>
+              <button data-id="menu-7" data-name="Smoked Salmon & Truffle Galette" data-price="17.50" data-img="img/menu/smoked_salmon_galette.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 8: Savory Galette (Cardamom Fig & Goat Cheese) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="savory-crepe" data-diet="veg gf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/fig_goat_galette.jpg" alt="Cardamom Fig & Sonoma Goat Cheese Galette" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$16.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-amber text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Autumn Fig</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Savory Galette</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 100% GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Cardamom Fig & Sonoma Goat Cheese</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Stewed Black Mission figs with green cardamom, whipped chèvre curd, toasted California walnuts, and wildflower honey.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">California / 430 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-8" data-title="Cardamom Fig & Goat Cheese Galette" data-price="16.50"
+                        data-story="Black Mission figs from Fresno Valley slow-simmered with crushed green cardamom seeds and paired with tangy goat curd from Sonoma."
+                        data-origin="California Central Valley / Sonoma" data-cal="430" data-allergens="Dairy, Tree Nuts (Walnuts)"
+                        data-img="img/menu/fig_goat_galette.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Toasted walnut crunch</span>
+              <button data-id="menu-8" data-name="Cardamom Fig & Goat Cheese Galette" data-price="16.50" data-img="img/menu/fig_goat_galette.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 9: Belgian Liege Waffle (Berry Crown) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="belgian-waffle" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/belgian_berry_waffle.jpg" alt="Belgian Berry Crown Liege Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$15.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Signature Waffle</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-berry">Liege Waffle</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Belgian Berry Crown Liege</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Caramelized P4 pearl sugar brioche dough crowned with fresh blackberries, raspberries, and Bourbon vanilla bean cream.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Liège, Belgium / 530 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-9" data-title="Belgian Berry Crown Liege Waffle" data-price="15.75"
+                        data-story="Authentic 24h proofed brioche with imported Belgian P4 pearl sugar that caramelizes on heavy cast iron plates into crispy sugar crystals."
+                        data-origin="Liège, Belgium" data-cal="530" data-allergens="Dairy, Gluten, Eggs"
+                        data-img="img/menu/belgian_berry_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Crunchy pearl sugar</span>
+              <button data-id="menu-9" data-name="Belgian Berry Crown Waffle" data-price="15.75" data-img="img/menu/belgian_berry_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 10: Belgian Waffle (Hot Honey Chicken) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="belgian-waffle" data-diet="nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/fried_chicken_waffle.jpg" alt="Hot Honey Crisp Fried Chicken Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$18.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-amber text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Savory Hit</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Savory Waffle</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Hot Honey Crisp Fried Chicken</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Double-dredged buttermilk fried chicken breast, golden malt waffle, habanero hot honey glaze, and house dill pickles.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Brussels / 680 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-10" data-title="Hot Honey Fried Chicken Waffle" data-price="18.50"
+                        data-story="Buttermilk-marinated fried chicken tenders atop a crisp Belgian malt waffle, drizzled with spicy fermented habanero honey."
+                        data-origin="American South meets Brussels" data-cal="680" data-allergens="Gluten, Dairy, Poultry"
+                        data-img="img/menu/fried_chicken_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Sweet & spicy glaze</span>
+              <button data-id="menu-10" data-name="Hot Honey Fried Chicken Waffle" data-price="18.50" data-img="img/menu/fried_chicken_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 11: Brussels Waffle (Strawberries & Cloud) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="belgian-waffle" data-diet="veg nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/brussels_strawberry_waffle.jpg" alt="Brussels Strawberry Vanilla Cloud Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$14.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Airy & Crisp</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Brussels Waffle</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Brussels Strawberry Vanilla Cloud</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Ultra-light Brussels waffle with deep grid pockets, ripe local strawberries, white chocolate pearls, and powdered sugar.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Brussels / 410 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-11" data-title="Brussels Strawberry Vanilla Cloud Waffle" data-price="14.50"
+                        data-story="Baked in authentic deep-grid irons using whipped egg-white leavened batter for a featherlight, glass-crisp exterior and cloud-soft crumb."
+                        data-origin="Brussels, Belgium" data-cal="410" data-allergens="Dairy, Gluten, Eggs"
+                        data-img="img/menu/brussels_strawberry_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Light & feather-crisp</span>
+              <button data-id="menu-11" data-name="Brussels Strawberry Cloud Waffle" data-price="14.50" data-img="img/menu/brussels_strawberry_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 12: Belgian Liege Waffle (Speculoos Biscoff) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="belgian-waffle" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/biscoff_liege_waffle.jpg" alt="Speculoos Biscoff & Salted Caramel Liege Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$15.25</span>
+                <span class="absolute top-2.5 start-2.5 bg-honey text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Biscoff Craving</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Liege Waffle</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Speculoos Biscoff & Salted Caramel</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Warm Belgian Biscoff spread, crushed spiced cinnamon cookies, salted butter caramel drizzle, and toasted pecans.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Flanders / 560 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-12" data-title="Speculoos Biscoff Liege Waffle" data-price="15.25"
+                        data-story="Melted Belgian Biscoff cookie spread over hot caramelized pearl sugar dough with spiced speculoos biscuits and Brittany sea salt caramel."
+                        data-origin="Flanders, Belgium" data-cal="560" data-allergens="Dairy, Gluten, Tree Nuts (Pecan)"
+                        data-img="img/menu/biscoff_liege_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Biscoff cookie crumble</span>
+              <button data-id="menu-12" data-name="Speculoos Biscoff Liege Waffle" data-price="15.25" data-img="img/menu/biscoff_liege_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 13: Bubble Waffle (Kyoto Matcha & Pistachio) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="bubble-waffle" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/matcha_bubble_waffle.jpg" alt="Kyoto Matcha Bubble Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$15.00</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Ceremonial Uji</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Bubble Cone</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Kyoto Matcha & Bronte Pistachio</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Crispy egg-puff bubble waffle infused with Uji ceremonial matcha, roasted pistachio gelato, and sweet red bean paste.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Kyoto / 510 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-13" data-title="Kyoto Matcha & Pistachio Bubble Waffle" data-price="15.00"
+                        data-story="Stone-ground ceremonial Uji matcha blended into airy egg batter, paired with Sicilian Bronte pistachio gelato and sweet Azuki beans."
+                        data-origin="Kyoto, Japan / Sicily, Italy" data-cal="510" data-allergens="Dairy, Eggs, Tree Nuts (Pistachio), Gluten"
+                        data-img="img/menu/matcha_bubble_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Gelato scoop included</span>
+              <button data-id="menu-13" data-name="Kyoto Matcha Bubble Waffle" data-price="15.00" data-img="img/menu/matcha_bubble_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 14: Bubble Waffle (Black Sesame & Coconut Cone) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="bubble-waffle" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/uji_matcha_cone.jpg" alt="Black Sesame Bubble Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$14.25</span>
+                <span class="absolute top-2.5 start-2.5 bg-espresso text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Street Icon</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Bubble Cone</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Uji Matcha & Black Sesame Cone</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Spherical egg puff waffle rolled cone-style, filled with matcha soft serve, roasted black sesame drizzle, and mochi pearls.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Hong Kong / 480 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-14" data-title="Uji Matcha & Black Sesame Cone" data-price="14.25"
+                        data-story="Inspired by Hong Kong night market street stalls: crisp egg puffs with hollow chewy bubbles, rolled into a cone with roasted sesame sauce."
+                        data-origin="Hong Kong Street Markets" data-cal="480" data-allergens="Dairy, Eggs, Gluten, Sesame"
+                        data-img="img/menu/uji_matcha_cone.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Toasted sesame tuile</span>
+              <button data-id="menu-14" data-name="Uji Matcha & Black Sesame Cone" data-price="14.25" data-img="img/menu/uji_matcha_cone.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 15: Bubble Waffle (Valrhona Molten Dark Ganache) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="bubble-waffle" data-diet="veg nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/valrhona_molten_bubble.jpg" alt="Valrhona Molten Bubble Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$14.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-cocoa text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Molten Core</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Bubble Cone</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300 font-semibold">🥜 Nut-Free</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Valrhona Molten Dark Ganache</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Cocoa egg-puff bubbles stuffed with molten Valrhona 66% chocolate drops, dark chocolate drizzle, and vanilla gelato.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Valrhona / 540 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-15" data-title="Valrhona Molten Dark Ganache Bubble Waffle" data-price="14.75"
+                        data-story="Premium French Valrhona chocolate drops placed directly into each egg bubble cavity on the iron, exploding into hot melted chocolate upon biting."
+                        data-origin="Tain-l'Hermitage, France" data-cal="540" data-allergens="Dairy, Eggs, Gluten"
+                        data-img="img/menu/valrhona_molten_bubble.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Warm molten pockets</span>
+              <button data-id="menu-15" data-name="Valrhona Molten Dark Ganache Waffle" data-price="14.75" data-img="img/menu/valrhona_molten_bubble.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 16: Bubble Waffle (Wild Mountain Berry & Tahitian Cream) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="bubble-waffle" data-diet="veg">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/wild_berry_bubble_waffle.jpg" alt="Wild Mountain Berry Bubble Waffle" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$14.95</span>
+                <span class="absolute top-2.5 start-2.5 bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Fresh Harvest</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Bubble Waffle</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Wild Mountain Berry &amp; Tahitian Cream</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Crisp golden egg-puff bubble waffle loaded with fresh Oregon blackberries, raspberries, Tahitian vanilla mascarpone cream, and berry coulis.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Oregon / 490 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-16" data-title="Wild Mountain Berry &amp; Tahitian Cream Bubble Waffle" data-price="14.95"
+                        data-story="Freshly poured golden bubble waffle pockets folded around fresh alpine berries, thick whipped Tahitian vanilla mascarpone cream, and house blackberry drizzle."
+                        data-origin="Pacific Northwest / Hong Kong" data-cal="490" data-allergens="Dairy, Eggs, Gluten"
+                        data-img="img/menu/wild_berry_bubble_waffle.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Tahitian mascarpone</span>
+              <button data-id="menu-16" data-name="Wild Mountain Berry Bubble Waffle" data-price="14.95" data-img="img/menu/wild_berry_bubble_waffle.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 17: Coffee (Salted Fleur de Sel Cortado) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="coffee" data-diet="veg gf nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/cortado.jpg" alt="Salted Caramel Cortado" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$5.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-amber text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">House Roast</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Specialty Coffee</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Salted Fleur de Sel Cortado</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Double shot of single-origin Guji roast espresso cut with equal parts steamed milk and French Brittany sea salt caramel.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Guji / 120 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-17" data-title="Salted Fleur de Sel Cortado" data-price="5.75"
+                        data-story="Direct-trade Ethiopian Guji roast cut 1:1 with micro-foamed milk and our signature butterscotch caramel with crushed fleur de sel."
+                        data-origin="Guji, Ethiopia / Guérande, France" data-cal="120" data-allergens="Dairy (Oat milk alternative available)"
+                        data-img="img/menu/cortado.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Double shot espresso</span>
+              <button data-id="menu-17" data-name="Salted Fleur de Sel Cortado" data-price="5.75" data-img="img/menu/cortado.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 18: Coffee (Madagascar Bourbon Vanilla Nitro Cold Brew) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="coffee" data-diet="veg gf nf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/cold_brew.jpg" alt="Nitro Cold Brew" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$6.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-blue-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Nitro Tap</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Specialty Coffee</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Madagascar Vanilla Nitro Brew</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                20-hour steeped Ethiopian cold brew charged with micro-nitrogen bubbles, Madagascar Bourbon vanilla bean syrup and sweet cold foam.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Yirgacheffe / 95 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-18" data-title="Madagascar Vanilla Nitro Cold Brew" data-price="6.50"
+                        data-story="Slow-steeped cold brew infused with nitrogen for a Guinness-like silky cascade head, paired with organic Madagascar vanilla caviar."
+                        data-origin="Yirgacheffe, Ethiopia" data-cal="95" data-allergens="Dairy (optional)"
+                        data-img="img/menu/cold_brew.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Cascading velvet foam</span>
+              <button data-id="menu-18" data-name="Madagascar Vanilla Nitro Cold Brew" data-price="6.50" data-img="img/menu/cold_brew.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 19: Drink (Belgian Cocoa Thick Shake) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="coffee" data-diet="veg gf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/shake.jpg" alt="Belgian Cocoa Thick Shake" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$7.50</span>
+                <span class="absolute top-2.5 start-2.5 bg-cocoa text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Hand-Spun</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Artisanal Shake</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Belgian Melted Cocoa Shake</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Hand-spun vanilla bean gelato blended with warm 54% Callebaut dark chocolate ganache and cocoa whipped cream.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Wieze, Belgium / 490 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-19" data-title="Belgian Melted Callebaut Cocoa Shake" data-price="7.50"
+                        data-story="Spun from Guernsey cream gelato blended with melted Callebaut 54% Belgian couverture chocolate and topped with cocoa Chantilly."
+                        data-origin="Wieze, Belgium" data-cal="490" data-allergens="Dairy"
+                        data-img="img/menu/shake.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Topped with waffle crumble</span>
+              <button data-id="menu-19" data-name="Belgian Melted Cocoa Shake" data-price="7.50" data-img="img/menu/shake.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 20: Drink (Iced Spanish Pistachio Oat Latte) -->
+          <div class="menu-card food-card group bg-white dark:bg-dark-card rounded-2xl p-4 sm:p-5 border border-amber/15 dark:border-dark-border shadow-xs hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col justify-between"
+               data-category="coffee" data-diet="veg gf">
+            <div>
+              <div class="relative overflow-hidden rounded-xl aspect-[16/11] mb-3 bg-espresso/5">
+                <img src="img/menu/iced_pistachio_latte.jpg" alt="Iced Spanish Pistachio Oat Latte" class="food-card-img w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <span class="absolute top-2.5 end-2.5 bg-white/95 dark:bg-dark-surface/95 backdrop-blur-xs text-amber dark:text-dark-gold font-bold text-xs sm:text-sm px-2.5 py-1 rounded-full shadow border border-amber/15">$6.75</span>
+                <span class="absolute top-2.5 start-2.5 bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">Barista Special</span>
+              </div>
+              <div class="flex items-center gap-1.5 mb-1.5 flex-wrap">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-amber">Specialty Coffee</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-semibold">🌱 Veg</span>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber/20 text-amber font-semibold">🌾 GF</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-amber transition-colors line-clamp-1">Iced Spanish Pistachio Oat Latte</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-1 leading-relaxed line-clamp-2">
+                Double espresso pulled over handcrafted Sicilian Bronte pistachio paste, chilled organic oat milk, and crushed roasted pistachios.
+              </p>
+              <div class="flex items-center justify-between mt-3 pt-2.5 border-t border-amber/10 dark:border-dark-border text-[11px]">
+                <span class="text-gray-400">Bronte / 180 kcal</span>
+                <button type="button" class="inspect-item-btn text-amber font-bold hover:underline"
+                        data-id="menu-20" data-title="Iced Spanish Pistachio Oat Latte" data-price="6.75"
+                        data-story="Slow-roasted Guji espresso layered over sweet Sicilian Bronte pistachio paste and cold organic oat milk, crowned with roasted pistachios."
+                        data-origin="Bronte, Sicily / Ethiopia" data-cal="180" data-allergens="Tree Nuts (Pistachio), Oat Milk"
+                        data-img="img/menu/iced_pistachio_latte.jpg">
+                  🔍 Recipe & Story
+                </button>
+              </div>
+            </div>
+            <div class="pt-3 mt-3 border-t border-amber/10 dark:border-dark-border flex items-center justify-between">
+              <span class="text-[11px] text-gray-500 font-medium">Sicilian Bronte paste</span>
+              <button data-id="menu-20" data-name="Iced Spanish Pistachio Oat Latte" data-price="6.75" data-img="img/menu/iced_pistachio_latte.jpg" class="add-to-cart-btn px-3.5 py-1.5 bg-honey hover:bg-amber active:scale-95 text-white text-xs font-bold rounded-xl shadow-xs transition">
+                + Add to Box
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Empty Filter State Fallback -->
+        <div id="menu-empty-state" class="hidden py-16 text-center max-w-md mx-auto">
+          <div class="w-16 h-16 mx-auto mb-3 rounded-2xl bg-honey/15 dark:bg-dark-border flex items-center justify-center text-3xl">
+            🍽️
+          </div>
+          <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">No creations match your search</h3>
+          <p class="text-xs text-gray-500 dark:text-dark-muted mt-1.5 leading-relaxed">
+            We couldn't find any dishes matching those filters. Try searching for "matcha", "berries", "chocolate", or "gluten-free".
+          </p>
+          <button id="reset-filters-btn" class="mt-4 px-5 py-2.5 bg-amber hover:bg-honey text-white text-xs font-bold rounded-full shadow transition">
+            Reset All Filters
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FLOATING QUICK ORDER PILL BAR (BOOSTS ORDERING & ELIMINATES WHITESPACE FRUSTRATION) -->
+    <div id="floating-cart-bar" class="fixed bottom-6 inset-x-0 mx-auto w-fit max-w-[92vw] z-40 px-5 py-3 rounded-full bg-espresso/95 dark:bg-dark-surface/95 backdrop-blur-md text-cream shadow-2xl border border-honey/40 flex items-center gap-3 sm:gap-5 transition-all duration-300 transform translate-y-10 opacity-0 pointer-events-none cursor-pointer open-cart-btn hover:scale-102">
+      <div class="flex items-center gap-2">
+        <span class="text-lg">🧇</span>
+        <span class="font-bold text-xs sm:text-sm">Your Dessert Box:</span>
+        <span class="cart-count-badge bg-berry text-white text-[11px] font-bold px-2 py-0.5 rounded-full">0</span>
+      </div>
+      <div class="h-4 w-px bg-white/20"></div>
+      <div class="text-xs text-honey font-bold" id="floating-cart-total">$0.00</div>
+      <span class="text-xs bg-gradient-to-r from-amber to-honey text-white font-bold px-3 py-1.5 rounded-full shadow">
+        Review Box & Checkout →
+      </span>
+    </div>
+
+    <!-- CALL TO ACTION BANNER (MATCHING HOME PAGE) -->
+    <section class="py-14 bg-gradient-to-r from-espresso via-cocoa to-espresso text-cream dark:from-dark-surface dark:to-dark-card border-t border-honey/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal-scale">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold">Craving Hot, Caramelized Waffles Right Now?</h2>
+        <p class="text-sm sm:text-base text-cream/80 max-w-xl mx-auto">
+          Order for speedy in-café pickup or have our warm dessert boxes delivered to your doorstep in eco-friendly insulated packaging.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button onclick="document.getElementById('cart-drawer').classList.add('active'); document.getElementById('cart-backdrop').classList.remove('opacity-0', 'pointer-events-none');" class="px-8 py-3.5 rounded-full bg-honey hover:bg-amber text-white font-bold shadow-lg transition active:scale-95">
+            View Dessert Box & Order
+          </button>
+          <a href="contact.html" class="px-8 py-3.5 rounded-full bg-transparent border-2 border-honey/40 hover:bg-honey/15 text-cream font-semibold transition active:scale-95">
+            Visit Café & Directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU & CART DRAWERS -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">Artisanal Menu</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">✕</button>
+      </div>
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✨</span>
+          <span>Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">Theme 🌓</button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">⇄ <span class="rtl-text">RTL</span></button>
+        </div>
+      </div>
+      <a href="menu.html" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Browse & Order Now →
+      </a>
+    </div>
+  </div>
+
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">🛍️</span>
+          <div>
+            <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3>
+            <p class="text-[11px] text-gray-500">Fresh bakes ready to cook</p>
+          </div>
+        </div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso">✕</button>
+      </div>
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar"></div>
+    </div>
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Subtotal</span><span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span></div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Local Tax (8%)</span><span id="cart-tax">$0.00</span></div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border"><span>Estimated Total</span><span id="cart-total">$0.00</span></div>
+      </div>
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg transition active:scale-95">Order Dessert Box Now 🧇</button>
+    </div>
+  </div>
+
+
+
+  <div id="toast-container"></div>
+
+  <!-- INGREDIENT & NUTRITION INSPECTOR MODAL -->
+  <div id="ingredient-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div id="ingredient-modal-backdrop" class="fixed inset-0 bg-espresso/70 backdrop-blur-sm transition-opacity"></div>
+    <div class="relative w-full max-w-lg modal-dialog bg-cream dark:bg-dark-surface rounded-3xl p-6 md:p-8 shadow-2xl border border-amber/20 dark:border-dark-border z-10 modal-enter max-h-[90vh] overflow-y-auto no-scrollbar">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-amber">Artisanal Flavor Profile</span>
+          <h3 id="modal-item-title" class="font-serif text-2xl font-bold text-espresso dark:text-dark-gold mt-0.5">Item Name</h3>
+        </div>
+        <button id="close-ingredient-modal" class="p-2 text-gray-400 hover:text-espresso dark:hover:text-dark-text rounded-full hover:bg-honey/10 transition text-lg">✕</button>
+      </div>
+
+      <div class="mt-4 space-y-5">
+        <div class="relative overflow-hidden rounded-2xl aspect-[16/9] shadow-md border border-amber/10 dark:border-dark-border">
+          <img id="modal-item-img" src="" alt="Item photo" class="w-full h-full object-cover">
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-gray-500 dark:text-dark-muted uppercase tracking-wider mb-1">Culinary Heritage & Technique</h4>
+          <p id="modal-item-story" class="text-sm text-gray-700 dark:text-dark-text leading-relaxed">
+            Description
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border">
+            <span class="text-[11px] text-gray-500 dark:text-dark-muted block">Direct Farm / Origin</span>
+            <span id="modal-item-origin" class="text-xs font-bold text-espresso dark:text-dark-gold mt-0.5 block">—</span>
+          </div>
+          <div class="p-3 bg-white dark:bg-dark-card rounded-2xl border border-amber/15 dark:border-dark-border">
+            <span class="text-[11px] text-gray-500 dark:text-dark-muted block">Estimated Nutrition</span>
+            <span id="modal-item-cal" class="text-xs font-bold text-espresso dark:text-dark-gold mt-0.5 block">—</span>
+          </div>
+        </div>
+
+        <div class="p-4 bg-amber/10 dark:bg-amber-950/30 rounded-2xl border border-amber/20 dark:border-dark-border">
+          <span class="text-xs font-bold text-amber dark:text-dark-gold block">Allergen & Dietary Transparency</span>
+          <p id="modal-item-allergens" class="text-xs text-gray-700 dark:text-dark-muted mt-1 leading-relaxed">
+            Allergen information
+          </p>
+        </div>
+
+        <button id="modal-item-add-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg hover:shadow-xl transition transform active:scale-98 flex items-center justify-center gap-2">
+          <span>Add to Dessert Box</span>
+          <span>🧇</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=2.6"></script>
+</body>
+</html>

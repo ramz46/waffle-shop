@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering & Private Events | Golden Crust Crepe & Waffle Café</title>
+  <meta name="description" content="Bring live cast-iron crepe billigs, caramelized Liege waffle bars, and specialty espresso to your weddings, corporate brunches, and private celebrations.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+            <span class="text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 block">Events & Private Catering</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Home Experience Switcher Dropdown (Home 1 & Home 2) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                    <span class="px-1.5 py-0.2 rounded bg-white/10 text-[9px] uppercase font-bold text-cream/80 dark:text-dark-muted">Home 1</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                    <span class="px-1.5 py-0.2 rounded bg-honey/25 text-[9px] uppercase font-bold text-amber dark:text-dark-gold">Home 2</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="catering.html" class="nav-link active text-honey dark:text-dark-gold">Catering & Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="blog.html" class="nav-link">Café Stories</a>
+          <a href="contact.html" class="nav-link">Contact & Hours</a>
+        </nav>
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow">
+
+    <!-- MAJESTIC CATERING HERO SECTION -->
+    <section class="relative py-16 md:py-24 bg-gradient-to-b from-cream via-amber/10 to-cream dark:from-dark-bg dark:via-dark-surface dark:to-dark-bg overflow-hidden border-b border-amber/15 dark:border-dark-border">
+      
+      <!-- Subtle Decorative Blur Elements -->
+      <div class="absolute -top-24 -start-24 w-96 h-96 bg-honey/15 dark:bg-honey/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -end-24 w-96 h-96 bg-amber/15 dark:bg-amber/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text (7 cols) -->
+          <div class="lg:col-span-7 space-y-6 text-start reveal-left">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 dark:bg-dark-card/80 border border-amber/30 dark:border-dark-border shadow-sm backdrop-blur-sm">
+              <span class="text-amber text-xs">👑</span>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-amber dark:text-dark-gold">
+                Bespoke Wedding & Private Event Catering
+              </span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-espresso dark:text-dark-text leading-[1.15]">
+              The Theatrical <span class="italic text-gradient-primary">French & Belgian</span> Culinary Experience
+            </h1>
+
+            <p class="text-base sm:text-lg text-gray-700 dark:text-dark-muted leading-relaxed max-w-2xl">
+              Turn your celebration into an authentic European culinary theater. We arrive with seasoned cast-iron crepe billigs, 185°C Liege waffle presses, flowing Belgian chocolate taps, and La Marzocco espresso bars—cooked live and made to order for your guests.
+            </p>
+
+            <!-- Luxury Feature Trust Chips -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              <div class="p-3 bg-white/70 dark:bg-dark-card/70 rounded-2xl border border-amber/15 dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">350+</span>
+                <span class="text-[10px] text-gray-500 dark:text-dark-muted font-semibold uppercase">Events Catered</span>
+              </div>
+              <div class="p-3 bg-white/70 dark:bg-dark-card/70 rounded-2xl border border-amber/15 dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">100%</span>
+                <span class="text-[10px] text-gray-500 dark:text-dark-muted font-semibold uppercase">Organic & AOP</span>
+              </div>
+              <div class="p-3 bg-white/70 dark:bg-dark-card/70 rounded-2xl border border-amber/15 dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">20 - 600</span>
+                <span class="text-[10px] text-gray-500 dark:text-dark-muted font-semibold uppercase">Guest Capacity</span>
+              </div>
+              <div class="p-3 bg-white/70 dark:bg-dark-card/70 rounded-2xl border border-amber/15 dark:border-dark-border text-center shadow-xs card-hover-elevate">
+                <span class="font-display text-2xl font-extrabold text-primary-btn dark:text-dark-gold tracking-tight block">4.98 ★</span>
+                <span class="text-[10px] text-gray-500 dark:text-dark-muted font-semibold uppercase">Planner Rating</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-4">
+              <a href="#tiers" class="btn-primary px-8 py-4 rounded-2xl text-white font-bold text-sm shadow-xl hover:shadow-2xl transition transform active:scale-98 flex items-center gap-2">
+                <span>Explore Event Packages ↓</span>
+                <span>✨</span>
+              </a>
+              <a href="#estimator" class="px-7 py-4 rounded-2xl bg-white dark:bg-dark-card hover:bg-honey/15 border-2 border-amber/30 text-amber dark:text-dark-gold font-bold text-sm shadow-sm transition flex items-center gap-2">
+                <span>Calculate Event Investment 🧮</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Showcase (5 cols) - Clean Unobstructed Photo & Separated Feature Card Below -->
+          <div class="lg:col-span-5 relative reveal-right">
+            <div class="relative mx-auto max-w-md lg:max-w-none flex flex-col gap-4">
+              
+              <!-- Ambient Aura Glow Behind Hero Image -->
+              <div class="absolute -inset-4 bg-gradient-to-tr from-primary-btn/25 via-honey/20 to-amber/20 rounded-3xl blur-2xl -z-10 aura-glow"></div>
+
+              <!-- Main Feature Photo - 100% Unobstructed High-Resolution Showcase -->
+              <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-dark-card aspect-[4/3] max-h-[400px] relative group">
+                <img src="img/catering/tier2_live_station.jpg" 
+                     alt="Live Crepe & Waffle Catering Station with Uniformed Pastry Chefs" 
+                     class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                
+                <!-- Subtle Gradient Vignette at Bottom for Text Readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/15 to-transparent pointer-events-none"></div>
+
+                <!-- Live Station Tag at Bottom (Clean & Non-obstructed) -->
+                <div class="absolute bottom-4 start-4 end-4 text-white">
+                  <span class="text-[10px] uppercase font-bold tracking-wider text-honey px-2.5 py-0.5 rounded-full bg-espresso/85 backdrop-blur-md mb-1 inline-block border border-white/10">Theatrical Crepe Station</span>
+                  <h3 class="font-serif text-base sm:text-lg font-bold leading-snug">Spun live on 210°C Krampouz cast-iron billigs</h3>
+                </div>
+
+                <!-- Non-obstructing Wedding Feature Badge at Top End -->
+                <div class="absolute top-3.5 end-3.5 bg-espresso/85 dark:bg-dark-surface/90 text-white backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-white/10 flex items-center gap-1.5 text-[11px] font-bold">
+                  <span>💍</span>
+                  <span class="text-honey uppercase tracking-wider text-[10px]">Top Rated</span>
+                  <span class="hidden sm:inline opacity-40">•</span>
+                  <span class="hidden sm:inline">2026 Wedding Bar</span>
+                </div>
+
+                <!-- Fresh Batch Badge at Top Start -->
+                <div class="absolute top-3.5 start-3.5 px-3 py-1.5 rounded-full bg-white/90 dark:bg-dark-card/90 text-espresso dark:text-dark-text backdrop-blur-md text-[11px] font-bold shadow-md border border-border/60 dark:border-dark-border flex items-center gap-1.5">
+                  <span class="status-dot-ping w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span>Live Catering Station</span>
+                </div>
+              </div>
+
+              <!-- Dedicated Separated Showcase Card Below Image -->
+              <div class="hero-feature-card bg-white dark:bg-dark-card rounded-3xl p-5 border border-amber/20 dark:border-dark-border shadow-xl hover:shadow-2xl transition duration-300">
+                <div class="flex items-center justify-between gap-2 pb-3 border-b border-amber/10 dark:border-dark-border">
+                  <div class="flex items-center gap-2">
+                    <span class="px-2.5 py-0.5 rounded-full bg-amber/15 text-amber text-[11px] font-bold uppercase tracking-wider">Companion Station</span>
+                    <span class="text-[11px] text-gray-500 dark:text-dark-muted font-medium">On-Site Culinary Theater</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-display font-extrabold text-sm text-primary-btn dark:text-dark-gold">
+                    <span>⚡ Made To Order</span>
+                  </div>
+                </div>
+
+                <!-- Separated Liege Waffle Station Feature -->
+                <div class="flex items-center gap-3.5 mt-3.5">
+                  <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-amber/25 dark:border-dark-border flex-shrink-0 shadow-md">
+                    <img src="img/menu/belgian_berry_waffle.jpg" 
+                         alt="Liege Waffle Station" 
+                         class="w-full h-full object-cover">
+                  </div>
+                  <div class="min-w-0">
+                    <div class="flex items-center gap-2">
+                      <span class="text-[10px] font-bold text-amber uppercase tracking-wider">Live Waffle Iron Station</span>
+                      <span class="text-[9px] px-2 py-0.5 rounded-full bg-honey/15 text-espresso dark:text-dark-text font-semibold">185°C Press</span>
+                    </div>
+                    <p class="font-serif text-sm font-bold text-espresso dark:text-dark-text mt-0.5 leading-snug">
+                      Pearl Sugar Caramelization Aroma
+                    </p>
+                    <p class="text-[11px] text-gray-500 dark:text-dark-muted mt-0.5 leading-relaxed">
+                      Crunchy caramelized pearl sugar exterior with warm, proofed brioche crumb and flowing chocolate taps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE EVENT OCCASIONS & SETTINGS EXPLORER -->
+    <section class="py-16 md:py-24 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 reveal-up">
+          <span class="text-xs font-bold uppercase tracking-widest text-amber dark:text-dark-gold">Tailored Celebrations</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">
+            Curated Formats for Every Occasion
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Click an event format below to discover customized menus, live station configurations, and capacity planning.
+          </p>
+        </div>
+
+        <!-- Occasion Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10 reveal-fade">
+          <button type="button" data-occasion="weddings" class="occasion-tab-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition bg-amber text-white shadow">
+            💍 Weddings & Afterparties
+          </button>
+          <button type="button" data-occasion="corporate" class="occasion-tab-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">
+            🏢 Corporate Summits & Galas
+          </button>
+          <button type="button" data-occasion="milestone" class="occasion-tab-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">
+            🎂 Birthdays & Private Soirées
+          </button>
+          <button type="button" data-occasion="winery" class="occasion-tab-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition bg-white dark:bg-dark-card border border-amber/20 dark:border-dark-border text-espresso dark:text-dark-text hover:bg-honey/15">
+            🍇 Vineyard Brunches & Showers
+          </button>
+        </div>
+
+        <!-- Panel 1: Weddings -->
+        <div data-occasion="weddings" class="occasion-panel bg-cream dark:bg-dark-card rounded-3xl p-6 sm:p-10 border border-amber/20 dark:border-dark-border shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[16/10] shadow-md border border-amber/10">
+            <img src="img/catering/occasion_weddings_latenight.jpg" alt="Wedding Late-Night Waffle and Flambéed Crepe Dessert Station with Espresso Martinis" class="w-full h-full object-cover">
+          </div>
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-[11px] font-bold text-amber uppercase tracking-wider bg-honey/15 px-3 py-1 rounded-full">Late-Night Dessert Revelry</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso dark:text-dark-gold">Unforgettable Wedding Receptions & Late-Night Drops</h3>
+            <p class="text-sm text-gray-700 dark:text-dark-muted leading-relaxed">
+              When the dance floor is rocking at 10:30 PM, nothing electrifies guests like the buttery aroma of freshly pressed Belgian Liege waffles and flambéed Crêpes Suzette. We offer custom stamped monogram waffle parchment, gold leaf garnishes, and espresso martinis.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Recommended Tier:</strong>
+                <span class="text-amber font-semibold">Tier 3: Grand Gala ($36/guest)</span>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Popular Add-On:</strong>
+                <span class="text-amber font-semibold">Callebaut Fondue Fountain</span>
+              </div>
+            </div>
+            <a href="#estimator" class="inline-block mt-2 text-xs font-bold text-amber hover:underline">Calculate wedding package quote →</a>
+          </div>
+        </div>
+
+        <!-- Panel 2: Corporate -->
+        <div data-occasion="corporate" class="occasion-panel hidden bg-cream dark:bg-dark-card rounded-3xl p-6 sm:p-10 border border-amber/20 dark:border-dark-border shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[16/10] shadow-md border border-amber/10">
+            <img src="img/catering/occasion_corporate.jpg" alt="Corporate High-Capacity Crepe and Savory Galette Live Station" class="w-full h-full object-cover">
+          </div>
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-[11px] font-bold text-amber uppercase tracking-wider bg-honey/15 px-3 py-1 rounded-full">High-Capacity Executive Breakfast</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso dark:text-dark-gold">Corporate Summits, Keynotes & Team Celebrations</h3>
+            <p class="text-sm text-gray-700 dark:text-dark-muted leading-relaxed">
+              Ditch boring conference bagels. We deploy dual-billig live stations capable of serving 200+ warm crepes per hour, alongside travelers of single-origin Guji roasts and savory buckwheat galettes for all dietary preferences (gluten-free, vegetarian, nut-free).
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Recommended Tier:</strong>
+                <span class="text-amber font-semibold">Tier 1 or Tier 2 ($18 - $26/guest)</span>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Popular Add-On:</strong>
+                <span class="text-amber font-semibold">Full Mobile Espresso Bar</span>
+              </div>
+            </div>
+            <a href="#estimator" class="inline-block mt-2 text-xs font-bold text-amber hover:underline">Calculate corporate package quote →</a>
+          </div>
+        </div>
+
+        <!-- Panel 3: Milestones & Birthdays -->
+        <div data-occasion="milestone" class="occasion-panel hidden bg-cream dark:bg-dark-card rounded-3xl p-6 sm:p-10 border border-amber/20 dark:border-dark-border shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[16/10] shadow-md border border-amber/10">
+            <img src="img/catering/occasion_birthday_waffles.jpg" alt="Interactive DIY Liege Waffle Celebration Dessert Bar" class="w-full h-full object-cover">
+          </div>
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-[11px] font-bold text-amber uppercase tracking-wider bg-honey/15 px-3 py-1 rounded-full">Interactive DIY Dessert Bars</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso dark:text-dark-gold">Milestone Birthdays, Anniversaries & Private Soirées</h3>
+            <p class="text-sm text-gray-700 dark:text-dark-muted leading-relaxed">
+              Delight guests of all ages with interactive chef stations. Guests watch sweet brioche waffles sizzle with caramelizing pearl sugar, then customize with roasted pistachios, candied chestnuts, torched marshmallows, and warm melted hazelnut drizzle.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Recommended Tier:</strong>
+                <span class="text-amber font-semibold">Tier 2: Live Chef Bar ($26/guest)</span>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Popular Add-On:</strong>
+                <span class="text-amber font-semibold">Italian Gelato Cart</span>
+              </div>
+            </div>
+            <a href="#estimator" class="inline-block mt-2 text-xs font-bold text-amber hover:underline">Calculate birthday package quote →</a>
+          </div>
+        </div>
+
+        <!-- Panel 4: Winery & Vineyard -->
+        <div data-occasion="winery" class="occasion-panel hidden bg-cream dark:bg-dark-card rounded-3xl p-6 sm:p-10 border border-amber/20 dark:border-dark-border shadow-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[16/10] shadow-md border border-amber/10">
+            <img src="img/catering/occasion_vineyard_galette.jpg" alt="Vineyard Al Fresco Savory Smoked Salmon Buckwheat Galette Station" class="w-full h-full object-cover">
+          </div>
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-[11px] font-bold text-amber uppercase tracking-wider bg-honey/15 px-3 py-1 rounded-full">Al Fresco Wine Country Brunches</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso dark:text-dark-gold">Napa & Sonoma Vineyard Brunches & Bridal Showers</h3>
+            <p class="text-sm text-gray-700 dark:text-dark-muted leading-relaxed">
+              Set against sunlit grapevines, our savory buckwheat galette station serves smoked Norwegian salmon, truffled ricotta, and Paris ham paired seamlessly with local Sauvignon Blanc and sparkling rosés. Complete with botanical iced cold brew teas.
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs pt-2">
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Recommended Tier:</strong>
+                <span class="text-amber font-semibold">Tier 2 or Tier 3 ($26 - $36/guest)</span>
+              </div>
+              <div class="p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/15">
+                <strong class="text-espresso dark:text-dark-text block">Popular Add-On:</strong>
+                <span class="text-amber font-semibold">Lavender Nitro Tea Station</span>
+              </div>
+            </div>
+            <a href="#estimator" class="inline-block mt-2 text-xs font-bold text-amber hover:underline">Calculate vineyard package quote →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE 3 CURATED CATERING TIERS (ELEVATED CARDS) -->
+    <section id="tiers" class="py-16 md:py-24 bg-cream dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+          <span class="text-xs font-bold tracking-widest text-amber dark:text-dark-gold uppercase">Transparent Culinary Pricing</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">
+            Choose Your Catering Experience
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Every tier features 100% organic Brittany buckwheat, AOP Normandy cultured butter, and Belgian pearl sugar. Select a tier to configure in our real-time estimator.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- TIER 1 -->
+          <div class="bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/20 dark:border-dark-border flex flex-col justify-between shadow-md hover:shadow-xl transition transform hover:-translate-y-1 reveal-up delay-100">
+            <div>
+              <div class="relative overflow-hidden aspect-[16/10]">
+                <img src="img/catering/tier1_brunch_buffet.jpg" alt="The Morning Brunch Buffet with Caramelized Liege Waffles and Parisian Crepes" class="w-full h-full object-cover">
+                <span class="absolute top-3 start-3 bg-white/95 dark:bg-dark-surface text-amber dark:text-dark-gold text-[10px] font-bold px-3 py-1 rounded-full uppercase shadow">Tier 1 • Drop-Off Buffet</span>
+              </div>
+              
+              <div class="p-6 sm:p-8 space-y-4">
+                <h3 class="font-serif text-2xl font-bold text-espresso dark:text-dark-text">The Morning Brunch Buffet</h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+                  Delivered hot in insulated thermal chafers. Perfect for corporate breakfasts, early morning wedding prep, and team retreats.
+                </p>
+
+                <div class="py-4 border-y border-amber/15 dark:border-dark-border flex items-baseline gap-2">
+                  <span class="font-serif text-4xl font-bold text-amber dark:text-dark-gold">$18</span>
+                  <span class="text-xs text-gray-500 dark:text-dark-muted">/ per guest (min 15 guests)</span>
+                </div>
+
+                <div class="space-y-2.5 text-xs text-gray-700 dark:text-dark-text">
+                  <div class="font-bold text-amber text-[11px] uppercase tracking-wider">What’s Included:</div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Warm caramelized Liege waffles (2 per guest)</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Sweet Parisian rolled crepes with hazelnut ganache</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Bowls of organic California strawberries & blackberries</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>House Madagascar vanilla Chantilly cream pots</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Single-origin Guji roast coffee in insulated travelers</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Compostable bamboo platters, tongs & napkins</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <button type="button" data-tier="18" class="tier-select-btn w-full py-3.5 rounded-2xl bg-white dark:bg-dark-surface border-2 border-amber/40 hover:bg-honey/15 text-amber dark:text-dark-gold font-bold text-xs shadow-sm transition flex items-center justify-center gap-2">
+                <span>Select in Estimator</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TIER 2: FEATURED / MOST POPULAR -->
+          <div class="bg-gradient-to-b from-espresso via-cocoa to-espresso text-cream dark:from-dark-card dark:to-dark-bg rounded-3xl overflow-hidden border-2 border-honey shadow-2xl flex flex-col justify-between relative transform md:-translate-y-3 hover:-translate-y-4 transition duration-300 reveal-up delay-200">
+            <span class="absolute top-4 end-4 z-10 bg-honey text-white text-[11px] font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">
+              ★ Most Popular
+            </span>
+
+            <div>
+              <div class="relative overflow-hidden aspect-[16/10]">
+                <img src="img/catering/tier2_live_station.jpg" alt="Live Crepe & Waffle Bar with Dedicated Pastry Chefs" class="w-full h-full object-cover">
+                <span class="absolute top-3 start-3 bg-espresso/90 text-honey text-[10px] font-bold px-3 py-1 rounded-full uppercase shadow">Tier 2 • Live Chef Station</span>
+              </div>
+
+              <div class="p-6 sm:p-8 space-y-4">
+                <h3 class="font-serif text-2xl font-bold text-white">Live Crepe & Waffle Bar</h3>
+                <p class="text-xs text-cream/70 leading-relaxed">
+                  Interactive culinary theater. Two uniformed pastry chefs cooking custom sweet crepes, savory galettes, and hot waffles right before your guests.
+                </p>
+
+                <div class="py-4 border-y border-honey/20 flex items-baseline gap-2">
+                  <span class="font-serif text-4xl font-bold text-honey">$26</span>
+                  <span class="text-xs text-cream/70">/ per guest (min 25 guests)</span>
+                </div>
+
+                <div class="space-y-2.5 text-xs text-cream/90">
+                  <div class="font-bold text-honey text-[11px] uppercase tracking-wider">What’s Included:</div>
+                  <div class="flex items-start gap-2"><span>★</span><span><strong>2 Dedicated Pastry Chefs</strong> in French aprons</span></div>
+                  <div class="flex items-start gap-2"><span>★</span><span>Dual Krampouz cast-iron billigs & Liege waffle presses</span></div>
+                  <div class="flex items-start gap-2"><span>★</span><span>Made-to-order sweet crepes & caramelized waffles</span></div>
+                  <div class="flex items-start gap-2"><span>★</span><span>Savory galette option: Paris Ham & Gruyère Sarrasin</span></div>
+                  <div class="flex items-start gap-2"><span>★</span><span>10 Gourmet toppings including torched marshmallow</span></div>
+                  <div class="flex items-start gap-2"><span>★</span><span>Warm Callebaut dark chocolate & salted caramel taps</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <button type="button" data-tier="26" class="tier-select-btn w-full py-4 rounded-2xl bg-gradient-to-r from-honey to-amber hover:from-amber hover:to-toasted text-white font-bold text-xs shadow-xl transition flex items-center justify-center gap-2">
+                <span>Select in Estimator</span>
+                <span>✨</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TIER 3: ULTRA LUXURY GALA -->
+          <div class="bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-amber/20 dark:border-dark-border flex flex-col justify-between shadow-md hover:shadow-xl transition transform hover:-translate-y-1 reveal-up delay-300">
+            <div>
+              <div class="relative overflow-hidden aspect-[16/10]">
+                <img src="img/catering/tier3_wedding_gala.jpg" alt="The Grand Gala & Wedding Bar with 24k Gold Leaf Waffles and Mobile Barista Station" class="w-full h-full object-cover">
+                <span class="absolute top-3 start-3 bg-white/95 dark:bg-dark-surface text-berry text-[10px] font-bold px-3 py-1 rounded-full uppercase shadow">Tier 3 • Ultra-Luxury VIP</span>
+              </div>
+
+              <div class="p-6 sm:p-8 space-y-4">
+                <h3 class="font-serif text-2xl font-bold text-espresso dark:text-dark-text">The Grand Gala & Wedding Bar</h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted leading-relaxed">
+                  The ultimate white-glove showpiece for lavish weddings and VIP banquets. Unlimited gourmet items, barista cart, and edible gold leaf accents.
+                </p>
+
+                <div class="py-4 border-y border-amber/15 dark:border-dark-border flex items-baseline gap-2">
+                  <span class="font-serif text-4xl font-bold text-amber dark:text-dark-gold">$36</span>
+                  <span class="text-xs text-gray-500 dark:text-dark-muted">/ per guest (min 40 guests)</span>
+                </div>
+
+                <div class="space-y-2.5 text-xs text-gray-700 dark:text-dark-text">
+                  <div class="font-bold text-berry text-[11px] uppercase tracking-wider">What’s Included:</div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Unlimited bespoke crepe & waffle creations (3 hours)</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Full savory buckwheat bar (Smoked salmon, Truffle ricotta)</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Edible 24k gold leaf waffle accents</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span><strong>Full Mobile Espresso & Matcha Barista station</strong></span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Belle Époque porcelain platters & bamboo cutlery</span></div>
+                  <div class="flex items-start gap-2"><span>✓</span><span>Full white-glove setup, service, and cleanup staff</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 pt-0">
+              <button type="button" data-tier="36" class="tier-select-btn w-full py-3.5 rounded-2xl bg-white dark:bg-dark-surface border-2 border-amber/40 hover:bg-honey/15 text-amber dark:text-dark-gold font-bold text-xs shadow-sm transition flex items-center justify-center gap-2">
+                <span>Select in Estimator</span>
+                <span>→</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE GUEST COUNT & BUDGET ESTIMATOR (REDESIGNED) -->
+    <section id="estimator" class="py-16 md:py-24 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-scale">
+        
+        <div class="bg-gradient-to-br from-cream via-white to-amber/10 dark:from-dark-card dark:via-dark-surface dark:to-dark-card p-6 sm:p-12 rounded-3xl border-2 border-amber/25 dark:border-dark-border shadow-2xl relative overflow-hidden">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-honey/20 text-amber dark:text-dark-gold text-[11px] font-bold uppercase tracking-wider mb-2">
+              Instant Event Investment Calculator
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text">
+              Interactive Catering Budget Estimator
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+              Slide your expected guest count and toggle packages to see real-time transparent costs including staffing.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Controls Column (7 cols) -->
+            <div class="lg:col-span-7 space-y-8">
+              
+              <!-- Guest Count Slider -->
+              <div class="p-6 bg-white dark:bg-dark-surface rounded-2xl border border-amber/20 dark:border-dark-border shadow-sm space-y-3">
+                <div class="flex justify-between items-center">
+                  <div>
+                    <label class="text-xs font-bold uppercase tracking-wider text-espresso dark:text-dark-text block">Guest Headcount</label>
+                    <span class="text-[11px] text-gray-400">Drag to adjust your party size</span>
+                  </div>
+                  <span id="slider-val" class="font-display text-3xl font-extrabold text-primary-btn dark:text-dark-gold px-4 py-1.5 rounded-2xl bg-honey/15 border border-amber/20 tracking-tight">
+                    50 Guests
+                  </span>
+                </div>
+                <input type="range" id="guest-slider" min="15" max="300" value="50" step="5" class="w-full accent-amber h-3 bg-gray-200 dark:bg-dark-border rounded-lg cursor-pointer">
+                <div class="flex justify-between text-[11px] font-semibold text-gray-400">
+                  <span>15 (Intimate)</span>
+                  <span>75 (Mid-Size)</span>
+                  <span>150 (Large)</span>
+                  <span>300+ (Grand Banquet)</span>
+                </div>
+              </div>
+
+              <!-- Package Select Radios -->
+              <div class="space-y-3">
+                <label class="text-xs font-bold uppercase tracking-wider text-espresso dark:text-dark-text block">Choose Event Tier</label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  
+                  <label class="p-4 rounded-2xl border-2 border-amber/25 dark:border-dark-border flex flex-col cursor-pointer hover:bg-honey/10 transition has-[:checked]:bg-honey/20 has-[:checked]:border-amber dark:has-[:checked]:bg-dark-border">
+                    <input type="radio" name="catering-tier" value="18" class="hidden">
+                    <span class="text-xs font-bold text-espresso dark:text-dark-text tier-label">Brunch Buffet</span>
+                    <span class="text-xs text-amber dark:text-dark-gold font-bold mt-1">$18 / guest</span>
+                    <span class="text-[10px] text-gray-400 mt-1">Drop-off & Chafers</span>
+                  </label>
+
+                  <label class="p-4 rounded-2xl border-2 border-amber/25 dark:border-dark-border flex flex-col cursor-pointer hover:bg-honey/10 transition has-[:checked]:bg-honey/20 has-[:checked]:border-amber dark:has-[:checked]:bg-dark-border">
+                    <input type="radio" name="catering-tier" value="26" class="hidden" checked>
+                    <span class="text-xs font-bold text-espresso dark:text-dark-text tier-label">Live Chef Bar</span>
+                    <span class="text-xs text-amber dark:text-dark-gold font-bold mt-1">$26 / guest</span>
+                    <span class="text-[10px] text-gray-400 mt-1">2 Chefs & Stations</span>
+                  </label>
+
+                  <label class="p-4 rounded-2xl border-2 border-amber/25 dark:border-dark-border flex flex-col cursor-pointer hover:bg-honey/10 transition has-[:checked]:bg-honey/20 has-[:checked]:border-amber dark:has-[:checked]:bg-dark-border">
+                    <input type="radio" name="catering-tier" value="36" class="hidden">
+                    <span class="text-xs font-bold text-espresso dark:text-dark-text tier-label">Grand Gala</span>
+                    <span class="text-xs text-amber dark:text-dark-gold font-bold mt-1">$36 / guest</span>
+                    <span class="text-[10px] text-gray-400 mt-1">Barista & Gold Leaf</span>
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- Add-ons Checkboxes -->
+              <div class="space-y-3">
+                <label class="text-xs font-bold uppercase tracking-wider text-espresso dark:text-dark-text block">Interactive Add-On Experiences</label>
+                <div class="space-y-2.5">
+                  
+                  <label class="flex items-center justify-between p-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border cursor-pointer hover:bg-honey/5 transition">
+                    <div class="flex items-center gap-3">
+                      <input type="checkbox" id="addon-espresso" value="5" class="w-4 h-4 rounded accent-amber cursor-pointer">
+                      <div>
+                        <span class="text-xs font-bold text-espresso dark:text-dark-text block">☕ Mobile Espresso & Latte Bar</span>
+                        <span class="text-[11px] text-gray-500">Dual-boiler espresso cart, certified barista, oat & dairy micro-foam</span>
+                      </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber whitespace-nowrap">+$5 / guest</span>
+                  </label>
+
+                  <label class="flex items-center justify-between p-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border cursor-pointer hover:bg-honey/5 transition">
+                    <div class="flex items-center gap-3">
+                      <input type="checkbox" id="addon-fountain" value="3" class="w-4 h-4 rounded accent-amber cursor-pointer">
+                      <div>
+                        <span class="text-xs font-bold text-espresso dark:text-dark-text block">🍫 Belgian Callebaut Fondue Fountain</span>
+                        <span class="text-[11px] text-gray-500">Molten 70% dark chocolate fountain with strawberry & marshmallow skewers</span>
+                      </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber whitespace-nowrap">+$3 / guest</span>
+                  </label>
+
+                  <label class="flex items-center justify-between p-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border cursor-pointer hover:bg-honey/5 transition">
+                    <div class="flex items-center gap-3">
+                      <input type="checkbox" id="addon-gelato" value="4" class="w-4 h-4 rounded accent-amber cursor-pointer">
+                      <div>
+                        <span class="text-xs font-bold text-espresso dark:text-dark-text block">🍨 Artisanal Italian Gelato Cart</span>
+                        <span class="text-[11px] text-gray-500">Sicilian pistachio, Madagascar vanilla, and roasted hazelnut gelato</span>
+                      </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber whitespace-nowrap">+$4 / guest</span>
+                  </label>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Price Breakdown Summary (5 cols) -->
+            <div class="lg:col-span-5 bg-gradient-to-b from-espresso via-cocoa to-espresso text-cream dark:from-dark-surface dark:to-dark-card p-8 rounded-3xl border-2 border-honey/40 shadow-2xl space-y-6">
+              
+              <div class="border-b border-honey/20 pb-4">
+                <span class="text-[10px] font-bold text-honey uppercase tracking-widest block">Instant Transparent Quote</span>
+                <h4 class="font-serif text-2xl font-bold text-white mt-0.5">Estimated Investment</h4>
+              </div>
+              
+              <div class="space-y-3 text-xs">
+                <div class="flex justify-between text-cream/70">
+                  <span>Guest Base Catering</span>
+                  <span id="est-base" class="font-bold text-white">$1,300.00</span>
+                </div>
+                <div class="flex justify-between text-cream/70">
+                  <span>Interactive Add-Ons</span>
+                  <span id="est-addons" class="font-bold text-white">$0.00</span>
+                </div>
+                <div class="flex justify-between text-cream/70">
+                  <span>Onsite Setup & Culinary Staff</span>
+                  <span id="est-service" class="font-bold text-white">$220.00</span>
+                </div>
+
+                <div class="pt-4 border-t border-honey/20 flex justify-between items-baseline">
+                  <div>
+                    <span class="text-xs font-bold text-cream block uppercase tracking-wider">Estimated Total</span>
+                    <span class="text-[10px] text-honey">All food & staff included</span>
+                  </div>
+                  <span id="est-total" class="font-display text-4xl sm:text-5xl font-extrabold text-honey tracking-tight">$1,520.00</span>
+                </div>
+              </div>
+
+              <div class="pt-2 space-y-3">
+                <a href="#inquiry-form" class="w-full py-4 bg-gradient-to-r from-honey to-amber hover:from-amber hover:to-toasted text-white text-center font-bold text-xs rounded-2xl shadow-xl transition flex items-center justify-center gap-2">
+                  <span>Lock in This Quote & Reserve Date →</span>
+                </a>
+                <p class="text-[11px] text-center text-cream/60">
+                  ✓ Complimentary menu tasting provided for all events over 50 guests.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE STATION EQUIPMENT TOUR -->
+    <section class="py-16 md:py-24 bg-cream dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-amber uppercase tracking-wider">The Mobile Kitchen Theater</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">
+            Authentic French & Belgian Event Hardware
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            No chafing warmers or pre-cooked rubbery crepes. We bring authentic commercial culinary equipment straight to your venue.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-6 border border-amber/15 dark:border-dark-border shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber/15 text-amber flex items-center justify-center text-2xl mb-4 font-bold">🥞</div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">Krampouz Cast-Iron Billigs</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+                Heavy machined cast-iron griddles forged in Brittany, France operating at 210°C. Delivers 60-second paper-thin sweet crepes and lace-edged savory buckwheat galettes.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-amber/10 dark:border-dark-border flex justify-between items-center text-[11px]">
+              <span class="text-gray-400">Heat Level:</span>
+              <span class="font-bold text-amber">210°C / 410°F</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-6 border border-amber/15 dark:border-dark-border shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-honey/20 text-amber flex items-center justify-center text-2xl mb-4 font-bold">🧇</div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">35-Pound Belgian Liege Irons</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+                Deep 4x7 grid presses radiating intense heat that melts pure Belgian pearl sugar without scorching the cold-fermented brioche dough interior.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-amber/10 dark:border-dark-border flex justify-between items-center text-[11px]">
+              <span class="text-gray-400">Iron Mass:</span>
+              <span class="font-bold text-amber">35 lbs Seasoned Iron</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-6 border border-amber/15 dark:border-dark-border shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber/15 text-amber flex items-center justify-center text-2xl mb-4 font-bold">☕</div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">Dual-Boiler Mobile Espresso</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+                Commercial Italian espresso cart featuring dual wands, rotary pumps, and organic dairy & oat milk micro-foaming for café-level cortados and iced shakeratos.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-amber/10 dark:border-dark-border flex justify-between items-center text-[11px]">
+              <span class="text-gray-400">Pressure:</span>
+              <span class="font-bold text-amber">9 Bar Rotary Pressure</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card rounded-3xl p-6 border border-amber/15 dark:border-dark-border shadow-md hover:shadow-xl transition flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-honey/20 text-amber flex items-center justify-center text-2xl mb-4 font-bold">🍫</div>
+              <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-gold">Callebaut Molten Wells</h3>
+              <p class="text-xs text-gray-600 dark:text-dark-muted mt-2.5 leading-relaxed">
+                Thermostatically stabilized fondue wells maintaining pure Belgian 70% dark chocolate and dulce de leche at a silky 32°C for cascading drizzling.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-amber/10 dark:border-dark-border flex justify-between items-center text-[11px]">
+              <span class="text-gray-400">Tempering Point:</span>
+              <span class="font-bold text-amber">32°C Silk Cascade</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIP CONCIERGE BOOKING & INQUIRY FORM -->
+    <section id="inquiry-form" class="py-16 md:py-24 bg-white dark:bg-dark-surface border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal-up">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold text-amber uppercase tracking-wider">Reserve Your Date</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1">
+            VIP Event Inquiry & Date Availability
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Our Catering Director will contact you within 4 business hours with custom menu options and date confirmation.
+          </p>
+        </div>
+
+        <form id="catering-form" onsubmit="event.preventDefault(); showToast('🎉 Inquiry received! Our Catering Director will call you within 4 hours.', 'success'); this.reset();" class="p-8 sm:p-12 rounded-3xl bg-cream dark:bg-dark-card border border-amber/25 dark:border-dark-border shadow-xl space-y-6">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1" for="catering-name">Your Full Name *</label>
+              <input type="text" 
+                     id="catering-name" 
+                     name="name" 
+                     required 
+                     autocomplete="name" 
+                     placeholder="Elena Rostova" 
+                     pattern="^[A-Za-z\s'-\.]{2,60}$" 
+                     title="Please enter letters only (no numbers allowed)" 
+                     onbeforeinput="if(event.data && /[0-9]/.test(event.data)) event.preventDefault();"
+                     onkeypress="if(/[0-9]/.test(event.key)) event.preventDefault();"
+                     oninput="this.value = this.value.replace(/[0-9]/g, '')"
+                     class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-medium">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Email Address *</label>
+              <input type="email" required placeholder="elena@example.com" class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-medium">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1" for="catering-phone">Direct Phone Number *</label>
+              <input type="tel" 
+                     id="catering-phone" 
+                     name="phone" 
+                     required 
+                     inputmode="tel" 
+                     autocomplete="tel" 
+                     placeholder="(555) 465-3362" 
+                     pattern="[0-9+\s\-()]{7,20}" 
+                     title="Please enter numbers only (e.g. (555) 465-3362)" 
+                     onbeforeinput="if(event.data && /[a-zA-Z]/.test(event.data)) event.preventDefault();"
+                     onkeypress="if(/[a-zA-Z]/.test(event.key)) event.preventDefault();"
+                     oninput="this.value = this.value.replace(/[^0-9+\s\-()]/g, '')"
+                     class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-medium">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Event Date *</label>
+              <input type="date" required class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-medium">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Event Type *</label>
+              <select class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-semibold">
+                <option>Wedding Reception / Afterparty</option>
+                <option>Corporate Summit / Executive Brunch</option>
+                <option>Milestone Birthday / Anniversary</option>
+                <option>Private Estate / Vineyard Celebration</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Venue Location or City *</label>
+              <input type="text" required placeholder="San Francisco / Napa Valley / San Jose" class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber font-medium">
+            </div>
+          </div>
+
+          <!-- Synced Fields from Estimator -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 p-4 rounded-2xl bg-white/70 dark:bg-dark-surface border border-amber/15">
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Estimated Guests (Synced from Calculator)</label>
+              <input type="number" id="form-guest-count" value="50" min="15" max="500" class="w-full px-4 py-3 rounded-xl bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-xs font-bold text-amber focus:outline-none focus:border-amber">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Catering Tier Selected</label>
+              <input type="text" id="form-package-select" value="Live Chef Bar" readonly class="w-full px-4 py-3 rounded-xl bg-cream dark:bg-dark-card border border-amber/20 dark:border-dark-border text-xs font-bold text-amber focus:outline-none focus:border-amber">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-2">Dietary Protocols & Accommodations Needed</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+              <label class="flex items-center gap-2 p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/10 cursor-pointer">
+                <input type="checkbox" class="accent-amber rounded"> Vegetarian Menu
+              </label>
+              <label class="flex items-center gap-2 p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/10 cursor-pointer">
+                <input type="checkbox" class="accent-amber rounded"> 100% Buckwheat GF
+              </label>
+              <label class="flex items-center gap-2 p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/10 cursor-pointer">
+                <input type="checkbox" class="accent-amber rounded"> Nut-Free Protocol
+              </label>
+              <label class="flex items-center gap-2 p-3 bg-white dark:bg-dark-surface rounded-xl border border-amber/10 cursor-pointer">
+                <input type="checkbox" class="accent-amber rounded"> Halal / Kosher Friendly
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-espresso dark:text-dark-text mb-1">Event Vision, Timing & Custom Flavor Requests</label>
+            <textarea rows="3" placeholder="Setup time, favorite flavors, custom waffle monogramming, special timing..." class="w-full px-4 py-3.5 rounded-2xl bg-white dark:bg-dark-surface border border-amber/20 dark:border-dark-border text-xs focus:outline-none focus:border-amber"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4.5 bg-gradient-to-r from-amber to-honey hover:from-toasted hover:to-amber text-white font-bold text-sm rounded-2xl shadow-xl transition transform active:scale-98 flex items-center justify-center gap-2">
+            <span>Submit Catering Availability Request</span>
+            <span>✨</span>
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- EVENT PLANNER TESTIMONIALS -->
+    <section class="py-16 bg-cream dark:bg-dark-bg border-b border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber">Client Celebrations</span>
+          <h2 class="font-serif text-3xl font-bold text-espresso dark:text-dark-text mt-1">Loved by Planners & Couples</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-dark-card p-6 rounded-3xl border border-amber/15 dark:border-dark-border shadow-sm space-y-3">
+            <div class="text-amber text-sm font-bold">★★★★★</div>
+            <p class="text-xs text-gray-700 dark:text-dark-text leading-relaxed italic">
+              “Our wedding guests are STILL talking about the midnight Liege waffle station! The smell of caramelized pearl sugar filled the vineyard tent. Absolute showstopper.”
+            </p>
+            <div class="pt-3 border-t border-amber/10 dark:border-dark-border">
+              <strong class="text-xs text-espresso dark:text-dark-text block">Camille & Marcus T.</strong>
+              <span class="text-[10px] text-gray-400">Wedding at St. Helena Winery, Napa Valley</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card p-6 rounded-3xl border border-amber/15 dark:border-dark-border shadow-sm space-y-3">
+            <div class="text-amber text-sm font-bold">★★★★★</div>
+            <p class="text-xs text-gray-700 dark:text-dark-text leading-relaxed italic">
+              “We hired Golden Crust for our 300-person tech summit breakfast. Their dual crepe billigs turned out hot galettes with zero wait time. Professional, clean, and delicious.”
+            </p>
+            <div class="pt-3 border-t border-amber/10 dark:border-dark-border">
+              <strong class="text-xs text-espresso dark:text-dark-text block">Sarah Lin</strong>
+              <span class="text-[10px] text-gray-400">Lead Event Producer, CloudSummit SF</span>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-dark-card p-6 rounded-3xl border border-amber/15 dark:border-dark-border shadow-sm space-y-3">
+            <div class="text-amber text-sm font-bold">★★★★★</div>
+            <p class="text-xs text-gray-700 dark:text-dark-text leading-relaxed italic">
+              “The mobile espresso cart paired with hot crepes took my 40th birthday garden party to another level. The pastry chefs were so charming and engaging with our guests.”
+            </p>
+            <div class="pt-3 border-t border-amber/10 dark:border-dark-border">
+              <strong class="text-xs text-espresso dark:text-dark-text block">David Rosenthal</strong>
+              <span class="text-[10px] text-gray-400">Pacific Heights Private Soirée</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE FAQ ACCORDION -->
+    <section class="py-16 bg-white dark:bg-dark-surface">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div class="text-center">
+          <span class="text-xs font-bold uppercase tracking-wider text-amber">Frequently Asked Questions</span>
+          <h2 class="font-serif text-3xl font-bold text-espresso dark:text-dark-text mt-1">Catering Details & Policies</h2>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="rounded-2xl border border-amber/20 dark:border-dark-border bg-cream dark:bg-dark-card overflow-hidden">
+            <button type="button" class="faq-toggle-btn w-full p-5 text-start flex justify-between items-center text-xs sm:text-sm font-bold text-espresso dark:text-dark-text hover:text-amber transition">
+              <span>What venue space and power setup do your live stations require?</span>
+              <span class="faq-icon text-lg font-bold text-amber">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-xs text-gray-600 dark:text-dark-muted leading-relaxed border-t border-amber/10 pt-3">
+              We typically require an 8ft x 6ft service footprint for our dual crepe and waffle cart. We carry both high-output electrical units (standard 110V/20A) and whisper-quiet battery inverter power for al fresco vineyard settings without dedicated outlets.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-amber/20 dark:border-dark-border bg-cream dark:bg-dark-card overflow-hidden">
+            <button type="button" class="faq-toggle-btn w-full p-5 text-start flex justify-between items-center text-xs sm:text-sm font-bold text-espresso dark:text-dark-text hover:text-amber transition">
+              <span>How do you handle guests with severe gluten or nut allergies?</span>
+              <span class="faq-icon text-lg font-bold text-amber">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-xs text-gray-600 dark:text-dark-muted leading-relaxed border-t border-amber/10 pt-3">
+              All Brittany galettes are made from 100% stone-ground certified buckwheat flour (sarrasin), which is naturally gluten-free. For severe celiac guests, we operate a dedicated, sanitized cast-iron griddle with separate utensils to eliminate any cross-contamination.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-amber/20 dark:border-dark-border bg-cream dark:bg-dark-card overflow-hidden">
+            <button type="button" class="faq-toggle-btn w-full p-5 text-start flex justify-between items-center text-xs sm:text-sm font-bold text-espresso dark:text-dark-text hover:text-amber transition">
+              <span>Can we schedule an in-person tasting before booking our wedding?</span>
+              <span class="faq-icon text-lg font-bold text-amber">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-xs text-gray-600 dark:text-dark-muted leading-relaxed border-t border-amber/10 pt-3">
+              Absolutely! For weddings and events over 50 guests, we host complimentary weekend tasting sessions at our 742 Sweetbriar café where you and your partner can sample custom doughs, toppings, and espresso pairings with our pastry director.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-amber/20 dark:border-dark-border bg-cream dark:bg-dark-card overflow-hidden">
+            <button type="button" class="faq-toggle-btn w-full p-5 text-start flex justify-between items-center text-xs sm:text-sm font-bold text-espresso dark:text-dark-text hover:text-amber transition">
+              <span>What is your booking timeline and deposit schedule?</span>
+              <span class="faq-icon text-lg font-bold text-amber">+</span>
+            </button>
+            <div class="faq-content hidden px-5 pb-5 text-xs text-gray-600 dark:text-dark-muted leading-relaxed border-t border-amber/10 pt-3">
+              A 25% refundable deposit reserves your event date on our calendar. Final headcount and custom menu selections are finalized 14 days prior to your celebration. We travel across the entire Bay Area, Napa Valley, and Carmel-by-the-Sea.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-8 h-8 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 border border-white/10 shadow-xs">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU & CART DRAWERS -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">Catering & Events</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">✕</button>
+      </div>
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🧇</span>
+          <span>Home: Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">Theme 🌓</button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">⇄ <span class="rtl-text">RTL</span></button>
+        </div>
+      </div>
+      <a href="#estimator" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Calculate Event Quote ✨
+      </a>
+    </div>
+  </div>
+
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2"><span class="text-2xl">🛍️</span><h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3></div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso">✕</button>
+      </div>
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar"></div>
+    </div>
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Subtotal</span><span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span></div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted"><span>Tax (8%)</span><span id="cart-tax">$0.00</span></div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border"><span>Estimated Total</span><span id="cart-total">$0.00</span></div>
+      </div>
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg transition active:scale-95">Checkout Box ✨</button>
+    </div>
+  </div>
+
+
+  <div id="toast-container"></div>
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js?v=2.6"></script>
+</body>
+</html>

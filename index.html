@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Crust | Artisanal Crepe & Waffle Café</title>
+  <meta name="description" content="Indulge in handcrafted Belgian waffles, authentic Parisian crepes, warm chocolate drips, and specialty roast coffee in a cozy café atmosphere.">
+  <!-- Anti-flicker early state initialization -->
+  <script>
+    (function() {
+      try {
+        var d = localStorage.getItem('gc_dir');
+        if (d) document.documentElement.setAttribute('dir', d);
+        var t = localStorage.getItem('gc_theme');
+        var isDark = t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Golden Crust | Artisanal Crepe & Waffle Café">
+  <meta property="og:description" content="Artisanal sweet and savory crepes, golden Belgian waffles, and specialty coffee.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=1200&auto=format&fit=crop&q=80">
+  <meta property="og:type" content="restaurant">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Golden Crust Crepe & Waffle Café",
+    "image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?w=1200&auto=format&fit=crop&q=80",
+    "telephone": "+1-555-465-3362",
+    "priceRange": "$$",
+    "servesCuisine": ["French Crepes", "Belgian Waffles", "Artisanal Coffee", "Desserts"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "742 Sweetbriar Lane, Downtown",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "postalCode": "94102",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:30",
+        "closes": "22:00"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            page: '#F7F8FC',
+            surface: '#FFFFFF',
+            'surface-elevated': '#F0F2F8',
+            'text-primary': '#18213A',
+            'text-secondary': '#626B80',
+            'primary-btn': '#6D5AE6',
+            'btn-hover': '#5945CF',
+            'soft-accent': '#EAE7FF',
+            link: '#5845D6',
+            border: '#E4E7EF',
+            success: '#16845B',
+            sale: '#D9485F',
+
+            cream: '#F7F8FC',
+            espresso: '#18213A',
+            amber: {
+              DEFAULT: '#6D5AE6',
+              hover: '#5945CF',
+              50: '#F5F3FF',
+              100: '#EAE7FF',
+              200: '#D5D0FF',
+              300: '#B5AAFF',
+              400: '#8B7CFF',
+              500: '#6D5AE6',
+              600: '#5945CF',
+              700: '#4834B8',
+              800: '#38259A',
+              900: '#2A1A78'
+            },
+            honey: '#8B7CFF',
+            cocoa: '#252E42',
+            berry: '#D9485F',
+            slate: {
+              subtle: '#626B80',
+              border: '#E4E7EF'
+            },
+            dark: {
+              bg: '#101522',
+              surface: '#1B2232',
+              card: '#1B2232',
+              elevated: '#252E42',
+              border: '#30394E',
+              gold: '#B5AAFF',
+              text: '#F1F3FA',
+              muted: '#B5BDCF'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Cairo"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧇</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
+</head>
+
+<body class="bg-cream text-espresso dark:bg-dark-bg dark:text-dark-text antialiased transition-colors duration-300 font-sans min-h-screen flex flex-col">
+
+  <!-- Page Preloader with Website Logo -->
+  <div id="page-preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-emblem-wrapper">
+        <div class="preloader-glow"></div>
+        <div class="preloader-spinner-ring"></div>
+        <div class="preloader-badge">
+          <span class="preloader-emoji">🧇</span>
+        </div>
+      </div>
+      <span class="preloader-title">Golden Crust</span>
+      <span class="preloader-subtitle">Artisanal Crêperie & Atelier</span>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-40 site-header bg-espresso text-cream dark:bg-dark-bg dark:text-dark-text border-b border-honey/20 dark:border-white/10 shadow-lg backdrop-blur-md glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-2">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3 group min-w-0">
+          <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-lg border border-white/15 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex-shrink-0">
+            <span class="text-xl sm:text-2xl filter drop-shadow">🧇</span>
+          </div>
+          <div class="min-w-0">
+            <span class="font-serif text-lg sm:text-2xl font-bold tracking-tight text-cream dark:text-dark-gold block leading-none group-hover:text-honey transition-colors duration-300 truncate">Golden Crust</span>
+            <span class="text-[10px] uppercase tracking-widest text-honey dark:text-dark-muted font-semibold mt-0.5 hidden sm:block">Artisanal Crêperie & Atelier</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold">
+          <!-- Home Experience Switcher Dropdown (Signature Experience & Express Ordering) -->
+          <div class="relative group dropdown-home-container">
+            <button type="button" class="dropdown-toggle-btn nav-link active text-honey dark:text-dark-gold flex items-center gap-1.5 py-2 cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <svg class="w-3.5 h-3.5 dropdown-toggle-arrow transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="dropdown-home-menu">
+              <a href="index.html" class="dropdown-home-item active">
+                <span class="text-lg">✨</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Signature Experience</span>
+                    <span class="px-1.5 py-0.2 rounded bg-amber/30 text-[9px] uppercase font-bold text-honey dark:text-dark-gold">Active</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Atmosphere, storytelling & atelier</div>
+                </div>
+              </a>
+              <a href="home-express.html" class="dropdown-home-item mt-1">
+                <span class="text-lg">⚡</span>
+                <div class="min-w-0">
+                  <div class="font-bold text-xs flex items-center gap-1.5">
+                    <span>Express Ordering</span>
+                  </div>
+                  <div class="text-[10px] text-cream/70 dark:text-dark-muted font-normal mt-0.5">Quick order, takeout & fast box cart</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="catering.html" class="nav-link">Catering & Events</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="blog.html" class="nav-link">Café Stories</a>
+          <a href="contact.html" class="nav-link">Contact & Hours</a>
+        </nav>
+
+        <!-- Right Action Bar: Theme, RTL, Cart, Mobile Menu -->
+        <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" title="Light Mode Active (Click to switch to Dark Mode)" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon hidden">🌙</span>
+          </button>
+
+          <!-- RTL Toggle Button -->
+          <button class="rtl-toggle-btn header-action-btn px-2 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold rounded-xl transition-all" title="Switch RTL/LTR">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+
+          <!-- Cart Drawer Button (Visible only on Website/Desktop Mode) -->
+          <button class="hidden lg:inline-flex open-cart-btn header-action-btn relative p-2.5 rounded-xl transition-all" aria-label="Dessert Box Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+            <span class="cart-count-badge hidden absolute -top-1 -end-1 bg-berry text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md animate-pulse">0</span>
+          </button>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden header-action-btn p-1.5 sm:p-2.5 rounded-xl transition-all" aria-label="Open Navigation Menu">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-grow">
+
+    <!-- HERO SECTION: Signature Experience Split Layout -->
+    <section class="relative overflow-hidden py-10 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-cream via-amber/5 to-cream dark:from-dark-bg dark:via-dark-surface dark:to-dark-bg">
+      
+      <!-- Decorative Ambient Mesh Glows -->
+      <div class="hero-ambient-mesh"></div>
+
+      <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          
+          <!-- Text Content (7 cols on lg) -->
+          <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-start reveal-left">
+            <div class="inline-flex items-center flex-wrap gap-1.5 sm:gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-white/85 dark:bg-dark-card/85 border border-primary-btn/30 text-primary-btn dark:text-dark-gold editorial-eyebrow shadow-xs backdrop-blur-md text-[10.5px] sm:text-xs max-w-full">
+              <span class="status-dot-ping w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-success flex-shrink-0"></span>
+              <span class="truncate">Fresh Batter Poured Daily</span>
+              <span class="opacity-30">•</span>
+              <span>Pure Belgian Chocolate</span>
+            </div>
+
+            <h1 class="hero-headline font-serif text-[1.95rem] sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold text-espresso dark:text-dark-text leading-[1.14] tracking-tight">
+              <span class="headline-mask-line">
+                <span class="headline-mask-inner">Warm, Caramelized</span>
+              </span>
+              <span class="headline-mask-line">
+                <span class="headline-mask-inner inline-flex items-center gap-1.5 flex-wrap">
+                  <span>Waffles</span>
+                  <span class="text-primary-btn dark:text-dark-gold font-serif italic font-normal">&amp;</span>
+                  <span class="italic font-medium text-gradient-primary">Silk-Folded</span>
+                  <span>Crepes.</span>
+                </span>
+              </span>
+            </h1>
+
+            <p class="text-xs sm:text-base lg:text-lg text-text-secondary dark:text-dark-muted max-w-xl leading-relaxed">
+              Step into an aromatic haven of roasted espresso beans, whipped organic buttercream, caramelized pearl sugars, and savory crepe galettes folded to perfection.
+            </p>
+
+            <!-- Action Buttons (Responsive on Mobile) -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3.5 pt-1 sm:pt-2">
+              <a href="menu.html" class="btn-primary btn-magnetic btn-liquid px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl sm:rounded-full shadow-lg shadow-primary-btn/30 hover:shadow-xl hover:shadow-primary-btn/40 transition-all flex items-center justify-center gap-2 text-center text-xs sm:text-sm font-bold tracking-wide group">
+                <span class="relative z-10">Explore Full Menu</span>
+                <span class="text-sm sm:text-base relative z-10 transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
+                <span class="btn-liquid-blob"></span>
+              </a>
+              <a href="catering.html" class="btn-secondary btn-magnetic btn-liquid px-5 sm:px-7 py-3 sm:py-4 rounded-2xl sm:rounded-full bg-white/90 dark:bg-dark-card/90 border-2 border-border dark:border-dark-border text-espresso dark:text-dark-text hover:border-primary-btn hover:text-primary-btn font-bold active:scale-95 transition-all flex items-center justify-center gap-2 text-center text-xs sm:text-sm backdrop-blur-sm shadow-xs group">
+                <span class="relative z-10">Book Event Catering</span>
+                <span class="relative z-10 transform group-hover:rotate-12 transition-transform duration-300">✨</span>
+                <span class="btn-liquid-blob"></span>
+              </a>
+            </div>
+
+            <!-- Social Proof Avatar Stack -->
+            <div class="flex items-center gap-2.5 sm:gap-3.5 pt-1 sm:pt-2 min-w-0">
+              <div class="flex -space-x-2 flex-shrink-0">
+                <img class="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white dark:ring-dark-card object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=90&auto=format&fit=crop&q=80" alt="Customer review 1">
+                <img class="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white dark:ring-dark-card object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=90&auto=format&fit=crop&q=80" alt="Customer review 2">
+                <img class="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white dark:ring-dark-card object-cover shadow-sm" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=90&auto=format&fit=crop&q=80" alt="Customer review 3">
+                <img class="inline-block h-8 w-8 sm:h-9 sm:w-9 rounded-full ring-2 ring-white dark:ring-dark-card object-cover shadow-sm" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=90&auto=format&fit=crop&q=80" alt="Customer review 4">
+              </div>
+              <div class="text-[10px] sm:text-xs min-w-0">
+                <div class="flex items-center gap-1.5 text-amber-400">
+                  <span class="text-xs">★★★★★</span>
+                  <span class="font-display font-extrabold text-espresso dark:text-dark-text text-xs sm:text-sm">4.9/5</span>
+                </div>
+                <span class="text-[10px] sm:text-[11px] text-text-secondary dark:text-dark-muted font-medium block truncate">Loved by 2,400+ dessert lovers in SF</span>
+              </div>
+            </div>
+
+            <!-- Café Mini Trust Stats -->
+            <div class="grid grid-cols-3 gap-1.5 sm:gap-4 pt-3 sm:pt-4 border-t border-border dark:border-dark-border max-w-lg">
+              <div class="p-2 sm:p-2.5 rounded-xl sm:rounded-2xl bg-white/80 dark:bg-dark-card/80 border border-border/80 dark:border-dark-border shadow-xs hover:-translate-y-1 transition duration-300 text-center sm:text-start">
+                <div class="font-display text-lg sm:text-3xl font-extrabold text-primary-btn tracking-tight">100%</div>
+                <div class="text-[9px] sm:text-xs text-text-secondary dark:text-dark-muted font-medium mt-0.5 leading-tight">Normandy Butter & Sugar</div>
+              </div>
+              <div class="p-2 sm:p-2.5 rounded-xl sm:rounded-2xl bg-white/80 dark:bg-dark-card/80 border border-border/80 dark:border-dark-border shadow-xs hover:-translate-y-1 transition duration-300 text-center sm:text-start">
+                <div class="font-display text-lg sm:text-3xl font-extrabold text-primary-btn tracking-tight">32+</div>
+                <div class="text-[9px] sm:text-xs text-text-secondary dark:text-dark-muted font-medium mt-0.5 leading-tight">Sweet & Savory Bakes</div>
+              </div>
+              <div class="p-2 sm:p-2.5 rounded-xl sm:rounded-2xl bg-white/80 dark:bg-dark-card/80 border border-border/80 dark:border-dark-border shadow-xs hover:-translate-y-1 transition duration-300 text-center sm:text-start">
+                <div class="font-display text-lg sm:text-3xl font-extrabold text-primary-btn tracking-tight">15m</div>
+                <div class="text-[9px] sm:text-xs text-text-secondary dark:text-dark-muted font-medium mt-0.5 leading-tight">Hot Iron-to-Table Pickup</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Showcase (5 cols on lg) - Clean Unobstructed Photo & Separated Feature Card Below -->
+          <div class="lg:col-span-5 relative reveal-right hero-showcase">
+            <div class="relative mx-auto max-w-md lg:max-w-none flex flex-col gap-3.5 sm:gap-4">
+              
+              <!-- Ambient Aura Glow Behind Hero Image -->
+              <div class="absolute inset-0 sm:-inset-4 bg-gradient-to-tr from-primary-btn/25 via-honey/20 to-sale/20 rounded-3xl blur-2xl -z-10 aura-glow hero-ambient-aura"></div>
+
+              <!-- Main Hero Photo - 100% Unobstructed High-Resolution Showcase -->
+              <div class="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 sm:border-4 border-white dark:border-dark-card glow-amber aspect-[4/3] max-h-[420px] relative group hero-floating-visual">
+                <img src="img/hero-signature-4k.jpg" 
+                     alt="Warm Caramelized Belgian Liege Waffle & Silk-Folded Crepe with Wild Berries and Valrhona Ganache" 
+                     class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
+                
+                <!-- Subtle Live Status Badge at Top Edge (Non-obstructing) -->
+                <div class="absolute top-2.5 sm:top-3.5 start-2.5 sm:start-3.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-espresso/85 dark:bg-dark-surface/90 text-white backdrop-blur-md text-[10px] sm:text-[11px] font-bold flex items-center gap-1.5 sm:gap-2 shadow-lg border border-white/10">
+                  <span class="status-dot-ping w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-sale"></span>
+                  <span>Fresh Out of Iron</span>
+                </div>
+
+                <!-- Quick Quality Tag at Top End -->
+                <div class="absolute top-2.5 sm:top-3.5 end-2.5 sm:end-3.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/90 dark:bg-dark-card/90 text-espresso dark:text-dark-text backdrop-blur-md text-[10px] sm:text-[11px] font-bold shadow-md border border-border/60 dark:border-dark-border flex items-center gap-1 sm:gap-1.5">
+                  <span class="text-amber-500">★</span>
+                  <span>4.98 Top Rated</span>
+                </div>
+              </div>
+
+              <!-- Dedicated Separated Showcase Card Below Image -->
+              <div class="hero-feature-card bg-white dark:bg-dark-card rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 border border-border dark:border-dark-border shadow-xl hover:shadow-2xl transition duration-300">
+                <div class="flex items-center justify-between gap-2 pb-2.5 sm:pb-3 border-b border-border dark:border-dark-border">
+                  <div class="flex items-center gap-1.5 sm:gap-2">
+                    <span class="px-2 sm:px-2.5 py-0.5 rounded-full bg-sale/10 text-sale text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">Signature Combo</span>
+                    <span class="text-[10px] sm:text-[11px] text-text-secondary dark:text-dark-muted font-medium">Daily Iron Selection</span>
+                  </div>
+                  <div class="flex items-center gap-1 font-display font-extrabold text-sm sm:text-base text-primary-btn dark:text-dark-gold">
+                    <span>$15.75</span>
+                  </div>
+                </div>
+
+                <div class="mt-2.5 sm:mt-3">
+                  <h3 class="font-serif text-base sm:text-xl font-bold text-espresso dark:text-dark-text leading-snug">
+                    The Royal Liege Waffle &amp; Artisan Pairing
+                  </h3>
+                  <p class="text-[11px] sm:text-xs text-text-secondary dark:text-dark-muted mt-1 leading-relaxed">
+                    Torched marshmallows, warm Valrhona dark chocolate coulis, and orchard-fresh wild berries.
+                  </p>
+                </div>
+
+                <!-- Two Separated Companion Features (Berries & Artisan Coffee) -->
+                <div class="grid grid-cols-2 gap-2 sm:gap-2.5 mt-3 pt-2.5 sm:pt-3 border-t border-border/60 dark:border-dark-border">
+                  <div class="flex items-center gap-2 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl bg-page-bg dark:bg-dark-surface border border-border/70 dark:border-dark-border/80 min-w-0">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-sale/15 text-sale flex items-center justify-center text-sm sm:text-base flex-shrink-0">
+                      🍓
+                    </div>
+                    <div class="min-w-0">
+                      <div class="font-display text-[10px] sm:text-[11px] font-bold text-espresso dark:text-dark-text truncate">Wild Berries</div>
+                      <div class="text-[8.5px] sm:text-[9px] text-text-secondary dark:text-dark-muted truncate">Daily Morning Harvest</div>
+                    </div>
+                  </div>
+
+                  <div class="flex items-center gap-2 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl bg-page-bg dark:bg-dark-surface border border-border/70 dark:border-dark-border/80 min-w-0">
+                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl overflow-hidden flex-shrink-0 border border-border/60 dark:border-dark-border">
+                      <img src="img/menu/cortado.jpg" alt="Artisan Cortado Pairing" class="w-full h-full object-cover">
+                    </div>
+                    <div class="min-w-0">
+                      <div class="font-display text-[10px] sm:text-[11px] font-bold text-espresso dark:text-dark-text truncate">Artisan Cortado</div>
+                      <div class="text-[8.5px] sm:text-[9px] text-text-secondary dark:text-dark-muted truncate">Single-Origin Roast</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quick Action Button -->
+                <button data-id="combo-2" data-name="Belgian Berry Crown Waffle" data-price="15.75" data-img="img/menu/belgian_berry_waffle.jpg" class="add-to-cart-btn w-full mt-3 py-2.5 px-3 sm:px-4 rounded-xl sm:rounded-2xl bg-primary-btn hover:bg-btn-hover text-white text-xs font-bold transition shadow flex items-center justify-center gap-2 group">
+                  <span>Add Signature Combo to Order</span>
+                  <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE COMBOS CAROUSEL / GRID -->
+    <section class="py-16 bg-white dark:bg-dark-surface border-y border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12 reveal-up">
+          <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Master Pâtissier Selections</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso dark:text-dark-text mt-1.5 tracking-tight">
+            Signature Crepe & <span class="italic font-normal text-gradient-primary">Liege Waffle</span> Combos
+          </h2>
+          <div class="mt-4 flex items-center justify-center">
+            <a href="menu.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-btn/10 hover:bg-primary-btn hover:text-white text-primary-btn dark:text-dark-gold dark:hover:text-white dark:hover:bg-primary-btn text-xs sm:text-sm font-bold transition-all duration-300 shadow-xs hover:shadow-md group">
+              <span>Browse All 32 Menu Items</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Combos Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 perspective-grid">
+          
+          <!-- Combo 1 -->
+          <div class="food-card menu-card card-3d-entrance bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-border dark:border-dark-border shadow-card hover:shadow-hover transition-all duration-300 flex flex-col reveal-up delay-100" data-id="combo-1">
+            <div class="relative overflow-hidden aspect-[4/3]">
+              <img src="img/menu/nutella_banana_crepe.jpg" alt="Nutella Banana Silk Crepe" class="food-card-img w-full h-full object-cover">
+              <span class="absolute top-3 start-3 bg-espresso/80 text-cream text-[11px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md">Chef's Pick</span>
+              <button type="button" class="wishlist-btn" data-id="combo-1" aria-label="Add to Wishlist">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <span class="absolute bottom-3 end-3 bg-white/95 dark:bg-dark-surface/95 text-primary-btn dark:text-dark-gold font-display font-extrabold text-sm sm:text-base px-2.5 py-1 rounded-full shadow border border-border tracking-tight">$14.50</span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-1.5 mb-1.5">
+                  <span class="text-xs text-primary-btn font-semibold">Sweet Parisian Crepe</span>
+                  <div class="flex items-center gap-1 text-[11px] text-amber-500 font-bold">
+                    <span>★ 4.95</span>
+                    <span class="text-text-secondary dark:text-dark-muted font-normal text-[10px]">(320)</span>
+                  </div>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Nutella & Caramel Banana Silk</h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 line-clamp-2">
+                  Paper-thin golden crepe filled with house hazelnut praline, caramelized bananas, and roasted chopped almonds.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-border dark:border-dark-border flex items-center justify-between">
+                <span class="text-[11px] text-gray-500 dark:text-dark-muted font-medium">Gluten-Free Option</span>
+                <button data-id="combo-1" data-name="Nutella Caramel Banana Silk" data-price="14.50" data-img="img/menu/nutella_banana_crepe.jpg" class="add-to-cart-btn px-3 py-1.5 rounded-full bg-primary-btn hover:bg-btn-hover text-white text-xs font-bold transition shadow">
+                  + Add to Box
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo 2 -->
+          <div class="food-card menu-card card-3d-entrance bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-border dark:border-dark-border shadow-card hover:shadow-hover transition-all duration-300 flex flex-col reveal-up delay-200" data-id="combo-2">
+            <div class="relative overflow-hidden aspect-[4/3]">
+              <img src="img/menu/belgian_berry_waffle.jpg" alt="Belgian Berry Crown Liege Waffle" class="food-card-img w-full h-full object-cover">
+              <span class="absolute top-3 start-3 bg-sale text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">Top Rated</span>
+              <button type="button" class="wishlist-btn" data-id="combo-2" aria-label="Add to Wishlist">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <span class="absolute bottom-3 end-3 bg-white/95 dark:bg-dark-surface/95 text-primary-btn dark:text-dark-gold font-display font-extrabold text-sm sm:text-base px-2.5 py-1 rounded-full shadow border border-border tracking-tight">$15.75</span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-1.5 mb-1.5">
+                  <span class="text-xs text-sale font-semibold">Belgian Liege Waffle</span>
+                  <div class="flex items-center gap-1 text-[11px] text-amber-500 font-bold">
+                    <span>★ 4.98</span>
+                    <span class="text-text-secondary dark:text-dark-muted font-normal text-[10px]">(514)</span>
+                  </div>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Belgian Berry Crown Waffle</h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 line-clamp-2">
+                  Crunchy pearl sugar dough topped with warm blackberry coulis, organic raspberries, and mascarpone cream.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-border dark:border-dark-border flex items-center justify-between">
+                <span class="text-[11px] text-gray-500 dark:text-dark-muted font-medium">Vegetarian Friendly</span>
+                <button data-id="combo-2" data-name="Belgian Berry Crown Waffle" data-price="15.75" data-img="img/menu/belgian_berry_waffle.jpg" class="add-to-cart-btn px-3 py-1.5 rounded-full bg-primary-btn hover:bg-btn-hover text-white text-xs font-bold transition shadow">
+                  + Add to Box
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo 3 -->
+          <div class="food-card menu-card card-3d-entrance bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-border dark:border-dark-border shadow-card hover:shadow-hover transition-all duration-300 flex flex-col reveal-up delay-300" data-id="combo-3">
+            <div class="relative overflow-hidden aspect-[4/3]">
+              <img src="img/menu/smoked_salmon_galette.jpg" alt="Smoked Salmon & Dill Galette" class="food-card-img w-full h-full object-cover">
+              <span class="absolute top-3 start-3 bg-success text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">Savory Gourmet</span>
+              <button type="button" class="wishlist-btn" data-id="combo-3" aria-label="Add to Wishlist">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <span class="absolute bottom-3 end-3 bg-white/95 dark:bg-dark-surface/95 text-primary-btn dark:text-dark-gold font-display font-extrabold text-sm sm:text-base px-2.5 py-1 rounded-full shadow border border-border tracking-tight">$17.50</span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-1.5 mb-1.5">
+                  <span class="text-xs text-success font-semibold">Brittany Buckwheat Galette</span>
+                  <div class="flex items-center gap-1 text-[11px] text-amber-500 font-bold">
+                    <span>★ 4.91</span>
+                    <span class="text-text-secondary dark:text-dark-muted font-normal text-[10px]">(248)</span>
+                  </div>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Smoked Salmon & Truffle Ricotta</h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 line-clamp-2">
+                  100% buckwheat crepe with smoked Norwegian salmon, fresh dill, capers, organic baby arugula, and lemon-crème fraîche.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-border dark:border-dark-border flex items-center justify-between">
+                <span class="text-[11px] text-gray-500 dark:text-dark-muted font-medium">Gluten-Free Buckwheat</span>
+                <button data-id="combo-3" data-name="Smoked Salmon & Truffle Galette" data-price="17.50" data-img="img/menu/smoked_salmon_galette.jpg" class="add-to-cart-btn px-3 py-1.5 rounded-full bg-primary-btn hover:bg-btn-hover text-white text-xs font-bold transition shadow">
+                  + Add to Box
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo 4 -->
+          <div class="food-card menu-card card-3d-entrance bg-white dark:bg-dark-card rounded-3xl overflow-hidden border border-border dark:border-dark-border shadow-card hover:shadow-hover transition-all duration-300 flex flex-col reveal-up delay-400" data-id="combo-4">
+            <div class="relative overflow-hidden aspect-[4/3]">
+              <img src="img/menu/fried_chicken_waffle.jpg" alt="Crispy Fried Chicken Honey Waffle" class="food-card-img w-full h-full object-cover">
+              <span class="absolute top-3 start-3 bg-primary-btn text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">Brunch Classic</span>
+              <button type="button" class="wishlist-btn" data-id="combo-4" aria-label="Add to Wishlist">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <span class="absolute bottom-3 end-3 bg-white/95 dark:bg-dark-surface/95 text-primary-btn dark:text-dark-gold font-display font-extrabold text-sm sm:text-base px-2.5 py-1 rounded-full shadow border border-border tracking-tight">$18.25</span>
+            </div>
+            <div class="p-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-1.5 mb-1.5">
+                  <span class="text-xs text-primary-btn font-semibold">Savory Belgian Waffle</span>
+                  <div class="flex items-center gap-1 text-[11px] text-amber-500 font-bold">
+                    <span>★ 4.94</span>
+                    <span class="text-text-secondary dark:text-dark-muted font-normal text-[10px]">(418)</span>
+                  </div>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Hot Honey Fried Chicken Waffle</h3>
+                <p class="text-xs text-gray-600 dark:text-dark-muted mt-2 line-clamp-2">
+                  Crispy buttermilk chicken tenders layered over malted waffle, drizzled with habanero wildflower honey and chives.
+                </p>
+              </div>
+              <div class="pt-4 mt-4 border-t border-border dark:border-dark-border flex items-center justify-between">
+                <span class="text-[11px] text-gray-500 dark:text-dark-muted font-medium">Sweet & Savory</span>
+                <button data-id="combo-4" data-name="Hot Honey Fried Chicken Waffle" data-price="18.25" data-img="img/menu/fried_chicken_waffle.jpg" class="add-to-cart-btn px-3 py-1.5 rounded-full bg-primary-btn hover:bg-btn-hover text-white text-xs font-bold transition shadow">
+                  + Add to Box
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE LIVE BATTER & TOPPING STUDIO ================= -->
+    <section id="waffle-customizer" class="py-16 md:py-24 bg-gradient-to-b from-white via-amber/5 to-white dark:from-dark-surface dark:via-dark-card dark:to-dark-surface border-y border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="editorial-eyebrow px-4 py-1.5 rounded-full bg-soft-accent dark:bg-dark-card border border-primary-btn/30 text-primary-btn dark:text-dark-gold shadow-xs inline-flex items-center gap-2 mb-3">
+            <span class="status-dot-ping w-2 h-2 rounded-full bg-primary-btn"></span>
+            <span>Interactive Culinary Atelier</span>
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso dark:text-dark-text tracking-tight">
+            Craft Your <span class="italic font-normal text-gradient-primary">Bespoke</span> Pastry
+          </h2>
+          <p class="text-sm text-gray-600 dark:text-dark-muted mt-2">
+            Choose your artisan dough base, warm chocolate fountain drip, and orchard toppings. Watch your creation take shape in real-time.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- CONTROLS COLUMN (7 cols) -->
+          <div class="lg:col-span-7 space-y-8">
+            
+            <!-- STEP 1: CHOOSE BASE -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-amber text-white text-xs font-bold flex items-center justify-center">1</span>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Select Dough & Iron Style</h3>
+              </div>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <label class="builder-option-btn p-3.5 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card flex flex-col justify-between cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-base" value="8.50" data-name="Belgian Liege Waffle" data-img="img/menu/belgian_berry_waffle.jpg" data-cal="380" autocomplete="off" class="hidden">
+                  <span class="text-2xl mb-2">🧇</span>
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">Belgian Liege</strong>
+                    <span class="text-[11px] text-amber font-semibold">$8.50</span>
+                  </div>
+                  <span class="text-[10px] text-gray-400 mt-1">Pearl sugar brioche</span>
+                </label>
+
+                <label class="builder-option-btn p-3.5 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card flex flex-col justify-between cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-base" value="8.00" data-name="Parisian Sweet Silk Crepe" data-img="img/menu/nutella_banana_crepe.jpg" data-cal="280" autocomplete="off" class="hidden">
+                  <span class="text-2xl mb-2">🥞</span>
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">Parisian Crepe</strong>
+                    <span class="text-[11px] text-amber font-semibold">$8.00</span>
+                  </div>
+                  <span class="text-[10px] text-gray-400 mt-1">Whipped egg batter</span>
+                </label>
+
+                <label class="builder-option-btn p-3.5 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card flex flex-col justify-between cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-base" value="9.50" data-name="Brittany Buckwheat Galette" data-img="img/menu/bretonne_galette.jpg" data-cal="310" autocomplete="off" class="hidden">
+                  <span class="text-2xl mb-2">🌾</span>
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">Buckwheat Galette</strong>
+                    <span class="text-[11px] text-amber font-semibold">$9.50</span>
+                  </div>
+                  <span class="text-[10px] text-gray-400 mt-1">Gluten-free organic</span>
+                </label>
+
+                <label class="builder-option-btn p-3.5 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card flex flex-col justify-between cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-base" value="9.00" data-name="Hong Kong Bubble Waffle" data-img="img/menu/matcha_bubble_waffle.jpg" data-cal="350" autocomplete="off" class="hidden">
+                  <span class="text-2xl mb-2">🧋</span>
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">Bubble Waffle</strong>
+                    <span class="text-[11px] text-amber font-semibold">$9.00</span>
+                  </div>
+                  <span class="text-[10px] text-gray-400 mt-1">Egg-puff spheres</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- STEP 2: WARM DRIZZLE / SAUCE -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-honey text-white text-xs font-bold flex items-center justify-center">2</span>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Warm Tap Sauce & Drizzle</h3>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-drizzle" value="1.50" data-name="Valrhona 70% Dark Ganache" autocomplete="off" class="hidden">
+                  <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🍫 Valrhona Dark</strong>
+                  <span class="text-[11px] text-amber font-semibold">+$1.50</span>
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-drizzle" value="1.50" data-name="Salted Bourbon Caramel" autocomplete="off" class="hidden">
+                  <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🍯 Bourbon Caramel</strong>
+                  <span class="text-[11px] text-amber font-semibold">+$1.50</span>
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-drizzle" value="2.00" data-name="Sicilian Pistachio Crema" autocomplete="off" class="hidden">
+                  <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🥜 Pistachio Crema</strong>
+                  <span class="text-[11px] text-amber font-semibold">+$2.00</span>
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition">
+                  <input type="radio" name="builder-drizzle" value="1.25" data-name="Raspberry Rose Coulis" autocomplete="off" class="hidden">
+                  <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🌹 Raspberry Rose</strong>
+                  <span class="text-[11px] text-amber font-semibold">+$1.25</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- STEP 3: TOPPINGS (MULTISELECT) -->
+            <div class="space-y-3">
+              <div class="flex items-center gap-2">
+                <span class="w-6 h-6 rounded-full bg-berry text-white text-xs font-bold flex items-center justify-center">3</span>
+                <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Artisan Garnishes & Toppings</h3>
+              </div>
+
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition flex items-center justify-between">
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🍓 Fresh Strawberries</strong>
+                    <span class="text-[10px] text-gray-500">+$1.50</span>
+                  </div>
+                  <input type="checkbox" name="builder-topping" value="1.50" data-name="Strawberries" autocomplete="off" class="accent-amber">
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition flex items-center justify-between">
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🔥 Torched Marshmallow</strong>
+                    <span class="text-[10px] text-gray-500">+$1.00</span>
+                  </div>
+                  <input type="checkbox" name="builder-topping" value="1.00" data-name="Torched Marshmallows" autocomplete="off" class="accent-amber">
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition flex items-center justify-between">
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🌰 Roasted Hazelnuts</strong>
+                    <span class="text-[10px] text-gray-500">+$1.25</span>
+                  </div>
+                  <input type="checkbox" name="builder-topping" value="1.25" data-name="Roasted Hazelnuts" autocomplete="off" class="accent-amber">
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition flex items-center justify-between">
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🍨 Madagascar Gelato</strong>
+                    <span class="text-[10px] text-gray-500">+$2.50</span>
+                  </div>
+                  <input type="checkbox" name="builder-topping" value="2.50" data-name="Vanilla Gelato" autocomplete="off" class="accent-amber">
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition flex items-center justify-between">
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">✨ 24k Edible Gold Dust</strong>
+                    <span class="text-[10px] text-gray-500">+$1.00</span>
+                  </div>
+                  <input type="checkbox" name="builder-topping" value="1.00" data-name="Edible Gold Dust" autocomplete="off" class="accent-amber">
+                </label>
+
+                <label class="builder-option-btn p-3 rounded-2xl border-2 border-amber/20 dark:border-dark-border bg-white dark:bg-dark-card cursor-pointer hover:border-amber transition flex items-center justify-between">
+                  <div>
+                    <strong class="text-xs font-bold text-espresso dark:text-dark-text block">🫐 Wild Blackberry Jam</strong>
+                    <span class="text-[10px] text-gray-500">+$1.25</span>
+                  </div>
+                  <input type="checkbox" name="builder-topping" value="1.25" data-name="Blackberry Jam" autocomplete="off" class="accent-amber">
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- LIVE PREVIEW CARD (5 cols) -->
+          <div class="lg:col-span-5 sticky top-28">
+            <div class="p-7 rounded-3xl bg-cream dark:bg-dark-card border-2 border-amber/30 dark:border-dark-border shadow-xl space-y-5">
+              <div class="relative rounded-2xl overflow-hidden aspect-[4/3] border border-amber/20 bg-espresso/5">
+                <img id="builder-preview-img" src="img/menu/belgian_berry_waffle.jpg" alt="Live Customizer Preview" class="w-full h-full object-cover opacity-75 transition-all duration-300">
+                <div id="builder-empty-overlay" class="absolute inset-0 bg-espresso/45 backdrop-blur-[2px] flex flex-col items-center justify-center text-center p-4 transition-opacity duration-300">
+                  <div class="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl mb-2 text-white shadow">
+                    🧇
+                  </div>
+                  <span class="text-white font-bold text-sm">Select Dough & Iron Style</span>
+                  <span class="text-cream/80 text-xs mt-0.5">Click any base on the left to start your bake</span>
+                </div>
+                <span class="absolute top-3 start-3 px-3 py-1 bg-espresso/80 text-cream backdrop-blur-md text-xs font-bold rounded-full">Your Custom Bake</span>
+                <span id="builder-preview-cal" class="absolute bottom-3 end-3 px-3 py-1 bg-white/90 dark:bg-dark-surface text-espresso dark:text-dark-text text-[11px] font-semibold rounded-full shadow">Select options to begin</span>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between">
+                  <h4 id="builder-preview-name" class="font-serif text-2xl font-bold text-espresso dark:text-dark-text">Craft Your Custom Pastry</h4>
+                  <span id="builder-preview-price" class="font-display text-3xl sm:text-4xl font-extrabold text-primary-btn tracking-tight">$0.00</span>
+                </div>
+                <p id="builder-preview-desc" class="text-xs text-gray-600 dark:text-dark-muted mt-2 leading-relaxed">
+                  Select your artisan dough base above, then pair with warm tap drizzle and gourmet toppings to watch your creation take shape in real-time.
+                </p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-amber/10 dark:bg-dark-border/40 border border-amber/20 flex items-center justify-between text-xs">
+                <span class="text-espresso dark:text-dark-text font-medium">Estimated Kitchen Prep:</span>
+                <span class="font-bold text-amber">⚡ 6 - 8 Minutes</span>
+              </div>
+
+              <button id="builder-add-btn" class="btn-primary w-full py-4 rounded-2xl text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition opacity-70 cursor-not-allowed" disabled>
+                <span>Select a Dough Style to Begin</span>
+                <span>🧇</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARTISANAL CRAFT HIGHLIGHTS -->
+    <section class="py-16 md:py-24 bg-cream dark:bg-dark-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
+          <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Uncompromising Quality & Provenance</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso dark:text-dark-text mt-2 tracking-tight">
+            Why Every Bite Feels Like <span class="italic font-normal text-gradient-primary">Pure Celebration</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-grid">
+          
+          <div class="p-8 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate card-3d-entrance text-center space-y-4 reveal-up delay-100 group">
+            <div class="w-16 h-16 rounded-2xl bg-amber/15 text-amber dark:text-dark-gold mx-auto flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+              🍫
+            </div>
+            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Imported Callebaut Chocolate</h3>
+            <p class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
+              We never use synthetic syrups. Our melted fountains run with 54.5% Belgian dark chocolate, silky milk cocoa, and velvety white vanilla ganache.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate card-3d-entrance text-center space-y-4 reveal-up delay-200 group">
+            <div class="w-16 h-16 rounded-2xl bg-honey/20 text-honey mx-auto flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+              🌾
+            </div>
+            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">24-Hour Fermented Brioche Batter</h3>
+            <p class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
+              Our Liege waffles are crafted from slow-fermented yeast dough folded with coarse pearl sugar that caramelizes to a crunchy glass glaze in heavy cast irons.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover card-hover-elevate card-3d-entrance text-center space-y-4 reveal-up delay-300 group">
+            <div class="w-16 h-16 rounded-2xl bg-berry/15 text-berry mx-auto flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+              🫐
+            </div>
+            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Farm-Direct Seasonal Fruit</h3>
+            <p class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
+              Hand-selected strawberries, blackberries, figs, and Meyer lemons picked from local organic orchards and reduced into in-house compotes.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= PAIRING MATCHMAKER QUIZ ================= -->
+    <section id="pairing-matchmaker" class="py-16 md:py-20 bg-white dark:bg-dark-surface border-t border-border dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-12 reveal-up">
+          <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Sommelier & Head Barista Pairings</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso dark:text-dark-text mt-1.5 tracking-tight">
+            Flavor Harmony <span class="italic font-normal text-gradient-primary">Matchmaker</span>
+          </h2>
+          <p class="text-xs text-text-secondary dark:text-dark-muted mt-2">Select your craving mood below to unlock our chef-recommended pastry & drink harmony.</p>
+        </div>
+
+        <!-- Mood Selector Tabs -->
+        <div class="flex items-center justify-center gap-3 flex-wrap mb-10 reveal-fade">
+          <button data-mood="sweet" class="pairing-mood-btn tab-spring px-5 py-2.5 rounded-full text-xs font-bold bg-primary-btn text-white shadow">
+            🍰 Sweet & Decadent
+          </button>
+          <button data-mood="fruit" class="pairing-mood-btn tab-spring px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-dark-card border border-border dark:border-dark-border text-espresso dark:text-dark-text hover:bg-soft-accent">
+            🍋 Light & Fruity
+          </button>
+          <button data-mood="savory" class="pairing-mood-btn tab-spring px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-dark-card border border-border dark:border-dark-border text-espresso dark:text-dark-text hover:bg-soft-accent">
+            🧀 Savory Galette Lunch
+          </button>
+          <button data-mood="energy" class="pairing-mood-btn tab-spring px-5 py-2.5 rounded-full text-xs font-bold bg-white dark:bg-dark-card border border-border dark:border-dark-border text-espresso dark:text-dark-text hover:bg-soft-accent">
+            ⚡ High-Energy Brunch
+          </button>
+        </div>
+
+        <!-- Matching Showcase Card -->
+        <div class="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover transition duration-300 grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal-scale">
+          
+          <div class="md:col-span-7 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-soft-accent dark:bg-dark-border text-primary-btn dark:text-dark-gold text-[10px] font-bold uppercase tracking-wider">Curated Harmony</span>
+              <span class="text-xs text-gray-400">Bundle Discount Included</span>
+            </div>
+
+            <!-- Pastry -->
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">🧇</span>
+              <div>
+                <h4 id="pairing-food-title" class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Belgian Berry Crown Liege Waffle</h4>
+                <p id="pairing-food-desc" class="text-xs text-gray-600 dark:text-dark-muted">Torched marshmallows, organic blackberry coulis, mascarpone cream.</p>
+              </div>
+            </div>
+
+            <div class="text-center font-bold text-primary-btn text-sm">+</div>
+
+            <!-- Drink -->
+            <div class="flex items-start gap-3">
+              <span class="text-2xl">☕</span>
+              <div>
+                <h4 id="pairing-drink-title" class="font-serif text-lg font-bold text-espresso dark:text-dark-text">Ethiopian Geisha Light Pour-Over</h4>
+                <p id="pairing-drink-desc" class="text-xs text-gray-600 dark:text-dark-muted">Floral jasmine notes with bergamot acidity cutting through rich caramelized pearl sugar.</p>
+              </div>
+            </div>
+
+            <p id="pairing-chef-note" class="text-xs italic text-text-secondary dark:text-dark-gold border-s-2 border-primary-btn ps-3 py-1">
+              “The bright berry acidity of high-altitude Geisha coffee harmonizes perfectly with warm blackberry coulis.”
+            </p>
+          </div>
+
+          <div class="md:col-span-5 text-center p-6 bg-white dark:bg-dark-surface rounded-2xl border border-border dark:border-dark-border shadow-sm space-y-4">
+            <span class="text-xs text-text-secondary uppercase tracking-wider font-semibold">Tasting Bundle Price</span>
+            <div>
+              <span id="pairing-price" class="font-display text-4xl sm:text-5xl font-extrabold text-primary-btn tracking-tight">$19.50</span>
+              <span class="text-xs text-success font-bold block mt-1">Includes $2.00 Pairing Discount</span>
+            </div>
+            <button id="pairing-add-bundle-btn" class="btn-primary w-full py-3.5 rounded-full text-white font-bold text-xs shadow-md transition">
+              + Add Bundle to Box
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS & SOCIAL PROOF -->
+    <section class="py-16 bg-white dark:bg-dark-surface border-t border-border dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-xl mx-auto mb-14 reveal-up">
+          <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Foodie Praise & Press</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso dark:text-dark-text mt-1.5 tracking-tight">
+            Loved by <span class="italic font-normal text-gradient-primary">Brunch Connoisseurs</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Review 1 -->
+          <div class="p-6 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border space-y-4 reveal-up delay-100 card-hover-elevate shadow-card hover:shadow-hover">
+            <div class="flex text-amber-400">★★★★★</div>
+            <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed">
+              "The crisp pearl sugar crunch on their Liege waffle is identical to the street stalls in Brussels. Paired with their cortado, it is my weekly sanctuary."
+            </p>
+            <div class="flex items-center gap-3 pt-2">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Reviewer Clara" class="w-10 h-10 rounded-full object-cover">
+              <div>
+                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Clara Vance</h4>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted">Food Critic, Bay Gastronomy</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="p-6 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border space-y-4 reveal-up delay-200 card-hover-elevate shadow-card hover:shadow-hover">
+            <div class="flex text-amber-400">★★★★★</div>
+            <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed">
+              "Ordered the Crepe Catering Station for our corporate product launch. The live cooking aroma drove 150 colleagues into an absolute dessert frenzy!"
+            </p>
+            <div class="flex items-center gap-3 pt-2">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Reviewer Marcus" class="w-10 h-10 rounded-full object-cover">
+              <div>
+                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Marcus Sterling</h4>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted">Event Producer, TechNexus</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="p-6 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border space-y-4 reveal-up delay-300 card-hover-elevate shadow-card hover:shadow-hover">
+            <div class="flex text-amber-400">★★★★★</div>
+            <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed">
+              "Being celiac, finding authentic buckwheat savory galettes this crisp and flavorful is a dream. The smoked salmon galette is absolute perfection."
+            </p>
+            <div class="flex items-center gap-3 pt-2">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80" alt="Reviewer Elena" class="w-10 h-10 rounded-full object-cover">
+              <div>
+                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Elena Rostova</h4>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted">Verified Customer</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SOCIAL MEDIA PROFILES & COMMUNITY SHOWCASE ================= -->
+    <section class="py-16 bg-gradient-to-b from-cream/30 via-white to-cream/40 dark:from-dark-surface dark:via-dark-card dark:to-dark-surface border-t border-amber/15 dark:border-dark-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10 reveal-up">
+          <span class="editorial-eyebrow px-3.5 py-1 rounded-full bg-soft-accent dark:bg-dark-card border border-primary-btn/30 text-primary-btn dark:text-dark-gold inline-flex items-center gap-1.5 shadow-xs mb-3">
+            <span>✨</span>
+            <span>Join Our 90K+ Online Foodie Community</span>
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso dark:text-dark-text mt-1 tracking-tight">
+            Connect with <span class="text-gradient-primary italic font-normal">Golden Crust</span> Across Social Media
+          </h2>
+          <p class="text-xs sm:text-sm text-text-secondary dark:text-dark-muted mt-2">
+            Watch our daily live waffle iron pours, discover secret off-menu combinations, and share your table moments with <span class="font-semibold text-primary-btn dark:text-dark-gold">#GoldenCrustCafe</span>.
+          </p>
+        </div>
+
+        <!-- Social Media Profile Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-fade">
+          
+          <!-- Instagram Card -->
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 text-[10px] font-bold">28.5K Followers</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">Instagram</h3>
+              <p class="text-xs text-primary-btn dark:text-dark-gold font-semibold mt-0.5">@GoldenCrustCafe</p>
+              <p class="text-xs text-text-secondary dark:text-dark-muted mt-2 leading-relaxed">
+                Daily fresh-out-of-the-iron reels, pastry stories & monthly VIP brunch giveaways.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border dark:border-dark-border flex items-center justify-between text-xs font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">
+              <span>View Profile</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+
+          <!-- Pinterest Card -->
+          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-[#E60023] text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-red-500/10 text-red-600 dark:text-red-400 text-[10px] font-bold">36.4K Viewers</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">Pinterest</h3>
+              <p class="text-xs text-primary-btn dark:text-dark-gold font-semibold mt-0.5">@GoldenCrustBakery</p>
+              <p class="text-xs text-text-secondary dark:text-dark-muted mt-2 leading-relaxed">
+                Brunch table styling, Liege plating aesthetics & secret dessert tables.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border dark:border-dark-border flex items-center justify-between text-xs font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">
+              <span>View Boards</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+
+          <!-- YouTube Card -->
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-red-500/10 text-red-600 dark:text-red-400 text-[10px] font-bold">14.8K Subs</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">YouTube</h3>
+              <p class="text-xs text-primary-btn dark:text-dark-gold font-semibold mt-0.5">Golden Crust Atelier</p>
+              <p class="text-xs text-text-secondary dark:text-dark-muted mt-2 leading-relaxed">
+                Pâtissier masterclasses, crepe folding techniques & artisan roasting series.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border dark:border-dark-border flex items-center justify-between text-xs font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">
+              <span>Subscribe</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+
+          <!-- Facebook & Community Card -->
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="group p-5 rounded-3xl bg-white dark:bg-dark-card border border-border dark:border-dark-border shadow-card hover:shadow-hover hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-[10px] font-bold">19.4K Members</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">Facebook</h3>
+              <p class="text-xs text-primary-btn dark:text-dark-gold font-semibold mt-0.5">Golden Crust Café Club</p>
+              <p class="text-xs text-text-secondary dark:text-dark-muted mt-2 leading-relaxed">
+                Brunch tastings, seasonal event RSVPs, secret menu drops & chef Q&A sessions.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-border dark:border-dark-border flex items-center justify-between text-xs font-bold text-espresso dark:text-dark-text group-hover:text-primary-btn transition">
+              <span>Join Club</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="py-14 bg-gradient-to-r from-espresso via-cocoa to-espresso text-cream dark:from-dark-surface dark:to-dark-card border-t border-honey/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 reveal-scale">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold">Craving Hot, Caramelized Waffles Right Now?</h2>
+        <p class="text-sm sm:text-base text-cream/80 max-w-xl mx-auto">
+          Order for speedy in-café pickup or have our warm dessert boxes delivered to your doorstep in eco-friendly insulated packaging.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="menu.html" class="px-8 py-3.5 rounded-full bg-honey hover:bg-amber text-white font-bold shadow-lg transition active:scale-95">
+            Order Pickup / Delivery
+          </a>
+          <a href="contact.html" class="px-8 py-3.5 rounded-full bg-transparent border-2 border-honey/40 hover:bg-honey/15 text-cream font-semibold transition active:scale-95">
+            Visit Café & Directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-espresso text-cream dark:bg-dark-bg dark:text-dark-muted border-t border-honey/15 pt-16 pb-28 lg:pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10 dark:border-dark-border">
+        
+        <!-- Brand Col (2 cols) -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" onclick="window.location.href='index.html'; return false;" ontouchend="window.location.href='index.html'; return false;" data-home-link="true" class="footer-home-link inline-flex items-center gap-3 group cursor-pointer" aria-label="Golden Crust - Return to Home" style="cursor: pointer; -webkit-tap-highlight-color: transparent;">
+            <div onclick="window.location.href='index.html';" ontouchend="window.location.href='index.html';" class="w-10 h-10 rounded-2xl bg-honey group-hover:bg-amber group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 flex items-center justify-center text-xl shadow-md cursor-pointer">
+              <span>🧇</span>
+            </div>
+            <span class="font-serif text-2xl font-bold text-cream dark:text-dark-gold group-hover:text-honey transition-colors duration-300">Golden Crust</span>
+          </a>
+          <p class="text-xs text-cream/70 dark:text-dark-muted leading-relaxed max-w-sm">
+            Handcrafted crepes and caramelized Belgian Liege waffles baked fresh daily. Warm ambiance, single-origin espresso, and artisanal chocolate indulgence.
+          </p>
+          
+          <!-- Official Social Media Profiles -->
+          <div class="pt-2">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-honey dark:text-dark-gold mb-2.5">Follow Our Profiles</div>
+            <div class="flex items-center gap-2.5 text-sm flex-wrap">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-amber-600 hover:to-rose-500 text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#ff0000] text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-black text-cream/80 hover:text-white flex items-center justify-center transition duration-300 hover:scale-110 shadow-sm border border-white/10">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-honey transition">Signature Landing</a></li>
+            <li><a href="home-express.html" class="hover:text-honey transition">Express Ordering</a></li>
+            <li><a href="menu.html" class="hover:text-honey transition">Sweet & Savory Menu</a></li>
+            <li><a href="catering.html" class="hover:text-honey transition">Catering Packages</a></li>
+            <li><a href="about.html" class="hover:text-honey transition">Our Story & Chefs</a></li>
+            <li><a href="blog.html" class="hover:text-honey transition">Café Stories & Recipes</a></li>
+            <li><a href="contact.html" class="hover:text-honey transition">Hours & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-cream/80 dark:text-dark-muted">
+            <li class="flex justify-between"><span>Mon - Thu:</span> <span>7:30 AM - 9:30 PM</span></li>
+            <li class="flex justify-between"><span>Friday:</span> <span>7:30 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday:</span> <span>8:00 AM - 11:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span>8:00 AM - 9:00 PM</span></li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 text-[11px] text-emerald-400 font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Dine-In & Takeout Available
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-honey dark:text-dark-gold">Stay Sweet</h4>
+          <p class="text-xs text-cream/70 dark:text-dark-muted">Subscribe for secret seasonal menu drops and exclusive promo codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed to VIP Sweet Club! 🍯', 'success'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="Enter your email" class="w-full px-3 py-2 text-xs rounded-xl bg-white/10 dark:bg-dark-surface border border-white/20 dark:border-dark-border text-white placeholder-gray-400 focus:outline-none focus:border-honey">
+            <button type="submit" class="w-full py-2 bg-amber hover:bg-honey text-white text-xs font-bold rounded-xl transition shadow">
+              Join VIP Club
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/60 dark:text-dark-muted gap-4">
+        <div>© 2026 Golden Crust Crepe & Waffle Café. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" onclick="event.preventDefault(); showToast('Privacy Policy: Golden Crust respects your privacy and never shares your personal information.', 'info');" class="hover:underline">Privacy Policy</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Terms of Service: Artisanal crêpes & waffles baked fresh daily to order.', 'info');" class="hover:underline">Terms of Service</a>
+          <a href="#" onclick="event.preventDefault(); showToast('Allergen Information: 100% Buckwheat galettes are gluten-free. Dairy-free & oat milk available.', 'info');" class="hover:underline">Allergen Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE MENU DRAWER ================= -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-md z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 bottom-0 end-0 w-80 max-w-full bg-cream dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-honey to-amber text-cream flex items-center justify-center shadow-md">
+            <span class="text-xl">🧇</span>
+          </div>
+          <div>
+            <span class="font-serif text-lg font-bold text-espresso dark:text-dark-gold block leading-tight">Golden Crust</span>
+            <span class="text-[9px] uppercase tracking-widest text-amber dark:text-dark-muted font-semibold">Crepe & Waffle Café</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" class="w-9 h-9 rounded-xl bg-amber/10 dark:bg-dark-border text-espresso dark:text-dark-text flex items-center justify-center hover:bg-amber/20 transition active:scale-95" aria-label="Close Navigation">
+          ✕
+        </button>
+      </div>
+
+      <nav class="py-5 space-y-1.5 font-semibold text-sm">
+        <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-amber/15 text-amber dark:text-dark-gold font-bold">
+          <span>✨</span>
+          <span>Signature Experience</span>
+        </a>
+        <a href="home-express.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>⚡</span>
+          <span>Express Ordering</span>
+        </a>
+        <a href="menu.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📋</span>
+          <span>Full Menu (Sweet & Savory)</span>
+        </a>
+        <a href="catering.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>🥂</span>
+          <span>Catering & Event Packages</span>
+        </a>
+        <a href="about.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📖</span>
+          <span>About Our Kitchen</span>
+        </a>
+        <a href="blog.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>✍️</span>
+          <span>Café Stories & Blog</span>
+        </a>
+        <a href="contact.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition">
+          <span>📍</span>
+          <span>Contact & Live Hours</span>
+        </a>
+        <button class="open-cart-btn w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-honey/15 dark:hover:bg-dark-border text-espresso dark:text-dark-text transition font-semibold text-start" aria-label="Open Dessert Box">
+          <span class="flex items-center gap-3">
+            <span>🛍️</span>
+            <span>Your Dessert Box</span>
+          </span>
+          <span class="cart-count-badge hidden bg-berry text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">0</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="pt-5 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-gray-500 dark:text-dark-muted font-medium">Preferences:</span>
+        <div class="flex items-center gap-2">
+          <button class="theme-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-semibold hover:bg-honey/25 transition">
+            Theme 🌓
+          </button>
+          <button class="rtl-toggle-btn px-3 py-1.5 rounded-xl bg-honey/15 dark:bg-dark-border text-xs font-bold hover:bg-honey/25 transition">
+            ⇄ <span class="rtl-text">RTL</span>
+          </button>
+        </div>
+      </div>
+      <a href="menu.html" class="block w-full py-3 text-center bg-gradient-to-r from-amber to-honey text-white font-bold rounded-2xl shadow-lg active:scale-95 transition">
+        Order Online Now →
+      </a>
+    </div>
+  </div>
+
+  <!-- ================= CART / DESSERT BOX DRAWER ================= -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-espresso/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 bottom-0 end-0 w-96 max-w-full bg-white dark:bg-dark-surface z-50 shadow-2xl p-6 flex flex-col justify-between side-drawer">
+    
+    <!-- Drawer Header -->
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-amber/15 dark:border-dark-border">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">🛍️</span>
+          <div>
+            <h3 class="font-serif text-lg font-bold text-espresso dark:text-dark-gold">Your Dessert Box</h3>
+            <p class="text-[11px] text-gray-500 dark:text-dark-muted">Crafted fresh upon order confirmation</p>
+          </div>
+        </div>
+        <button id="close-cart-btn" class="p-2 text-gray-500 hover:text-espresso dark:hover:text-dark-text" aria-label="Close Cart">
+          ✕
+        </button>
+      </div>
+
+      <!-- Items List Container -->
+      <div id="cart-items-container" class="py-4 space-y-3 overflow-y-auto max-h-[50vh] no-scrollbar">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+
+    <!-- Drawer Footer / Checkout -->
+    <div class="pt-4 border-t border-amber/15 dark:border-dark-border space-y-3">
+      <div class="space-y-1.5 text-xs">
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="font-bold text-espresso dark:text-dark-text">$0.00</span>
+        </div>
+        <div class="flex justify-between text-gray-600 dark:text-dark-muted">
+          <span>Local Tax (8%)</span>
+          <span id="cart-tax">$0.00</span>
+        </div>
+        <div class="flex justify-between text-sm font-bold text-espresso dark:text-dark-gold pt-2 border-t border-amber/10 dark:border-dark-border">
+          <span>Estimated Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+      </div>
+
+      <button id="cart-checkout-btn" class="w-full py-3.5 bg-gradient-to-r from-amber to-honey hover:from-toasted hover:to-amber text-white font-bold rounded-2xl shadow-lg transition active:scale-95">
+        Checkout & Start Baking ✨
+      </button>
+      <p class="text-[10px] text-center text-gray-400">Fresh bakes ready for pickup in 15-20 minutes.</p>
+    </div>
+
+  </div>
+
+  <!-- ================= MOBILE STICKY CUSTOMIZER BAR ================= -->
+  <div id="customizer-mobile-bar" class="customizer-mobile-bar lg:hidden">
+    <div class="p-3 bg-white/95 dark:bg-dark-card/95 backdrop-blur-xl rounded-2xl border-2 border-amber/30 dark:border-dark-border shadow-2xl flex items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5 min-w-0">
+        <img id="customizer-mobile-img" src="img/menu/belgian_berry_waffle.jpg" alt="Custom Preview" class="w-12 h-12 rounded-xl object-cover border border-amber/20 flex-shrink-0">
+        <div class="min-w-0">
+          <div id="customizer-mobile-name" class="font-serif text-xs font-bold text-espresso dark:text-dark-text truncate">Craft Custom Pastry</div>
+          <div id="customizer-mobile-price" class="text-sm font-bold text-amber dark:text-dark-gold">$0.00</div>
+        </div>
+      </div>
+      <button id="customizer-mobile-add-btn" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber to-honey hover:from-toasted hover:to-amber text-white text-xs font-bold shadow-md active:scale-95 transition flex-shrink-0 opacity-70 cursor-not-allowed" disabled>
+        + Add to Box
+      </button>
+    </div>
+  </div>
+
+
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Momentum Scrolling Engine -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js?v=2.6"></script>
+</body>
+</html>
