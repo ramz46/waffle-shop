@@ -826,6 +826,12 @@ button[type="submit"]:not(.plain-submit),
 #cart-checkout-btn,
 #builder-add-btn,
 #customizer-mobile-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap !important;
+  flex-shrink: 0;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-primary-btn) 0%, var(--color-btn-hover) 100%) !important;
@@ -2595,6 +2601,9 @@ html.lenis body {
 /* 5. Magnetic CTA Hover & Liquid Fill Transitions */
 .btn-magnetic {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   position: relative;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);

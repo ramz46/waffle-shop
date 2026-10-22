@@ -780,9 +780,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="text-center max-w-2xl mx-auto mb-16 reveal-up">
-          <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Uncompromising Quality & Provenance</span>
+          <span class="editorial-eyebrow text-primary-btn dark:text-dark-gold">Uncompromising Quality &amp; Provenance</span>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso dark:text-dark-text mt-2 tracking-tight">
-            Why Every Bite Feels Like <span class="italic font-normal text-gradient-primary">Pure Celebration</span>
+            Why Every Bite Feels Like <br class="hidden sm:inline"><span class="italic font-normal text-gradient-primary whitespace-nowrap inline-block">Pure Celebration</span>
           </h2>
         </div>
 
@@ -792,7 +792,7 @@
             <div class="w-16 h-16 rounded-2xl bg-amber/15 text-amber dark:text-dark-gold mx-auto flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
               🍫
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Imported Callebaut Chocolate</h3>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-espresso dark:text-dark-text">Imported Callebaut Chocolate</h3>
             <p class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
               We never use synthetic syrups. Our melted fountains run with 54.5% Belgian dark chocolate, silky milk cocoa, and velvety white vanilla ganache.
             </p>
@@ -802,9 +802,9 @@
             <div class="w-16 h-16 rounded-2xl bg-honey/20 text-honey mx-auto flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
               🌾
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">24-Hour Fermented Brioche Batter</h3>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-espresso dark:text-dark-text">24-Hour Brioche Batter</h3>
             <p class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
-              Our Liege waffles are crafted from slow-fermented yeast dough folded with coarse pearl sugar that caramelizes to a crunchy glass glaze in heavy cast irons.
+              Our Liege waffles are crafted from slow-fermented dough folded with pearl sugar that caramelizes to a crunchy glass glaze in heavy cast irons.
             </p>
           </div>
 
@@ -812,9 +812,9 @@
             <div class="w-16 h-16 rounded-2xl bg-berry/15 text-berry mx-auto flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
               🫐
             </div>
-            <h3 class="font-serif text-xl font-bold text-espresso dark:text-dark-text">Farm-Direct Seasonal Fruit</h3>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-espresso dark:text-dark-text">Farm-Direct Seasonal Fruit</h3>
             <p class="text-sm text-gray-600 dark:text-dark-muted leading-relaxed">
-              Hand-selected strawberries, blackberries, figs, and Meyer lemons picked from local organic orchards and reduced into in-house compotes.
+              Hand-selected strawberries, blackberries, figs, and Meyer lemons picked from local organic orchards and reduced into rich in-house compotes.
             </p>
           </div>
 
@@ -912,49 +912,55 @@
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
           <!-- Review 1 -->
-          <div class="p-6 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border space-y-4 reveal-up delay-100 card-hover-elevate shadow-card hover:shadow-hover">
-            <div class="flex text-amber-400">★★★★★</div>
-            <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed">
-              "The crisp pearl sugar crunch on their Liege waffle is identical to the street stalls in Brussels. Paired with their cortado, it is my weekly sanctuary."
-            </p>
-            <div class="flex items-center gap-3 pt-2">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Reviewer Clara" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Clara Vance</h4>
-                <p class="text-[11px] text-gray-500 dark:text-dark-muted">Food Critic, Bay Gastronomy</p>
+          <div class="flex flex-col justify-between h-full p-6 sm:p-7 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border reveal-up delay-100 card-hover-elevate shadow-card hover:shadow-hover">
+            <div>
+              <div class="flex text-amber-400 text-sm tracking-wide mb-3">★★★★★</div>
+              <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed min-h-[4.75rem]">
+                "The crisp pearl sugar crunch on their Liege waffle is identical to the street stalls in Brussels. Paired with their cortado, it is my weekly sanctuary."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 mt-5 border-t border-border/70 dark:border-dark-border">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Reviewer Clara" class="w-10 h-10 rounded-full object-cover ring-2 ring-amber/20 dark:ring-dark-border flex-shrink-0 shadow-xs">
+              <div class="min-w-0">
+                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text truncate">Clara Vance</h4>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted truncate">Food Critic, Bay Gastronomy</p>
               </div>
             </div>
           </div>
 
           <!-- Review 2 -->
-          <div class="p-6 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border space-y-4 reveal-up delay-200 card-hover-elevate shadow-card hover:shadow-hover">
-            <div class="flex text-amber-400">★★★★★</div>
-            <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed">
-              "Ordered the Crepe Catering Station for our corporate product launch. The live cooking aroma drove 150 colleagues into an absolute dessert frenzy!"
-            </p>
-            <div class="flex items-center gap-3 pt-2">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Reviewer Marcus" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Marcus Sterling</h4>
-                <p class="text-[11px] text-gray-500 dark:text-dark-muted">Event Producer, TechNexus</p>
+          <div class="flex flex-col justify-between h-full p-6 sm:p-7 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border reveal-up delay-200 card-hover-elevate shadow-card hover:shadow-hover">
+            <div>
+              <div class="flex text-amber-400 text-sm tracking-wide mb-3">★★★★★</div>
+              <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed min-h-[4.75rem]">
+                "Ordered the Crepe Catering Station for our corporate launch. The live cooking aroma drove 150 colleagues into an absolute dessert frenzy!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 mt-5 border-t border-border/70 dark:border-dark-border">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Reviewer Marcus" class="w-10 h-10 rounded-full object-cover ring-2 ring-amber/20 dark:ring-dark-border flex-shrink-0 shadow-xs">
+              <div class="min-w-0">
+                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text truncate">Marcus Sterling</h4>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted truncate">Event Producer, TechNexus</p>
               </div>
             </div>
           </div>
 
           <!-- Review 3 -->
-          <div class="p-6 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border space-y-4 reveal-up delay-300 card-hover-elevate shadow-card hover:shadow-hover">
-            <div class="flex text-amber-400">★★★★★</div>
-            <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed">
-              "Being celiac, finding authentic buckwheat savory galettes this crisp and flavorful is a dream. The smoked salmon galette is absolute perfection."
-            </p>
-            <div class="flex items-center gap-3 pt-2">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80" alt="Reviewer Elena" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text">Elena Rostova</h4>
-                <p class="text-[11px] text-gray-500 dark:text-dark-muted">Verified Customer</p>
+          <div class="flex flex-col justify-between h-full p-6 sm:p-7 rounded-3xl bg-cream dark:bg-dark-card border border-border dark:border-dark-border reveal-up delay-300 card-hover-elevate shadow-card hover:shadow-hover">
+            <div>
+              <div class="flex text-amber-400 text-sm tracking-wide mb-3">★★★★★</div>
+              <p class="text-sm text-cocoa/90 dark:text-dark-text italic leading-relaxed min-h-[4.75rem]">
+                "Being celiac, finding authentic buckwheat savory galettes this crisp and flavorful is a dream. The smoked salmon galette is absolute perfection."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 mt-5 border-t border-border/70 dark:border-dark-border">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80" alt="Reviewer Elena" class="w-10 h-10 rounded-full object-cover ring-2 ring-amber/20 dark:ring-dark-border flex-shrink-0 shadow-xs">
+              <div class="min-w-0">
+                <h4 class="font-display text-xs font-bold text-espresso dark:text-dark-text truncate">Elena Rostova</h4>
+                <p class="text-[11px] text-gray-500 dark:text-dark-muted truncate">Verified Customer, San Francisco</p>
               </div>
             </div>
           </div>
@@ -1081,10 +1087,10 @@
           Order for speedy in-café pickup or have our warm dessert boxes delivered to your doorstep in eco-friendly insulated packaging.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="menu.html" class="px-8 py-3.5 rounded-full bg-honey hover:bg-amber text-white font-bold shadow-lg transition active:scale-95">
+          <a href="menu.html" class="inline-flex items-center justify-center text-center px-8 py-3.5 rounded-full bg-honey hover:bg-amber border-2 border-transparent text-white font-bold shadow-lg transition active:scale-95 leading-normal">
             Order Pickup / Delivery
           </a>
-          <a href="contact.html" class="px-8 py-3.5 rounded-full bg-transparent border-2 border-honey/40 hover:bg-honey/15 text-cream font-semibold transition active:scale-95">
+          <a href="contact.html" class="inline-flex items-center justify-center text-center px-8 py-3.5 rounded-full bg-transparent border-2 border-honey/40 hover:bg-honey/15 text-cream font-semibold transition active:scale-95 leading-normal">
             Visit Café & Directions
           </a>
         </div>
